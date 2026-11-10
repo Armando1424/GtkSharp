@@ -315,3 +315,8 @@ OpenCover/
 
 # macOS metadata
 .DS_Store
+
+# Test artifacts
+TestResults/
+*.trx
+coverage.*.xml
