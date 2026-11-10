@@ -57,6 +57,54 @@ jobs:
             --api-key "${{ secrets.GITHUB_TOKEN }}" \
             --skip-duplicate
 
+      - name: Verify the published feed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          WORK=$(mktemp -d)
+          trap 'rm -rf "$WORK"' EXIT
+
+          cat > "$WORK/NuGet.config" <<EOF
+          <?xml version="1.0" encoding="utf-8"?>
+          <configuration>
+            <packageSources>
+              <clear />
+              <add key="github" value="https://nuget.pkg.github.com/${GITHUB_REPOSITORY_OWNER}/index.json" />
+            </packageSources>
+            <packageSourceCredentials>
+              <github>
+                <add key="Username" value="${GITHUB_REPOSITORY_OWNER}" />
+                <add key="ClearTextPassword" value="${GITHUB_TOKEN}" />
+              </github>
+            </packageSourceCredentials>
+          </configuration>
+          EOF
+
+          cat > "$WORK/consumer.csproj" <<EOF
+          <Project Sdk="Microsoft.NET.Sdk">
+            <PropertyGroup>
+              <OutputType>Exe</OutputType>
+              <TargetFramework>net10.0</TargetFramework>
+              <Nullable>enable</Nullable>
+            </PropertyGroup>
+            <ItemGroup>
+              <PackageReference Include="GtkSharp" Version="${GTKSHARP_VERSION}" />
+            </ItemGroup>
+          </Project>
+          EOF
+
+          cat > "$WORK/Program.cs" <<'CS'
+          using System;
+          using Gtk;
+
+          Gtk.Application.Init();
+          using var label = new Label("published");
+          Console.WriteLine($"restored {typeof(Gtk.Window).Assembly.GetName().Version} from GitHub Packages");
+          CS
+
+          dotnet restore "$WORK/consumer.csproj" --configfile "$WORK/NuGet.config"
+          dotnet build "$WORK/consumer.csproj" -c Release --no-restore
+
       - uses: actions/upload-artifact@v4
         with:
           name: Stable NuGet Packages
