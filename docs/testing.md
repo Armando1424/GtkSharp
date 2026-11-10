@@ -13,13 +13,13 @@ xvfb-run -a dotnet test Source/Tests/GtkSharp.Tests -c Release
 Expected output on a healthy checkout:
 
 ```text
-Passed! - Failed: 0, Passed: 184, Skipped: 0, Total: 184
+Passed! - Failed: 0, Passed: 191, Skipped: 0, Total: 191
 ```
 
 Without a display, the GTK tests are skipped:
 
 ```text
-Passed! - Failed: 0, Passed: <n>, Skipped: <gtk tests>, Total: 184
+Passed! - Failed: 0, Passed: <n>, Skipped: <gtk tests>, Total: 191
 ```
 
 ## Why GTK tests are different

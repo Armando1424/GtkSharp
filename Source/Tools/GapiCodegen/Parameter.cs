@@ -278,13 +278,28 @@ namespace GtkSharp.Generation {
 			}
 		}
 
+		/// <summary>
+		/// True when the native parameter accepts NULL. For struct pointers the
+		/// default value is marshalled as IntPtr.Zero instead of a pointer to a
+		/// zeroed struct (GtkTreeIter.Zero means "top level").
+		/// </summary>
+		public bool Nullable {
+			get {
+				return elem.GetAttributeAsBoolean ("nullable");
+			}
+		}
+
 		public virtual string[] Prepare {
 			get {
 				IGeneratable gen = Generatable;
 				if (gen is IManualMarshaler) {
 					string result = "IntPtr native_" + CallName;
-					if (PassAs != "out")
-						result += " = " + (gen as IManualMarshaler).AllocNative (CallName);
+					if (PassAs != "out") {
+						string alloc = (gen as IManualMarshaler).AllocNative (CallName);
+						if (Nullable)
+							alloc = "(" + CallName + ".Equals (default (" + CSType + ")) ? IntPtr.Zero : " + alloc + ")";
+						result += " = " + alloc;
+					}
 					return new string [] { result + ";" };
 				} else if (PassAs == "out" && CSType != MarshalType) {
 					return new string [] { gen.MarshalType + " native_" + CallName + ";" };
@@ -395,8 +410,12 @@ namespace GtkSharp.Generation {
 			get {
 				if (PassAs == "out")
 					return new string [] { "IntPtr native_" + CallName + " = Marshal.AllocHGlobal (" + GenerationInfo.GetSizeOfExpression(Generatable.QualifiedName) + ");"};
-				else
-					return new string [] { "IntPtr native_" + CallName + " = " + (Generatable as IManualMarshaler).AllocNative (CallName) + ";"};
+				else {
+					string alloc = (Generatable as IManualMarshaler).AllocNative (CallName);
+					if (Nullable)
+						alloc = "(" + CallName + ".Equals (default (" + CSType + ")) ? IntPtr.Zero : " + alloc + ")";
+					return new string [] { "IntPtr native_" + CallName + " = " + alloc + ";"};
+				}
 			}
 		}
 

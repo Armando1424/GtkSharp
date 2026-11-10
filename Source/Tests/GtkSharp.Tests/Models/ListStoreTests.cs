@@ -60,6 +60,65 @@ public sealed class ListStoreTests
     }
 
     [GtkFact]
+    public void IterNthChild_WithZeroParent_ReturnsTopLevelRow()
+    {
+        using var store = CreateStore();
+        store.AppendValues("a", 1);
+        store.AppendValues("b", 2);
+
+        Assert.True(store.IterNthChild(out var iter, TreeIter.Zero, 1));
+        Assert.Equal("b", Read(store, iter, 0));
+    }
+
+    [GtkFact]
+    public void IterNthChild_WithZeroParent_OutOfRange_ReturnsFalse()
+    {
+        using var store = CreateStore();
+        store.AppendValues("a", 1);
+
+        Assert.False(store.IterNthChild(out _, TreeIter.Zero, 5));
+    }
+
+    [GtkFact]
+    public void IterNChildren_WithZeroParent_CountsTopLevelRows()
+    {
+        using var store = CreateStore();
+        store.AppendValues("a", 1);
+        store.AppendValues("b", 2);
+
+        Assert.Equal(2, store.IterNChildren(TreeIter.Zero));
+    }
+
+    [GtkFact]
+    public void IterChildren_WithZeroParent_EnumeratesTopLevelRows()
+    {
+        using var store = CreateStore();
+        store.AppendValues("a", 1);
+        store.AppendValues("b", 2);
+
+        var count = 0;
+        var valid = store.IterChildren(out var iter, TreeIter.Zero);
+        while (valid)
+        {
+            count++;
+            valid = store.IterNext(ref iter);
+        }
+
+        Assert.Equal(2, count);
+    }
+
+    [GtkFact]
+    public void ConvenienceOverloads_WorkWithoutAParent()
+    {
+        using var store = CreateStore();
+        store.AppendValues("a", 1);
+
+        Assert.Equal(1, store.IterNChildren());
+        Assert.True(store.IterNthChild(out var iter, 0));
+        Assert.Equal("a", Read(store, iter, 0));
+    }
+
+    [GtkFact]
     public void GetIterFromString_OutOfRange_ReturnsFalse()
     {
         using var store = CreateStore();

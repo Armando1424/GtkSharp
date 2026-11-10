@@ -307,6 +307,10 @@
         <xs:attribute name="printf_format" type="xs:boolean" use="optional"/>
         <xs:attribute name="printf_format_args" type="xs:boolean" use="optional"/>
         <xs:attribute name="scope" type="scopeType" use="optional"/>
+        <!-- The parameter may be NULL on the native side. For struct pointers this
+             maps the zero/default value to IntPtr.Zero instead of a pointer to a
+             zeroed struct. -->
+        <xs:attribute name="nullable" type="xs:boolean" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="constructor-parameterType">

@@ -137,6 +137,29 @@ public sealed class TreeStoreTests
     }
 
     [GtkFact]
+    public void IterNthChild_WithZeroParent_ReturnsTopLevelRow()
+    {
+        using var store = CreateStore();
+        store.AppendValues("first");
+        store.AppendValues("second");
+
+        Assert.True(store.IterNthChild(out var iter, TreeIter.Zero, 1));
+        Assert.Equal("second", Read(store, iter, 0));
+    }
+
+    [GtkFact]
+    public void IterNChildren_WithZeroParent_CountsRoots()
+    {
+        using var store = CreateStore();
+        var first = store.AppendValues("first");
+        store.AppendValues("second");
+        store.AppendValues(first, "child");
+
+        Assert.Equal(2, store.IterNChildren(TreeIter.Zero));
+        Assert.Equal(1, store.IterNChildren(first));
+    }
+
+    [GtkFact]
     public void IterParent_ReturnsTheParentRow()
     {
         using var store = CreateStore();
