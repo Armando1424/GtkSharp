@@ -1,6 +1,9 @@
 name: Build
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -69,6 +72,33 @@ jobs:
           name: coverage
           path: TestResults/**/coverage.cobertura.xml
           if-no-files-found: warn
+
+  performance:
+    name: Performance (advisory)
+    runs-on: ubuntu-24.04
+    # Advisory until the thresholds have been stable for a few runs. Flip this
+    # to false to make performance a required gate.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Install GTK runtime and virtual display
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends xvfb libgtk-3-0
+
+      - name: Restore tools
+        run: dotnet tool restore
+
+      - name: Run performance tests under Xvfb
+        run: xvfb-run -a dotnet cake build.cake --BuildTarget=TestPerformance
 
   arm64-smoke:
     name: ARM64 workload smoke test

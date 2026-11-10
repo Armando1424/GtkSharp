@@ -192,6 +192,30 @@ UPDATE_API_BASELINE=1 xvfb-run -a dotnet test Source/Tests/GtkSharp.Tests \
 git diff Source/Tests/GtkSharp.Tests/PublicAPI
 ```
 
+## Performance and memory
+
+Performance and leak checks use the `Category=Performance` trait and are
+excluded from the default `Test` target so the functional suite stays fast:
+
+```sh
+xvfb-run -a dotnet cake build.cake --BuildTarget=TestPerformance
+```
+
+They cover managed allocations per operation, CPU per operation, working-set
+growth over create/dispose cycles, signal churn and wrapper leaks (the internal
+`GLib.Object` registry is used because toggle refs keep undisposed widgets
+alive forever). Thresholds and the Pi baseline are documented in
+[perf/README.md](../perf/README.md).
+
+Detailed benchmarks live in `Source/Tests/GtkSharp.Benchmarks`:
+
+```sh
+xvfb-run -a dotnet run -c Release --project Source/Tests/GtkSharp.Benchmarks
+```
+
+The CI `performance` job is advisory for now; promote it to a blocking gate
+after three stable runs.
+
 ## Coverage
 
 Coverage is collected with coverlet and excludes the generated bindings under

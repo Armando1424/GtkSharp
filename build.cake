@@ -122,10 +122,29 @@ Task("Test")
             .Append("--settings Source/Tests/GtkSharp.Tests/coverlet.runsettings")
             .Append("--collect:\"XPlat Code Coverage\"")
             .Append("--results-directory TestResults")
+            .Append("--filter \"Category!=Performance\"")
     };
 
     // GTK based tests are skipped automatically when no display is available.
     // Use `xvfb-run -a dotnet cake build.cake --BuildTarget=Test` on headless hosts.
+    DotNetTest("Source/Tests/GtkSharp.Tests/GtkSharp.Tests.csproj", settings);
+});
+
+Task("TestPerformance")
+    .IsDependentOn("Build")
+    .Does(() =>
+{
+    var settings = new DotNetTestSettings
+    {
+        Configuration = configuration,
+        NoBuild = true,
+        MSBuildSettings = msbuildsettings,
+        ArgumentCustomization = args => args.Append("--filter \"Category=Performance\"")
+    };
+
+    // These tests measure allocations, working set and CPU; run them under
+    // xvfb-run on headless hosts. They live in a separate target so the
+    // functional suite stays fast and deterministic.
     DotNetTest("Source/Tests/GtkSharp.Tests/GtkSharp.Tests.csproj", settings);
 });
 
