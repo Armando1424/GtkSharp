@@ -1,8 +1,6 @@
 #load CakeScripts\GAssembly.cake
 #load CakeScripts\Settings.cake
 #load CakeScripts\TargetEnvironment.cake
-#addin "Cake.FileHelpers&version=5.0.0"
-#addin "Cake.Incubator&version=7.0.0"
 
 // VARS
 
@@ -14,7 +12,7 @@ var configuration = Argument("Configuration", "Release");
 
 var msbuildsettings = new DotNetMSBuildSettings();
 var list = new List<GAssembly>();
-var supportedVersionBands = new List<string>() {"6.0.100", "6.0.200", "6.0.300", "6.0.400", "7.0.400", "8.0.100", "8.0.200"};
+var supportedVersionBands = new List<string>() {"10.0.100", "10.0.200", "10.0.300", "10.0.400"};
 
 // TASKS
 
@@ -38,6 +36,17 @@ Task("Init")
 
     // Add stuff to list
     Settings.Init();
+
+    // Keep the workload installable on whichever .NET 10 SDK the maintainer
+    // has installed: if the current feature band is not packaged yet, add it so
+    // `--BuildTarget=InstallWorkload` works out of the box.
+    var currentBand = TargetEnvironment.DotNetCliFeatureBand;
+    if (!supportedVersionBands.Contains(currentBand))
+    {
+        Console.WriteLine($"Adding current SDK feature band {currentBand} to the workload bands.");
+        supportedVersionBands.Add(currentBand);
+    }
+
     foreach(var gassembly in Settings.AssemblyList)
         if(string.IsNullOrEmpty(Settings.Assembly) || Settings.Assembly == gassembly.Name)
             list.Add(gassembly);
@@ -100,6 +109,22 @@ Task("Build")
     }
 });
 
+Task("Test")
+    .IsDependentOn("Build")
+    .Does(() =>
+{
+    var settings = new DotNetTestSettings
+    {
+        Configuration = configuration,
+        NoBuild = true,
+        MSBuildSettings = msbuildsettings
+    };
+
+    // GTK based tests are skipped automatically when no display is available.
+    // Use `xvfb-run -a dotnet cake build.cake --BuildTarget=Test` on headless hosts.
+    DotNetTest("Source/Tests/GtkSharp.Tests/GtkSharp.Tests.csproj", settings);
+});
+
 Task("RunSamples")
     .IsDependentOn("Build")
     .Does(() =>
@@ -152,8 +177,21 @@ Task("PackageWorkload")
 
     foreach (var band in supportedVersionBands)
     {
-        packSettings.MSBuildSettings = packSettings.MSBuildSettings.WithProperty("_GtkSharpManifestVersionBand", band);
-        DotNetPack("Source/Workload/GtkSharp.NET.Sdk.Gtk/GtkSharp.NET.Sdk.Gtk.csproj", packSettings);
+        // Use fresh settings for every band: Cake merges repeated properties
+        // into a single ";" separated value, which MSBuild rejects.
+        var manifestSettings = new DotNetPackSettings
+        {
+            Configuration = configuration,
+            OutputDirectory = "BuildOutput/NugetPackages",
+            NoBuild = false,
+            MSBuildSettings = new DotNetMSBuildSettings()
+        };
+
+        foreach (var property in msbuildsettings.Properties)
+            manifestSettings.MSBuildSettings.WithProperty(property.Key, string.Join(";", property.Value));
+
+        manifestSettings.MSBuildSettings.WithProperty("_GtkSharpManifestVersionBand", band);
+        DotNetPack("Source/Workload/GtkSharp.NET.Sdk.Gtk/GtkSharp.NET.Sdk.Gtk.csproj", manifestSettings);
     }
 });
 

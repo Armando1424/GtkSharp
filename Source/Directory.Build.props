@@ -1,6 +1,12 @@
 <Project>
   <PropertyGroup>
-    <_GtkSharpNetVersion>8.0</_GtkSharpNetVersion>
+    <!--
+      Target .NET version for the workload and the TFM-specific library builds.
+      Override on the command line (-p:_GtkSharpNetVersion=8.0) to produce a
+      workload for another .NET version. The libraries still ship a
+      netstandard2.0 target for maximum compatibility.
+    -->
+    <_GtkSharpNetVersion Condition=" '$(_GtkSharpNetVersion)' == '' ">10.0</_GtkSharpNetVersion>
     <_GtkSharpSourceDirectory>$(MSBuildThisFileDirectory)</_GtkSharpSourceDirectory>
     <_GtkSharpBuildOutputDirectory>$(MSBuildThisFileDirectory)..\BuildOutput\</_GtkSharpBuildOutputDirectory>
   </PropertyGroup>
