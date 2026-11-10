@@ -212,8 +212,6 @@ Task("PackageTemplates")
 });
 
 const string manifestName = "GtkSharp.NET.Sdk.Gtk";
-var manifestPack = $"{manifestName}.Manifest-{TargetEnvironment.DotNetCliFeatureBand}.{Settings.Version}.nupkg";
-var manifestPackPath = $"BuildOutput/NugetPackages/{manifestPack}";
 
 var packNames = new List<string>()
 {
@@ -234,6 +232,12 @@ Task("InstallWorkload")
     .IsDependentOn("PackageTemplates")
     .Does(() =>
 {
+    // Compute the manifest path inside the task: Init rewrites Settings.Version
+    // when running on GitHub Actions, so a path built at script load time would
+    // point to a package name that does not exist.
+    var manifestPack = $"{manifestName}.Manifest-{TargetEnvironment.DotNetCliFeatureBand}.{Settings.Version}.nupkg";
+    var manifestPackPath = $"BuildOutput/NugetPackages/{manifestPack}";
+
     Console.WriteLine($"Installing workload for SDK version {TargetEnvironment.DotNetCliFeatureBand}, at {TargetEnvironment.DotNetInstallPath}");
     Console.WriteLine($"Installing manifests to {TargetEnvironment.DotNetManifestPath}");
     TargetEnvironment.InstallManifests(manifestName, manifestPackPath);
