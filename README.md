@@ -112,6 +112,19 @@ workload bands are listed in [build.cake](build.cake); the build adds the
 current SDK feature band automatically when it is missing, so the install
 target works with any .NET 10 SDK.
 
+## Installing from GitHub Packages
+
+The fork publishes stable builds to GitHub Packages. Add the feed to your
+`NuGet.config` (authentication is required even for public packages) and
+reference the version you want:
+
+```xml
+<PackageReference Include="GtkSharp" Version="3.24.24.200" />
+```
+
+See [docs/releasing.md](docs/releasing.md) for the feed URL, credentials and the
+workload installation flow.
+
 ## Contributing
 
 Pull requests target `develop`. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the

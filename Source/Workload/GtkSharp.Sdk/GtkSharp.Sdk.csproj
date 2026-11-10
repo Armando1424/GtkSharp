@@ -23,8 +23,7 @@
 
   <Target Name="_ReplaceSdkText"
       BeforeTargets="Build;AssignTargetPaths"
-      Inputs="$(MSBuildProjectFile);Sdk\Sdk.in.targets"
-      Outputs="$(IntermediateOutputPath)Sdk.targets">
+      >
     
     <ReplaceText
         Input="Sdk\Sdk.in.targets"

@@ -27,8 +27,7 @@
 
   <Target Name="_ReplaceJsonText"
       BeforeTargets="Build;AssignTargetPaths"
-      Inputs="$(MSBuildProjectFile);WorkloadManifest.in.json"
-      Outputs="$(IntermediateOutputPath)WorkloadManifest.json">
+      >
     
     <ReplaceText
         Input="WorkloadManifest.in.json"

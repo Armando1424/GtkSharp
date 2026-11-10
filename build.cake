@@ -19,12 +19,28 @@ var supportedVersionBands = new List<string>() {"10.0.100", "10.0.200", "10.0.30
 Task("Init")
     .Does(() =>
 {
-    if (!string.IsNullOrEmpty(EnvironmentVariable("GITHUB_ACTIONS")))
+    var explicitVersion = EnvironmentVariable("GTKSHARP_VERSION");
+    if (!string.IsNullOrEmpty(explicitVersion))
     {
-        Settings.Version = "3.24.24." + EnvironmentVariable("GITHUB_RUN_NUMBER");
+        // A stable release: the workflow or the maintainer pins the exact version.
+        Settings.Version = explicitVersion;
+    }
+    else if (!string.IsNullOrEmpty(EnvironmentVariable("GITHUB_ACTIONS")))
+    {
+        var gitRef = EnvironmentVariable("GITHUB_REF") ?? string.Empty;
 
-        if (EnvironmentVariable("GITHUB_REF") != "refs/heads/master")
-            Settings.Version += "-develop";
+        if (gitRef.StartsWith("refs/tags/v"))
+        {
+            // Tag v3.24.24.200 produces the stable package version 3.24.24.200.
+            Settings.Version = gitRef.Substring("refs/tags/v".Length);
+        }
+        else
+        {
+            Settings.Version = "3.24.24." + EnvironmentVariable("GITHUB_RUN_NUMBER");
+
+            if (gitRef != "refs/heads/master")
+                Settings.Version += "-develop";
+        }
     }
 
     Console.WriteLine("Version: " + Settings.Version);

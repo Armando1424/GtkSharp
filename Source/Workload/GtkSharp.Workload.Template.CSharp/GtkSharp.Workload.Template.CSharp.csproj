@@ -21,8 +21,7 @@
 
   <Target Name="_ReplaceJsonText"
       BeforeTargets="Build;AssignTargetPaths"
-      Inputs="$(MSBuildProjectFile);content\GtkSharp.Application.CSharp\.template.config\template.in.json"
-      Outputs="$(IntermediateOutputPath)template.json">
+      >
     
     <ReplaceText
         Input="content\GtkSharp.Application.CSharp\.template.config\template.in.json"

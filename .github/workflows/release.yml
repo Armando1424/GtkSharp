@@ -1,0 +1,64 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Stable version to publish (e.g. 3.24.24.200)'
+        required: true
+        type: string
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    name: Build and publish stable packages
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Resolve version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            VERSION="${{ inputs.version }}"
+          else
+            VERSION="${GITHUB_REF_NAME#v}"
+          fi
+
+          if ! echo "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$'; then
+            echo "Invalid version '$VERSION'. Expected something like 3.24.24.200." >&2
+            exit 1
+          fi
+
+          echo "GTKSHARP_VERSION=$VERSION" >> "$GITHUB_ENV"
+          echo "Publishing GtkSharp $VERSION"
+
+      - name: Restore tools
+        run: dotnet tool restore
+
+      - name: Build and package
+        run: dotnet cake build.cake
+
+      - name: Push packages to GitHub Packages
+        run: |
+          dotnet nuget push "BuildOutput/NugetPackages/**/*.nupkg" \
+            --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" \
+            --api-key "${{ secrets.GITHUB_TOKEN }}" \
+            --skip-duplicate
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Stable NuGet Packages
+          path: BuildOutput/NugetPackages/**/*.nupkg
+          if-no-files-found: error

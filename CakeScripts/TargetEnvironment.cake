@@ -61,6 +61,21 @@ class TargetEnvironment
         DotNetTemplatePacksPath = P.Combine(DotNetInstallPath, "template-packs");
     }
 
+    public static void RunDotNet(string arguments)
+    {
+        var proc = Pr.Start(new PSI()
+        {
+            FileName = DotNetCliPath,
+            Arguments = arguments,
+            UseShellExecute = false
+        });
+
+        proc.WaitForExit();
+
+        if (proc.ExitCode != 0)
+            throw new Exception($"dotnet {arguments} exited with code {proc.ExitCode}");
+    }
+
     public static void RegisterInstalledWorkload(string workloadName)
     {
         D.CreateDirectory(DotNetInstalledWorkloadsMetadataPath);
@@ -198,6 +213,11 @@ class TargetEnvironment
         D.CreateDirectory(DotNetTemplatePacksPath);
         var targetPath = P.Combine(DotNetTemplatePacksPath, packName);
         F.Copy(packPath, targetPath, true);
+
+        // Copying the pack into template-packs is not enough: the SDK only
+        // discovers its bundled templates on first run. Register the pack so
+        // `dotnet new` can use it.
+        RunDotNet($"new install \"{targetPath}\"");
     }
 
     public static void UninstallTemplatePack(string packName)
@@ -206,6 +226,18 @@ class TargetEnvironment
         if (F.Exists(targetPath))
         {
             F.Delete(targetPath);
+        }
+
+        var match = System.Text.RegularExpressions.Regex.Match(packName, @"^(.+?)\.\d+\.\d+\.\d+");
+        var packageId = match.Success ? match.Groups[1].Value : packName.Replace(".nupkg", string.Empty);
+
+        try
+        {
+            RunDotNet($"new uninstall \"{packageId}\"");
+        }
+        catch (Exception)
+        {
+            // The template may not be registered; deleting the file is enough.
         }
     }
 }
