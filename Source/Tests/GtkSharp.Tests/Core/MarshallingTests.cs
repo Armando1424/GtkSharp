@@ -10,6 +10,7 @@ namespace GtkSharp.Tests.Core;
 /// conversion) that break consumers even when the public API is unchanged.
 /// </summary>
 [Collection(GtkCollection.Name)]
+[Trait("Category", "UI")]
 public sealed class MarshallingTests
 {
     [GtkFact]

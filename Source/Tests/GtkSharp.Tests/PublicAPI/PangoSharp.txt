@@ -1,0 +1,1092 @@
+T:Pango.Alignment
+F:Pango.Alignment Pango.Alignment.Center
+F:Pango.Alignment Pango.Alignment.Left
+F:Pango.Alignment Pango.Alignment.Right
+F:System.Int32 Pango.Alignment.value__
+T:Pango.Analysis
+M:Pango.Analysis Pango.Analysis.New(System.IntPtr)
+M:System.Boolean Pango.Analysis.Equals(Pango.Analysis)
+M:System.Boolean Pango.Analysis.Equals(System.Object)
+M:System.Int32 Pango.Analysis.GetHashCode()
+P:Pango.Attribute[] Pango.Analysis.ExtraAttrs
+P:Pango.Font Pango.Analysis.Font
+P:Pango.EngineLang Pango.Analysis.LangEngine
+P:Pango.Language Pango.Analysis.Language
+P:Pango.EngineShape Pango.Analysis.ShapeEngine
+P:Pango.Font Pango.Analysis.font
+P:Pango.EngineLang Pango.Analysis.lang_engine
+P:Pango.Language Pango.Analysis.language
+P:Pango.EngineShape Pango.Analysis.shape_engine
+F:System.Byte Pango.Analysis.Flags
+F:System.Byte Pango.Analysis.Gravity
+F:System.Byte Pango.Analysis.Level
+F:System.Byte Pango.Analysis.Script
+F:Pango.Analysis Pango.Analysis.Zero
+T:Pango.AttrBackground
+C:Pango.AttrBackground..ctor(Pango.Color)
+C:Pango.AttrBackground..ctor(System.UInt16,System.UInt16,System.UInt16)
+P:Pango.Color Pango.AttrBackground.Color
+T:Pango.AttrDataCopyFunc
+C:Pango.AttrDataCopyFunc..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Pango.AttrDataCopyFunc.BeginInvoke(System.AsyncCallback,System.Object)
+M:System.IntPtr Pango.AttrDataCopyFunc.EndInvoke(System.IAsyncResult)
+M:System.IntPtr Pango.AttrDataCopyFunc.Invoke()
+T:Pango.AttrFallback
+C:Pango.AttrFallback..ctor(System.Boolean)
+P:System.Boolean Pango.AttrFallback.Fallback
+T:Pango.AttrFamily
+C:Pango.AttrFamily..ctor(System.String)
+P:System.String Pango.AttrFamily.Family
+T:Pango.AttrFilterFunc
+C:Pango.AttrFilterFunc..ctor(System.Object,System.IntPtr)
+M:System.Boolean Pango.AttrFilterFunc.EndInvoke(System.IAsyncResult)
+M:System.Boolean Pango.AttrFilterFunc.Invoke(Pango.Attribute)
+M:System.IAsyncResult Pango.AttrFilterFunc.BeginInvoke(Pango.Attribute,System.AsyncCallback,System.Object)
+T:Pango.AttrFontDesc
+C:Pango.AttrFontDesc..ctor(Pango.FontDescription)
+P:Pango.FontDescription Pango.AttrFontDesc.Desc
+T:Pango.AttrFontFeatures
+C:Pango.AttrFontFeatures..ctor(System.IntPtr)
+C:Pango.AttrFontFeatures..ctor(System.String)
+P:Pango.Attribute Pango.AttrFontFeatures.Attr
+P:System.String Pango.AttrFontFeatures.Features
+P:GLib.AbiStruct Pango.AttrFontFeatures.abi_info
+T:Pango.AttrFontFeatures+PangoAttrFontFeatures_attrAlign
+T:Pango.AttrForeground
+C:Pango.AttrForeground..ctor(Pango.Color)
+C:Pango.AttrForeground..ctor(System.UInt16,System.UInt16,System.UInt16)
+P:Pango.Color Pango.AttrForeground.Color
+T:Pango.AttrGravity
+C:Pango.AttrGravity..ctor(Pango.Gravity)
+P:Pango.Gravity Pango.AttrGravity.Gravity
+T:Pango.AttrGravityHint
+C:Pango.AttrGravityHint..ctor(Pango.GravityHint)
+P:Pango.GravityHint Pango.AttrGravityHint.GravityHint
+T:Pango.AttrIterator
+C:Pango.AttrIterator..ctor(System.IntPtr)
+M:Pango.AttrIterator Pango.AttrIterator.Copy()
+M:Pango.Attribute Pango.AttrIterator.Get(Pango.AttrType)
+M:System.Boolean Pango.AttrIterator.Next()
+M:System.Void Pango.AttrIterator.Destroy()
+M:System.Void Pango.AttrIterator.GetFont(Pango.FontDescription&,Pango.Language&,Pango.Attribute[]&)
+M:System.Void Pango.AttrIterator.Range(System.Int32&,System.Int32&)
+P:Pango.Attribute[] Pango.AttrIterator.Attrs
+P:GLib.AbiStruct Pango.AttrIterator.abi_info
+T:Pango.AttrLanguage
+C:Pango.AttrLanguage..ctor(Pango.Language)
+P:Pango.Language Pango.AttrLanguage.Language
+T:Pango.AttrLetterSpacing
+C:Pango.AttrLetterSpacing..ctor(System.Int32)
+P:System.Int32 Pango.AttrLetterSpacing.LetterSpacing
+T:Pango.AttrList
+C:Pango.AttrList..ctor()
+C:Pango.AttrList..ctor(System.IntPtr)
+M:Pango.AttrList Pango.AttrList.Copy()
+M:Pango.AttrList Pango.AttrList.Filter(Pango.AttrFilterFunc)
+M:Pango.AttrList Pango.AttrList.Ref()
+M:System.Void Pango.AttrList.Change(Pango.Attribute)
+M:System.Void Pango.AttrList.Insert(Pango.Attribute)
+M:System.Void Pango.AttrList.InsertBefore(Pango.Attribute)
+M:System.Void Pango.AttrList.Splice(Pango.AttrList,System.Int32,System.Int32)
+M:System.Void Pango.AttrList.Unref()
+P:GLib.GType Pango.AttrList.GType
+P:Pango.AttrIterator Pango.AttrList.Iterator
+P:GLib.AbiStruct Pango.AttrList.abi_info
+T:Pango.AttrRise
+C:Pango.AttrRise..ctor(System.Int32)
+P:System.Int32 Pango.AttrRise.Rise
+T:Pango.AttrScale
+C:Pango.AttrScale..ctor(System.Double)
+P:System.Double Pango.AttrScale.Scale
+T:Pango.AttrShape
+C:Pango.AttrShape..ctor(Pango.Rectangle,Pango.Rectangle)
+P:Pango.Rectangle Pango.AttrShape.InkRect
+P:Pango.Rectangle Pango.AttrShape.LogicalRect
+T:Pango.AttrSize
+C:Pango.AttrSize..ctor(System.Int32)
+C:Pango.AttrSize..ctor(System.Int32,System.Boolean)
+P:System.Boolean Pango.AttrSize.Absolute
+P:System.Int32 Pango.AttrSize.Size
+T:Pango.AttrStretch
+C:Pango.AttrStretch..ctor(Pango.Stretch)
+P:Pango.Stretch Pango.AttrStretch.Stretch
+T:Pango.AttrStrikethrough
+C:Pango.AttrStrikethrough..ctor(System.Boolean)
+P:System.Boolean Pango.AttrStrikethrough.Strikethrough
+T:Pango.AttrStrikethroughColor
+C:Pango.AttrStrikethroughColor..ctor(Pango.Color)
+C:Pango.AttrStrikethroughColor..ctor(System.UInt16,System.UInt16,System.UInt16)
+P:Pango.Color Pango.AttrStrikethroughColor.Color
+T:Pango.AttrStyle
+C:Pango.AttrStyle..ctor(Pango.Style)
+P:Pango.Style Pango.AttrStyle.Style
+T:Pango.AttrType
+F:Pango.AttrType Pango.AttrType.AbsoluteSize
+F:Pango.AttrType Pango.AttrType.Background
+F:Pango.AttrType Pango.AttrType.BackgroundAlpha
+F:Pango.AttrType Pango.AttrType.Fallback
+F:Pango.AttrType Pango.AttrType.Family
+F:Pango.AttrType Pango.AttrType.FontDesc
+F:Pango.AttrType Pango.AttrType.FontFeatures
+F:Pango.AttrType Pango.AttrType.Foreground
+F:Pango.AttrType Pango.AttrType.ForegroundAlpha
+F:Pango.AttrType Pango.AttrType.Gravity
+F:Pango.AttrType Pango.AttrType.GravityHint
+F:Pango.AttrType Pango.AttrType.Invalid
+F:Pango.AttrType Pango.AttrType.Language
+F:Pango.AttrType Pango.AttrType.LetterSpacing
+F:Pango.AttrType Pango.AttrType.Rise
+F:Pango.AttrType Pango.AttrType.Scale
+F:Pango.AttrType Pango.AttrType.Shape
+F:Pango.AttrType Pango.AttrType.Size
+F:Pango.AttrType Pango.AttrType.Stretch
+F:Pango.AttrType Pango.AttrType.Strikethrough
+F:Pango.AttrType Pango.AttrType.StrikethroughColor
+F:Pango.AttrType Pango.AttrType.Style
+F:Pango.AttrType Pango.AttrType.Underline
+F:Pango.AttrType Pango.AttrType.UnderlineColor
+F:Pango.AttrType Pango.AttrType.Variant
+F:Pango.AttrType Pango.AttrType.Weight
+F:System.Int32 Pango.AttrType.value__
+T:Pango.AttrUnderline
+C:Pango.AttrUnderline..ctor(Pango.Underline)
+P:Pango.Underline Pango.AttrUnderline.Underline
+T:Pango.AttrUnderlineColor
+C:Pango.AttrUnderlineColor..ctor(Pango.Color)
+C:Pango.AttrUnderlineColor..ctor(System.UInt16,System.UInt16,System.UInt16)
+P:Pango.Color Pango.AttrUnderlineColor.Color
+T:Pango.AttrVariant
+C:Pango.AttrVariant..ctor(Pango.Variant)
+P:Pango.Variant Pango.AttrVariant.Variant
+T:Pango.AttrWeight
+C:Pango.AttrWeight..ctor(Pango.Weight)
+P:Pango.Weight Pango.AttrWeight.Weight
+T:Pango.Attribute
+M:Pango.Attribute Pango.Attribute.Copy()
+M:Pango.Attribute Pango.Attribute.GetAttribute(System.IntPtr)
+M:System.Boolean Pango.Attribute.Equal(Pango.Attribute)
+M:System.Void Pango.Attribute.Dispose()
+P:System.UInt32 Pango.Attribute.EndIndex
+P:GLib.GType Pango.Attribute.GType
+P:System.IntPtr Pango.Attribute.Handle
+P:System.UInt32 Pango.Attribute.StartIndex
+P:Pango.AttrType Pango.Attribute.Type
+T:Pango.BidiType
+F:Pango.BidiType Pango.BidiType.Al
+F:Pango.BidiType Pango.BidiType.An
+F:Pango.BidiType Pango.BidiType.B
+F:Pango.BidiType Pango.BidiType.Bn
+F:Pango.BidiType Pango.BidiType.Cs
+F:Pango.BidiType Pango.BidiType.En
+F:Pango.BidiType Pango.BidiType.Es
+F:Pango.BidiType Pango.BidiType.Et
+F:Pango.BidiType Pango.BidiType.L
+F:Pango.BidiType Pango.BidiType.Lre
+F:Pango.BidiType Pango.BidiType.Lro
+F:Pango.BidiType Pango.BidiType.Nsm
+F:Pango.BidiType Pango.BidiType.On
+F:Pango.BidiType Pango.BidiType.Pdf
+F:Pango.BidiType Pango.BidiType.R
+F:Pango.BidiType Pango.BidiType.Rle
+F:Pango.BidiType Pango.BidiType.Rlo
+F:Pango.BidiType Pango.BidiType.S
+F:Pango.BidiType Pango.BidiType.Ws
+F:System.Int32 Pango.BidiType.value__
+T:Pango.BlockInfo
+C:Pango.BlockInfo..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.BlockInfo.abi_info
+T:Pango.CacheEntry
+C:Pango.CacheEntry..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CacheEntry.abi_info
+T:Pango.CairoContextInfo
+C:Pango.CairoContextInfo..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CairoContextInfo.abi_info
+T:Pango.CairoFcFont
+C:Pango.CairoFcFont..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CairoFcFont.abi_info
+T:Pango.CairoFcFontClass
+C:Pango.CairoFcFontClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CairoFcFontClass.abi_info
+T:Pango.CairoFcFontMapClass
+C:Pango.CairoFcFontMapClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CairoFcFontMapClass.abi_info
+T:Pango.CairoHelper
+C:Pango.CairoHelper..ctor()
+M:Pango.CairoShapeRendererFunc Pango.CairoHelper.ContextGetShapeRenderer(Pango.Context,System.IntPtr)
+M:Pango.Context Pango.CairoHelper.CreateContext(Cairo.Context)
+M:Pango.Layout Pango.CairoHelper.CreateLayout(Cairo.Context)
+M:System.Double Pango.CairoHelper.ContextGetResolution(Pango.Context)
+M:System.Void Pango.CairoHelper.ContextSetResolution(Pango.Context,System.Double)
+M:System.Void Pango.CairoHelper.ContextSetShapeRenderer(Pango.Context,Pango.CairoShapeRendererFunc)
+M:System.Void Pango.CairoHelper.ErrorUnderlinePath(Cairo.Context,System.Double,System.Double,System.Double,System.Double)
+M:System.Void Pango.CairoHelper.GlyphStringPath(Cairo.Context,Pango.Font,Pango.GlyphString)
+M:System.Void Pango.CairoHelper.LayoutLinePath(Cairo.Context,Pango.LayoutLine)
+M:System.Void Pango.CairoHelper.LayoutPath(Cairo.Context,Pango.Layout)
+M:System.Void Pango.CairoHelper.ShowErrorUnderline(Cairo.Context,System.Double,System.Double,System.Double,System.Double)
+M:System.Void Pango.CairoHelper.ShowGlyphItem(Cairo.Context,System.String,Pango.GlyphItem)
+M:System.Void Pango.CairoHelper.ShowGlyphString(Cairo.Context,Pango.Font,Pango.GlyphString)
+M:System.Void Pango.CairoHelper.ShowLayout(Cairo.Context,Pango.Layout)
+M:System.Void Pango.CairoHelper.ShowLayoutLine(Cairo.Context,Pango.LayoutLine)
+M:System.Void Pango.CairoHelper.UpdateContext(Cairo.Context,Pango.Context)
+M:System.Void Pango.CairoHelper.UpdateLayout(Cairo.Context,Pango.Layout)
+T:Pango.CairoRendererClass
+C:Pango.CairoRendererClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CairoRendererClass.abi_info
+T:Pango.CairoShapeRendererFunc
+C:Pango.CairoShapeRendererFunc..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Pango.CairoShapeRendererFunc.BeginInvoke(Cairo.Context,Pango.Attribute,System.Boolean,System.AsyncCallback,System.Object)
+M:System.Void Pango.CairoShapeRendererFunc.EndInvoke(System.IAsyncResult)
+M:System.Void Pango.CairoShapeRendererFunc.Invoke(Cairo.Context,Pango.Attribute,System.Boolean)
+T:Pango.CairoWin32Font
+C:Pango.CairoWin32Font..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CairoWin32Font.abi_info
+T:Pango.CairoWin32FontClass
+C:Pango.CairoWin32FontClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CairoWin32FontClass.abi_info
+T:Pango.CairoWin32FontMapClass
+C:Pango.CairoWin32FontMapClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CairoWin32FontMapClass.abi_info
+T:Pango.Color
+M:Pango.Color Pango.Color.Copy()
+M:Pango.Color Pango.Color.New(System.IntPtr)
+M:System.Boolean Pango.Color.Equals(Pango.Color)
+M:System.Boolean Pango.Color.Equals(System.Object)
+M:System.Boolean Pango.Color.Parse(System.String)
+M:System.Int32 Pango.Color.GetHashCode()
+M:System.String Pango.Color.ToString()
+P:GLib.GType Pango.Color.GType
+F:System.UInt16 Pango.Color.Blue
+F:System.UInt16 Pango.Color.Green
+F:System.UInt16 Pango.Color.Red
+F:Pango.Color Pango.Color.Zero
+T:Pango.Context
+C:Pango.Context..ctor()
+C:Pango.Context..ctor(System.IntPtr)
+M:Pango.Font Pango.Context.LoadFont(Pango.FontDescription)
+M:Pango.FontMetrics Pango.Context.GetMetrics(Pango.FontDescription,Pango.Language)
+M:Pango.Fontset Pango.Context.LoadFontset(Pango.FontDescription,Pango.Language)
+M:System.Int32 Pango.Context.ListFamilies(Pango.FontFamily)
+M:System.Void Pango.Context.Changed()
+P:Pango.Direction Pango.Context.BaseDir
+P:Pango.Gravity Pango.Context.BaseGravity
+P:Pango.FontFamily[] Pango.Context.Families
+P:Pango.FontDescription Pango.Context.FontDescription
+P:Pango.FontMap Pango.Context.FontMap
+P:GLib.GType Pango.Context.GType
+P:Pango.Gravity Pango.Context.Gravity
+P:Pango.GravityHint Pango.Context.GravityHint
+P:Pango.Language Pango.Context.Language
+P:Pango.Matrix Pango.Context.Matrix
+P:System.UInt32 Pango.Context.Serial
+P:GLib.AbiStruct Pango.Context.abi_info
+P:GLib.AbiStruct Pango.Context.class_abi
+T:Pango.CoreTextFace
+C:Pango.CoreTextFace..ctor(System.IntPtr)
+T:Pango.CoreTextFaceClass
+C:Pango.CoreTextFaceClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CoreTextFaceClass.abi_info
+T:Pango.CoreTextFamily
+C:Pango.CoreTextFamily..ctor(System.IntPtr)
+T:Pango.CoreTextFamilyClass
+C:Pango.CoreTextFamilyClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CoreTextFamilyClass.abi_info
+T:Pango.CoreTextFont
+C:Pango.CoreTextFont..ctor(System.IntPtr)
+P:GLib.GType Pango.CoreTextFont.GType
+T:Pango.CoreTextFontKey
+C:Pango.CoreTextFontKey..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CoreTextFontKey.abi_info
+T:Pango.CoreTextFontMap
+C:Pango.CoreTextFontMap..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CoreTextFontMap.abi_info
+T:Pango.CoreTextFontMapClass
+C:Pango.CoreTextFontMapClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CoreTextFontMapClass.abi_info
+T:Pango.CoreTextFontset
+C:Pango.CoreTextFontset..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CoreTextFontset.abi_info
+T:Pango.CoreTextFontsetClass
+C:Pango.CoreTextFontsetClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CoreTextFontsetClass.abi_info
+T:Pango.CoreTextFontsetKey
+C:Pango.CoreTextFontsetKey..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.CoreTextFontsetKey.abi_info
+T:Pango.Coverage
+C:Pango.Coverage..ctor()
+C:Pango.Coverage..ctor(System.IntPtr)
+M:Pango.Coverage Pango.Coverage.Copy()
+M:Pango.Coverage Pango.Coverage.FromBytes(System.Byte&,System.Int32)
+M:Pango.Coverage Pango.Coverage.Ref()
+M:Pango.CoverageLevel Pango.Coverage.Get(System.Int32)
+M:System.Void Pango.Coverage.Max(Pango.Coverage)
+M:System.Void Pango.Coverage.Set(System.Int32,Pango.CoverageLevel)
+M:System.Void Pango.Coverage.ToBytes(System.Byte[]&)
+M:System.Void Pango.Coverage.Unref()
+P:GLib.AbiStruct Pango.Coverage.abi_info
+T:Pango.CoverageLevel
+F:Pango.CoverageLevel Pango.CoverageLevel.Approximate
+F:Pango.CoverageLevel Pango.CoverageLevel.Exact
+F:Pango.CoverageLevel Pango.CoverageLevel.Fallback
+F:Pango.CoverageLevel Pango.CoverageLevel.None
+F:System.Int32 Pango.CoverageLevel.value__
+T:Pango.Direction
+F:Pango.Direction Pango.Direction.Ltr
+F:Pango.Direction Pango.Direction.Neutral
+F:Pango.Direction Pango.Direction.Rtl
+F:Pango.Direction Pango.Direction.TtbLtr
+F:Pango.Direction Pango.Direction.TtbRtl
+F:Pango.Direction Pango.Direction.WeakLtr
+F:Pango.Direction Pango.Direction.WeakRtl
+F:System.Int32 Pango.Direction.value__
+T:Pango.EllipsizeMode
+F:Pango.EllipsizeMode Pango.EllipsizeMode.End
+F:Pango.EllipsizeMode Pango.EllipsizeMode.Middle
+F:Pango.EllipsizeMode Pango.EllipsizeMode.None
+F:Pango.EllipsizeMode Pango.EllipsizeMode.Start
+F:System.Int32 Pango.EllipsizeMode.value__
+T:Pango.EllipsizeState
+C:Pango.EllipsizeState..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.EllipsizeState.abi_info
+T:Pango.EngineLang
+C:Pango.EngineLang..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.EngineLang.abi_info
+T:Pango.EngineShape
+C:Pango.EngineShape..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.EngineShape.abi_info
+T:Pango.Extents
+C:Pango.Extents..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.Extents.abi_info
+T:Pango.FT2Family
+C:Pango.FT2Family..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.FT2Family.abi_info
+T:Pango.FT2Font
+C:Pango.FT2Font..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.FT2Font.abi_info
+T:Pango.FT2FontClass
+C:Pango.FT2FontClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.FT2FontClass.abi_info
+T:Pango.FT2GlyphInfo
+C:Pango.FT2GlyphInfo..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.FT2GlyphInfo.abi_info
+T:Pango.FT2Renderer
+C:Pango.FT2Renderer..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.FT2Renderer.abi_info
+T:Pango.FT2RendererClass
+C:Pango.FT2RendererClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.FT2RendererClass.abi_info
+T:Pango.Font
+C:Pango.Font..ctor(System.IntPtr)
+M:Pango.Coverage Pango.Font.GetCoverage(Pango.Language)
+M:Pango.EngineShape Pango.Font.FindShaper(Pango.Language,System.UInt32)
+M:Pango.FontDescription Pango.Font.Describe()
+M:Pango.FontDescription Pango.Font.DescribeWithAbsoluteSize()
+M:Pango.FontMetrics Pango.Font.GetMetrics(Pango.Language)
+M:System.Void Pango.Font.GetGlyphExtents(System.UInt32,Pango.Rectangle,Pango.Rectangle)
+P:Pango.FontMap Pango.Font.FontMap
+P:GLib.GType Pango.Font.GType
+T:Pango.FontDescription
+C:Pango.FontDescription..ctor()
+C:Pango.FontDescription..ctor(System.IntPtr)
+M:Pango.FontDescription Pango.FontDescription.Copy()
+M:Pango.FontDescription Pango.FontDescription.CopyStatic()
+M:Pango.FontDescription Pango.FontDescription.FromString(System.String)
+M:System.Boolean Pango.FontDescription.BetterMatch(Pango.FontDescription,Pango.FontDescription)
+M:System.Boolean Pango.FontDescription.Equal(Pango.FontDescription)
+M:System.String Pango.FontDescription.ToFilename()
+M:System.String Pango.FontDescription.ToString()
+M:System.Void Pango.FontDescription.Free()
+M:System.Void Pango.FontDescription.Merge(Pango.FontDescription,System.Boolean)
+M:System.Void Pango.FontDescription.MergeStatic(Pango.FontDescription,System.Boolean)
+M:System.Void Pango.FontDescription.UnsetFields(Pango.FontMask)
+P:System.Double Pango.FontDescription.AbsoluteSize
+P:System.String Pango.FontDescription.Family
+P:System.String Pango.FontDescription.FamilyStatic
+P:GLib.GType Pango.FontDescription.GType
+P:Pango.Gravity Pango.FontDescription.Gravity
+P:System.UInt32 Pango.FontDescription.Hash
+P:Pango.FontMask Pango.FontDescription.SetFields
+P:System.Int32 Pango.FontDescription.Size
+P:System.Boolean Pango.FontDescription.SizeIsAbsolute
+P:Pango.Stretch Pango.FontDescription.Stretch
+P:Pango.Style Pango.FontDescription.Style
+P:Pango.Variant Pango.FontDescription.Variant
+P:Pango.Weight Pango.FontDescription.Weight
+P:GLib.AbiStruct Pango.FontDescription.abi_info
+T:Pango.FontFace
+C:Pango.FontFace..ctor(System.IntPtr)
+M:Pango.FontDescription Pango.FontFace.Describe()
+M:System.Void Pango.FontFace.ListSizes(System.Int32&,System.Int32&)
+P:System.String Pango.FontFace.FaceName
+P:GLib.GType Pango.FontFace.GType
+P:System.Boolean Pango.FontFace.IsSynthesized
+T:Pango.FontFamily
+C:Pango.FontFamily..ctor(System.IntPtr)
+M:System.Int32 Pango.FontFamily.ListFaces(Pango.FontFace)
+P:Pango.FontFace[] Pango.FontFamily.Faces
+P:GLib.GType Pango.FontFamily.GType
+P:System.Boolean Pango.FontFamily.IsMonospace
+P:System.String Pango.FontFamily.Name
+T:Pango.FontHashKey
+C:Pango.FontHashKey..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.FontHashKey.abi_info
+T:Pango.FontMap
+C:Pango.FontMap..ctor(System.IntPtr)
+M:Pango.Context Pango.FontMap.CreateContext()
+M:Pango.Font Pango.FontMap.LoadFont(Pango.Context,Pango.FontDescription)
+M:Pango.Fontset Pango.FontMap.LoadFontset(Pango.Context,Pango.FontDescription,Pango.Language)
+M:System.Int32 Pango.FontMap.ListFamilies(Pango.FontFamily)
+M:System.Void Pango.FontMap.Changed()
+P:Pango.FontFamily[] Pango.FontMap.Families
+P:GLib.GType Pango.FontMap.GType
+P:System.UInt32 Pango.FontMap.Serial
+T:Pango.FontMask
+F:Pango.FontMask Pango.FontMask.Family
+F:Pango.FontMask Pango.FontMask.Gravity
+F:Pango.FontMask Pango.FontMask.Size
+F:Pango.FontMask Pango.FontMask.Stretch
+F:Pango.FontMask Pango.FontMask.Style
+F:Pango.FontMask Pango.FontMask.Variant
+F:Pango.FontMask Pango.FontMask.Weight
+F:System.Int32 Pango.FontMask.value__
+T:Pango.FontMetrics
+C:Pango.FontMetrics..ctor(System.IntPtr)
+M:Pango.FontMetrics Pango.FontMetrics.Ref()
+M:System.Void Pango.FontMetrics.Unref()
+P:System.Int32 Pango.FontMetrics.ApproximateCharWidth
+P:System.Int32 Pango.FontMetrics.ApproximateDigitWidth
+P:System.Int32 Pango.FontMetrics.Ascent
+P:System.Int32 Pango.FontMetrics.Descent
+P:GLib.GType Pango.FontMetrics.GType
+P:System.Int32 Pango.FontMetrics.StrikethroughPosition
+P:System.Int32 Pango.FontMetrics.StrikethroughThickness
+P:System.Int32 Pango.FontMetrics.UnderlinePosition
+P:System.Int32 Pango.FontMetrics.UnderlineThickness
+P:GLib.AbiStruct Pango.FontMetrics.abi_info
+T:Pango.Fontset
+C:Pango.Fontset..ctor(System.IntPtr)
+M:Pango.Font Pango.Fontset.GetFont(System.UInt32)
+M:System.Void Pango.Fontset.Foreach(Pango.FontsetForeachFunc)
+P:GLib.GType Pango.Fontset.GType
+P:Pango.FontMetrics Pango.Fontset.Metrics
+T:Pango.FontsetForeachFunc
+C:Pango.FontsetForeachFunc..ctor(System.Object,System.IntPtr)
+M:System.Boolean Pango.FontsetForeachFunc.EndInvoke(System.IAsyncResult)
+M:System.Boolean Pango.FontsetForeachFunc.Invoke(Pango.Fontset,Pango.Font)
+M:System.IAsyncResult Pango.FontsetForeachFunc.BeginInvoke(Pango.Fontset,Pango.Font,System.AsyncCallback,System.Object)
+T:Pango.Global
+C:Pango.Global..ctor()
+M:Pango.BidiType Pango.Global.BidiTypeForUnichar(System.Char)
+M:Pango.Direction Pango.Global.FindBaseDir(System.String)
+M:Pango.Direction Pango.Global.UnicharDirection(System.Char)
+M:Pango.Gravity Pango.Global.GravityGetForMatrix(Pango.Matrix)
+M:Pango.Gravity Pango.Global.GravityGetForScript(Pango.Script,Pango.Gravity,Pango.GravityHint)
+M:Pango.Gravity Pango.Global.GravityGetForScriptAndWidth(Pango.Script,System.Boolean,Pango.Gravity,Pango.GravityHint)
+M:Pango.Item[] Pango.Global.ItemizeWithBaseDir(Pango.Context,Pango.Direction,System.String,System.Int32,System.Int32,Pango.AttrList,Pango.AttrIterator)
+M:Pango.Language Pango.Global.ScriptGetSampleLanguage(Pango.Script)
+M:Pango.Script Pango.Global.ScriptForUnichar(System.Char)
+M:System.Boolean Pango.Global.IsZeroWidth(System.Char)
+M:System.Boolean Pango.Global.ParseEnum(GLib.GType,System.String,System.Int32&,System.Boolean,System.String)
+M:System.Boolean Pango.Global.ParseMarkup(System.String,System.Char,Pango.AttrList&,System.String&,System.Char&)
+M:System.Boolean Pango.Global.ParseStretch(System.String,Pango.Stretch&,System.Boolean)
+M:System.Boolean Pango.Global.ParseStyle(System.String,Pango.Style&,System.Boolean)
+M:System.Boolean Pango.Global.ParseVariant(System.String,Pango.Variant&,System.Boolean)
+M:System.Boolean Pango.Global.ParseWeight(System.String,Pango.Weight&,System.Boolean)
+M:System.Boolean Pango.Global.ScanInt(System.String&,System.Int32&)
+M:System.Boolean Pango.Global.ScanInt(System.String,System.Int32&)
+M:System.Boolean Pango.Global.SkipSpace(System.String&)
+M:System.Double Pango.Global.GravityToRotation(Pango.Gravity)
+M:System.String Pango.Global.SplitFileList(System.String)
+M:System.String Pango.Global.TrimString(System.String)
+M:System.String Pango.Global.VersionCheck(System.Int32,System.Int32,System.Int32)
+M:System.String Pango.Global.VersionString()
+M:System.Void Pango.Global.ExtentsToPixels(Pango.Rectangle&,Pango.Rectangle&)
+M:System.Void Pango.Global.FindParagraphBoundary(System.String,System.Int32&,System.Int32&)
+M:System.Void Pango.Global.GetLogAttrs(System.String,System.Int32,Pango.Language,Pango.LogAttr,System.Int32)
+M:System.Void Pango.Global.QuantizeLineGeometry(System.Int32&,System.Int32&)
+M:System.Void Pango.Global.ShapeFull(System.String,System.String,Pango.Analysis,Pango.GlyphString)
+P:System.Boolean Pango.Global.IsSupported
+T:Pango.GlyphGeometry
+M:Pango.GlyphGeometry Pango.GlyphGeometry.New(System.IntPtr)
+M:System.Boolean Pango.GlyphGeometry.Equals(Pango.GlyphGeometry)
+M:System.Boolean Pango.GlyphGeometry.Equals(System.Object)
+M:System.Int32 Pango.GlyphGeometry.GetHashCode()
+F:System.Int32 Pango.GlyphGeometry.Width
+F:System.Int32 Pango.GlyphGeometry.XOffset
+F:System.Int32 Pango.GlyphGeometry.YOffset
+F:Pango.GlyphGeometry Pango.GlyphGeometry.Zero
+T:Pango.GlyphInfo
+M:Pango.GlyphInfo Pango.GlyphInfo.New(System.IntPtr)
+M:System.Boolean Pango.GlyphInfo.Equals(Pango.GlyphInfo)
+M:System.Boolean Pango.GlyphInfo.Equals(System.Object)
+M:System.Int32 Pango.GlyphInfo.GetHashCode()
+F:Pango.GlyphVisAttr Pango.GlyphInfo.Attr
+F:Pango.GlyphGeometry Pango.GlyphInfo.Geometry
+F:System.UInt32 Pango.GlyphInfo.Glyph
+F:Pango.GlyphInfo Pango.GlyphInfo.Zero
+T:Pango.GlyphItem
+M:Pango.GlyphItem Pango.GlyphItem.Free()
+M:Pango.GlyphItem Pango.GlyphItem.New(System.IntPtr)
+M:Pango.GlyphItem Pango.GlyphItem.Split(System.String,System.Int32)
+M:Pango.GlyphItem[] Pango.GlyphItem.ApplyAttrs(System.String,Pango.AttrList)
+M:System.Boolean Pango.GlyphItem.Equals(Pango.GlyphItem)
+M:System.Boolean Pango.GlyphItem.Equals(System.Object)
+M:System.Int32 Pango.GlyphItem.GetHashCode()
+M:System.Int32 Pango.GlyphItem.GetLogicalWidths(System.String)
+M:System.Void Pango.GlyphItem.LetterSpace(System.String,Pango.LogAttr,System.Int32)
+P:GLib.GType Pango.GlyphItem.GType
+P:Pango.GlyphString Pango.GlyphItem.Glyphs
+P:Pango.Item Pango.GlyphItem.Item
+P:Pango.GlyphString Pango.GlyphItem.glyphs
+P:Pango.Item Pango.GlyphItem.item
+F:Pango.GlyphItem Pango.GlyphItem.Zero
+T:Pango.GlyphItemIter
+M:Pango.GlyphItemIter Pango.GlyphItemIter.New(System.IntPtr)
+M:System.Boolean Pango.GlyphItemIter.Equals(Pango.GlyphItemIter)
+M:System.Boolean Pango.GlyphItemIter.Equals(System.Object)
+M:System.Boolean Pango.GlyphItemIter.InitEnd(Pango.GlyphItem,System.String)
+M:System.Boolean Pango.GlyphItemIter.InitStart(Pango.GlyphItem,System.String)
+M:System.Boolean Pango.GlyphItemIter.NextCluster()
+M:System.Boolean Pango.GlyphItemIter.PrevCluster()
+M:System.Int32 Pango.GlyphItemIter.GetHashCode()
+P:GLib.GType Pango.GlyphItemIter.GType
+P:Pango.GlyphItem Pango.GlyphItemIter.glyph_item
+F:System.Int32 Pango.GlyphItemIter.EndChar
+F:System.Int32 Pango.GlyphItemIter.EndGlyph
+F:System.Int32 Pango.GlyphItemIter.EndIndex
+F:System.Int32 Pango.GlyphItemIter.StartChar
+F:System.Int32 Pango.GlyphItemIter.StartGlyph
+F:System.Int32 Pango.GlyphItemIter.StartIndex
+F:System.String Pango.GlyphItemIter.Text
+F:Pango.GlyphItemIter Pango.GlyphItemIter.Zero
+T:Pango.GlyphString
+C:Pango.GlyphString..ctor()
+C:Pango.GlyphString..ctor(System.IntPtr)
+M:Pango.GlyphString Pango.GlyphString.Copy()
+M:Pango.GlyphString Pango.GlyphString.New()
+M:Pango.GlyphString Pango.GlyphString.New(System.IntPtr)
+M:System.Int32 Pango.GlyphString.GetLogicalWidths(System.String,System.Int32)
+M:System.Int32 Pango.GlyphString.IndexToX(System.String,Pango.Analysis,System.Int32,System.Boolean)
+M:System.Void Pango.GlyphString.Extents(Pango.Font,Pango.Rectangle,Pango.Rectangle)
+M:System.Void Pango.GlyphString.ExtentsRange(System.Int32,System.Int32,Pango.Font,Pango.Rectangle,Pango.Rectangle)
+M:System.Void Pango.GlyphString.XToIndex(System.String,Pango.Analysis,System.Int32,System.Int32&,System.Int32&)
+P:GLib.GType Pango.GlyphString.GType
+P:System.Int32 Pango.GlyphString.NumGlyphs
+P:System.Int32 Pango.GlyphString.Size
+P:System.Int32 Pango.GlyphString.Width
+P:GLib.AbiStruct Pango.GlyphString.abi_info
+F:Pango.GlyphString Pango.GlyphString.Zero
+T:Pango.GlyphString+PangoGlyphString_num_glyphsAlign
+T:Pango.GlyphString+PangoGlyphString_spaceAlign
+T:Pango.GlyphVisAttr
+M:Pango.GlyphVisAttr Pango.GlyphVisAttr.New(System.IntPtr)
+M:System.Boolean Pango.GlyphVisAttr.Equals(Pango.GlyphVisAttr)
+M:System.Boolean Pango.GlyphVisAttr.Equals(System.Object)
+M:System.Int32 Pango.GlyphVisAttr.GetHashCode()
+F:Pango.GlyphVisAttr Pango.GlyphVisAttr.Zero
+T:Pango.Gravity
+F:Pango.Gravity Pango.Gravity.Auto
+F:Pango.Gravity Pango.Gravity.East
+F:Pango.Gravity Pango.Gravity.North
+F:Pango.Gravity Pango.Gravity.South
+F:Pango.Gravity Pango.Gravity.West
+F:System.Int32 Pango.Gravity.value__
+T:Pango.GravityHint
+F:Pango.GravityHint Pango.GravityHint.Line
+F:Pango.GravityHint Pango.GravityHint.Natural
+F:Pango.GravityHint Pango.GravityHint.Strong
+F:System.Int32 Pango.GravityHint.value__
+T:Pango.Item
+C:Pango.Item..ctor()
+C:Pango.Item..ctor(System.IntPtr)
+M:Pango.Item Pango.Item.Copy()
+M:Pango.Item Pango.Item.New()
+M:Pango.Item Pango.Item.New(System.IntPtr)
+M:Pango.Item Pango.Item.Split(System.Int32,System.Int32)
+P:Pango.Analysis Pango.Item.Analysis
+P:GLib.GType Pango.Item.GType
+P:System.Int32 Pango.Item.Length
+P:System.Int32 Pango.Item.NumChars
+P:System.Int32 Pango.Item.Offset
+P:GLib.AbiStruct Pango.Item.abi_info
+F:Pango.Item Pango.Item.Zero
+T:Pango.Item+PangoItem_analysisAlign
+T:Pango.Item+PangoItem_lengthAlign
+T:Pango.Item+PangoItem_num_charsAlign
+T:Pango.Item+PangoItem_offsetAlign
+T:Pango.ItemProperties
+C:Pango.ItemProperties..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.ItemProperties.abi_info
+T:Pango.ItemizeState
+C:Pango.ItemizeState..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.ItemizeState.abi_info
+T:Pango.Language
+C:Pango.Language..ctor(System.IntPtr)
+M:Pango.Language Pango.Language.FromString(System.String)
+M:Pango.Script Pango.Language.GetScripts(System.Int32&)
+M:System.Boolean Pango.Language.IncludesScript(Pango.Script)
+M:System.Boolean Pango.Language.Matches(System.String)
+M:System.String Pango.Language.ToString()
+P:Pango.Language Pango.Language.Default
+P:GLib.GType Pango.Language.GType
+P:System.String Pango.Language.SampleString
+P:GLib.AbiStruct Pango.Language.abi_info
+T:Pango.Layout
+C:Pango.Layout..ctor(Pango.Context)
+C:Pango.Layout..ctor(System.IntPtr)
+M:Pango.Direction Pango.Layout.GetDirection(System.Int32)
+M:Pango.Layout Pango.Layout.Copy()
+M:Pango.LayoutLine Pango.Layout.GetLine(System.Int32)
+M:Pango.LayoutLine Pango.Layout.GetLineReadonly(System.Int32)
+M:Pango.Rectangle Pango.Layout.IndexToPos(System.Int32)
+M:System.Boolean Pango.Layout.XyToIndex(System.Int32,System.Int32,System.Int32&,System.Int32&)
+M:System.Void Pango.Layout.ContextChanged()
+M:System.Void Pango.Layout.GetCursorPos(System.Int32,Pango.Rectangle&,Pango.Rectangle&)
+M:System.Void Pango.Layout.GetExtents(Pango.Rectangle&,Pango.Rectangle&)
+M:System.Void Pango.Layout.GetPixelExtents(Pango.Rectangle&,Pango.Rectangle&)
+M:System.Void Pango.Layout.GetPixelSize(System.Int32&,System.Int32&)
+M:System.Void Pango.Layout.GetSize(System.Int32&,System.Int32&)
+M:System.Void Pango.Layout.IndexToLineX(System.Int32,System.Boolean,System.Int32&,System.Int32&)
+M:System.Void Pango.Layout.MoveCursorVisually(System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32&,System.Int32&)
+M:System.Void Pango.Layout.SetMarkup(System.String)
+M:System.Void Pango.Layout.SetMarkupWithAccel(System.String,System.Char,System.Char&)
+M:System.Void Pango.Layout.SetText(System.String)
+P:Pango.Alignment Pango.Layout.Alignment
+P:Pango.AttrList Pango.Layout.Attributes
+P:System.Boolean Pango.Layout.AutoDir
+P:System.Int32 Pango.Layout.Baseline
+P:System.Int32 Pango.Layout.CharacterCount
+P:Pango.Context Pango.Layout.Context
+P:Pango.EllipsizeMode Pango.Layout.Ellipsize
+P:Pango.FontDescription Pango.Layout.FontDescription
+P:GLib.GType Pango.Layout.GType
+P:System.Int32 Pango.Layout.Height
+P:System.Int32 Pango.Layout.Indent
+P:System.Boolean Pango.Layout.IsEllipsized
+P:System.Boolean Pango.Layout.IsWrapped
+P:Pango.LayoutIter Pango.Layout.Iter
+P:System.Boolean Pango.Layout.Justify
+P:System.Int32 Pango.Layout.LineCount
+P:System.Single Pango.Layout.LineSpacing
+P:Pango.LayoutLine[] Pango.Layout.Lines
+P:Pango.LayoutLine[] Pango.Layout.LinesReadOnly
+P:Pango.LogAttr[] Pango.Layout.LogAttrs
+P:System.UInt32 Pango.Layout.Serial
+P:System.Boolean Pango.Layout.SingleParagraphMode
+P:System.Int32 Pango.Layout.Spacing
+P:Pango.TabArray Pango.Layout.Tabs
+P:System.String Pango.Layout.Text
+P:System.Int32 Pango.Layout.UnknownGlyphsCount
+P:System.Int32 Pango.Layout.Width
+P:Pango.WrapMode Pango.Layout.Wrap
+P:GLib.AbiStruct Pango.Layout.abi_info
+P:GLib.AbiStruct Pango.Layout.class_abi
+T:Pango.LayoutIter
+C:Pango.LayoutIter..ctor(System.IntPtr)
+M:Pango.LayoutIter Pango.LayoutIter.Copy()
+M:System.Boolean Pango.LayoutIter.AtLastLine()
+M:System.Boolean Pango.LayoutIter.NextChar()
+M:System.Boolean Pango.LayoutIter.NextCluster()
+M:System.Boolean Pango.LayoutIter.NextLine()
+M:System.Boolean Pango.LayoutIter.NextRun()
+M:System.Void Pango.LayoutIter.Free()
+M:System.Void Pango.LayoutIter.GetClusterExtents(Pango.Rectangle&,Pango.Rectangle&)
+M:System.Void Pango.LayoutIter.GetLayoutExtents(Pango.Rectangle&,Pango.Rectangle&)
+M:System.Void Pango.LayoutIter.GetLineExtents(Pango.Rectangle&,Pango.Rectangle&)
+M:System.Void Pango.LayoutIter.GetLineYrange(System.Int32&,System.Int32&)
+M:System.Void Pango.LayoutIter.GetRunExtents(Pango.Rectangle&,Pango.Rectangle&)
+P:System.Int32 Pango.LayoutIter.Baseline
+P:Pango.Rectangle Pango.LayoutIter.CharExtents
+P:GLib.GType Pango.LayoutIter.GType
+P:System.Int32 Pango.LayoutIter.Index
+P:Pango.Layout Pango.LayoutIter.Layout
+P:Pango.LayoutLine Pango.LayoutIter.Line
+P:Pango.LayoutLine Pango.LayoutIter.LineReadonly
+P:Pango.LayoutRun Pango.LayoutIter.Run
+P:Pango.LayoutRun Pango.LayoutIter.RunReadonly
+P:GLib.AbiStruct Pango.LayoutIter.abi_info
+T:Pango.LayoutLine
+C:Pango.LayoutLine..ctor(System.IntPtr)
+M:Pango.LayoutLine Pango.LayoutLine.Ref()
+M:System.Boolean Pango.LayoutLine.XToIndex(System.Int32,System.Int32&,System.Int32&)
+M:System.Int32 Pango.LayoutLine.IndexToX(System.Int32,System.Boolean)
+M:System.Int32[] Pango.LayoutLine.GetXRanges(System.Int32,System.Int32)
+M:System.Void Pango.LayoutLine.GetExtents(Pango.Rectangle&,Pango.Rectangle&)
+M:System.Void Pango.LayoutLine.GetPixelExtents(Pango.Rectangle&,Pango.Rectangle&)
+M:System.Void Pango.LayoutLine.Unref()
+P:GLib.GType Pango.LayoutLine.GType
+P:System.Int32 Pango.LayoutLine.Height
+P:System.Boolean Pango.LayoutLine.IsParagraphStart
+P:Pango.Layout Pango.LayoutLine.Layout
+P:System.Int32 Pango.LayoutLine.Length
+P:System.UInt32 Pango.LayoutLine.ResolvedDir
+P:System.Int32 Pango.LayoutLine.StartIndex
+P:GLib.AbiStruct Pango.LayoutLine.abi_info
+T:Pango.LayoutLine+PangoLayoutLine_lengthAlign
+T:Pango.LayoutLine+PangoLayoutLine_start_indexAlign
+T:Pango.LayoutRun
+M:Pango.LayoutRun Pango.LayoutRun.New(System.IntPtr)
+M:System.Boolean Pango.LayoutRun.Equals(Pango.LayoutRun)
+M:System.Boolean Pango.LayoutRun.Equals(System.Object)
+M:System.Int32 Pango.LayoutRun.GetHashCode()
+P:Pango.GlyphString Pango.LayoutRun.Glyphs
+P:Pango.Item Pango.LayoutRun.Item
+P:Pango.GlyphString Pango.LayoutRun.glyphs
+P:Pango.Item Pango.LayoutRun.item
+F:Pango.LayoutRun Pango.LayoutRun.Zero
+T:Pango.LineIter
+C:Pango.LineIter..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.LineIter.abi_info
+T:Pango.LineState
+C:Pango.LineState..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.LineState.abi_info
+T:Pango.LogAttr
+C:Pango.LogAttr..ctor(System.UInt32)
+M:Pango.LogAttr Pango.LogAttr.New(System.IntPtr)
+M:System.Boolean Pango.LogAttr.Equals(Pango.LogAttr)
+M:System.Boolean Pango.LogAttr.Equals(System.Object)
+M:System.Int32 Pango.LogAttr.GetHashCode()
+M:System.String Pango.LogAttr.ToString()
+P:System.Boolean Pango.LogAttr.BackspaceDeletesCharacter
+P:System.UInt32 Pango.LogAttr.Bitfield
+P:System.Boolean Pango.LogAttr.IsCharBreak
+P:System.Boolean Pango.LogAttr.IsCursorPosition
+P:System.Boolean Pango.LogAttr.IsExpandableSpace
+P:System.Boolean Pango.LogAttr.IsLineBreak
+P:System.Boolean Pango.LogAttr.IsMandatoryBreak
+P:System.Boolean Pango.LogAttr.IsSentenceBoundary
+P:System.Boolean Pango.LogAttr.IsSentenceEnd
+P:System.Boolean Pango.LogAttr.IsSentenceStart
+P:System.Boolean Pango.LogAttr.IsWhite
+P:System.Boolean Pango.LogAttr.IsWordBoundary
+P:System.Boolean Pango.LogAttr.IsWordEnd
+P:System.Boolean Pango.LogAttr.IsWordStart
+F:Pango.LogAttr Pango.LogAttr.Zero
+T:Pango.Markup
+C:Pango.Markup..ctor()
+T:Pango.MarkupData
+C:Pango.MarkupData..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.MarkupData.abi_info
+T:Pango.Matrix
+M:Pango.Matrix Pango.Matrix.Copy()
+M:Pango.Matrix Pango.Matrix.New(System.IntPtr)
+M:System.Boolean Pango.Matrix.Equals(Pango.Matrix)
+M:System.Boolean Pango.Matrix.Equals(System.Object)
+M:System.Int32 Pango.Matrix.GetHashCode()
+M:System.Void Pango.Matrix.Concat(Pango.Matrix)
+M:System.Void Pango.Matrix.GetFontScaleFactors(System.Double&,System.Double&)
+M:System.Void Pango.Matrix.Rotate(System.Double)
+M:System.Void Pango.Matrix.Scale(System.Double,System.Double)
+M:System.Void Pango.Matrix.TransformDistance(System.Double&,System.Double&)
+M:System.Void Pango.Matrix.TransformPixelRectangle(Pango.Rectangle&)
+M:System.Void Pango.Matrix.TransformPoint(System.Double&,System.Double&)
+M:System.Void Pango.Matrix.TransformRectangle(Pango.Rectangle&)
+M:System.Void Pango.Matrix.Translate(System.Double,System.Double)
+P:System.Double Pango.Matrix.FontScaleFactor
+P:GLib.GType Pango.Matrix.GType
+F:Pango.Matrix Pango.Matrix.Identity
+F:System.Double Pango.Matrix.X0
+F:System.Double Pango.Matrix.Xx
+F:System.Double Pango.Matrix.Xy
+F:System.Double Pango.Matrix.Y0
+F:System.Double Pango.Matrix.Yx
+F:System.Double Pango.Matrix.Yy
+F:Pango.Matrix Pango.Matrix.Zero
+T:Pango.OTInfoClass
+C:Pango.OTInfoClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.OTInfoClass.abi_info
+T:Pango.OTRulesetClass
+C:Pango.OTRulesetClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.OTRulesetClass.abi_info
+T:Pango.OpenTag
+C:Pango.OpenTag..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.OpenTag.abi_info
+T:Pango.ParaBreakState
+C:Pango.ParaBreakState..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.ParaBreakState.abi_info
+T:Pango.ParenStackEntry
+C:Pango.ParenStackEntry..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.ParenStackEntry.abi_info
+T:Pango.Point
+C:Pango.Point..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.Point.abi_info
+T:Pango.Rectangle
+M:Pango.Rectangle Pango.Rectangle.New(System.IntPtr)
+M:System.Boolean Pango.Rectangle.Equals(Pango.Rectangle)
+M:System.Boolean Pango.Rectangle.Equals(System.Object)
+M:System.Int32 Pango.Rectangle.GetHashCode()
+F:System.Int32 Pango.Rectangle.Height
+F:System.Int32 Pango.Rectangle.Width
+F:System.Int32 Pango.Rectangle.X
+F:System.Int32 Pango.Rectangle.Y
+F:Pango.Rectangle Pango.Rectangle.Zero
+T:Pango.RenderPart
+F:Pango.RenderPart Pango.RenderPart.Background
+F:Pango.RenderPart Pango.RenderPart.Foreground
+F:Pango.RenderPart Pango.RenderPart.Strikethrough
+F:Pango.RenderPart Pango.RenderPart.Underline
+F:System.Int32 Pango.RenderPart.value__
+T:Pango.Renderer
+C:Pango.Renderer..ctor(System.IntPtr)
+M:Pango.Color Pango.Renderer.GetColor(Pango.RenderPart)
+M:System.UInt16 Pango.Renderer.GetAlpha(Pango.RenderPart)
+M:System.Void Pango.Renderer.Activate()
+M:System.Void Pango.Renderer.Deactivate()
+M:System.Void Pango.Renderer.DrawErrorUnderline(System.Int32,System.Int32,System.Int32,System.Int32)
+M:System.Void Pango.Renderer.DrawGlyph(Pango.Font,System.UInt32,System.Double,System.Double)
+M:System.Void Pango.Renderer.DrawGlyphItem(System.String,Pango.GlyphItem,System.Int32,System.Int32)
+M:System.Void Pango.Renderer.DrawGlyphs(Pango.Font,Pango.GlyphString,System.Int32,System.Int32)
+M:System.Void Pango.Renderer.DrawLayout(Pango.Layout,System.Int32,System.Int32)
+M:System.Void Pango.Renderer.DrawLayoutLine(Pango.LayoutLine,System.Int32,System.Int32)
+M:System.Void Pango.Renderer.DrawRectangle(Pango.RenderPart,System.Int32,System.Int32,System.Int32,System.Int32)
+M:System.Void Pango.Renderer.DrawTrapezoid(Pango.RenderPart,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)
+M:System.Void Pango.Renderer.PartChanged(Pango.RenderPart)
+M:System.Void Pango.Renderer.SetAlpha(Pango.RenderPart,System.UInt16)
+M:System.Void Pango.Renderer.SetColor(Pango.RenderPart,Pango.Color)
+P:GLib.GType Pango.Renderer.GType
+P:Pango.Layout Pango.Renderer.Layout
+P:Pango.LayoutLine Pango.Renderer.LayoutLine
+P:Pango.Matrix Pango.Renderer.Matrix
+P:GLib.AbiStruct Pango.Renderer.abi_info
+P:GLib.AbiStruct Pango.Renderer.class_abi
+T:Pango.Renderer+PangoRenderer_active_countAlign
+T:Pango.Renderer+PangoRenderer_strikethroughAlign
+T:Pango.Renderer+PangoRenderer_underlineAlign
+T:Pango.RunInfo
+C:Pango.RunInfo..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.RunInfo.abi_info
+T:Pango.Scale
+C:Pango.Scale..ctor()
+F:System.Double Pango.Scale.Large
+F:System.Double Pango.Scale.Medium
+F:System.Double Pango.Scale.PangoScale
+F:System.Double Pango.Scale.Small
+F:System.Double Pango.Scale.XLarge
+F:System.Double Pango.Scale.XSmall
+F:System.Double Pango.Scale.XXLarge
+F:System.Double Pango.Scale.XXSmall
+F:System.Double Pango.Scale.XX_Large
+F:System.Double Pango.Scale.XX_Small
+F:System.Double Pango.Scale.X_Large
+F:System.Double Pango.Scale.X_Small
+T:Pango.Script
+F:Pango.Script Pango.Script.Ahom
+F:Pango.Script Pango.Script.AnatolianHieroglyphs
+F:Pango.Script Pango.Script.Arabic
+F:Pango.Script Pango.Script.Armenian
+F:Pango.Script Pango.Script.Balinese
+F:Pango.Script Pango.Script.BassaVah
+F:Pango.Script Pango.Script.Batak
+F:Pango.Script Pango.Script.Bengali
+F:Pango.Script Pango.Script.Bopomofo
+F:Pango.Script Pango.Script.Brahmi
+F:Pango.Script Pango.Script.Braille
+F:Pango.Script Pango.Script.Buginese
+F:Pango.Script Pango.Script.Buhid
+F:Pango.Script Pango.Script.CanadianAboriginal
+F:Pango.Script Pango.Script.Carian
+F:Pango.Script Pango.Script.CaucasianAlbanian
+F:Pango.Script Pango.Script.Chakma
+F:Pango.Script Pango.Script.Cham
+F:Pango.Script Pango.Script.Cherokee
+F:Pango.Script Pango.Script.Common
+F:Pango.Script Pango.Script.Coptic
+F:Pango.Script Pango.Script.Cuneiform
+F:Pango.Script Pango.Script.Cypriot
+F:Pango.Script Pango.Script.Cyrillic
+F:Pango.Script Pango.Script.Deseret
+F:Pango.Script Pango.Script.Devanagari
+F:Pango.Script Pango.Script.Duployan
+F:Pango.Script Pango.Script.Elbasan
+F:Pango.Script Pango.Script.Ethiopic
+F:Pango.Script Pango.Script.Georgian
+F:Pango.Script Pango.Script.Glagolitic
+F:Pango.Script Pango.Script.Gothic
+F:Pango.Script Pango.Script.Grantha
+F:Pango.Script Pango.Script.Greek
+F:Pango.Script Pango.Script.Gujarati
+F:Pango.Script Pango.Script.Gurmukhi
+F:Pango.Script Pango.Script.Han
+F:Pango.Script Pango.Script.Hangul
+F:Pango.Script Pango.Script.Hanunoo
+F:Pango.Script Pango.Script.Hatran
+F:Pango.Script Pango.Script.Hebrew
+F:Pango.Script Pango.Script.Hiragana
+F:Pango.Script Pango.Script.Inherited
+F:Pango.Script Pango.Script.InvalidCode
+F:Pango.Script Pango.Script.Kannada
+F:Pango.Script Pango.Script.Katakana
+F:Pango.Script Pango.Script.KayahLi
+F:Pango.Script Pango.Script.Kharoshthi
+F:Pango.Script Pango.Script.Khmer
+F:Pango.Script Pango.Script.Khojki
+F:Pango.Script Pango.Script.Khudawadi
+F:Pango.Script Pango.Script.Lao
+F:Pango.Script Pango.Script.Latin
+F:Pango.Script Pango.Script.Lepcha
+F:Pango.Script Pango.Script.Limbu
+F:Pango.Script Pango.Script.LinearA
+F:Pango.Script Pango.Script.LinearB
+F:Pango.Script Pango.Script.Lycian
+F:Pango.Script Pango.Script.Lydian
+F:Pango.Script Pango.Script.Mahajani
+F:Pango.Script Pango.Script.Malayalam
+F:Pango.Script Pango.Script.Mandaic
+F:Pango.Script Pango.Script.Manichaean
+F:Pango.Script Pango.Script.MendeKikakui
+F:Pango.Script Pango.Script.MeroiticCursive
+F:Pango.Script Pango.Script.MeroiticHieroglyphs
+F:Pango.Script Pango.Script.Miao
+F:Pango.Script Pango.Script.Modi
+F:Pango.Script Pango.Script.Mongolian
+F:Pango.Script Pango.Script.Mro
+F:Pango.Script Pango.Script.Multani
+F:Pango.Script Pango.Script.Myanmar
+F:Pango.Script Pango.Script.Nabataean
+F:Pango.Script Pango.Script.NewTaiLue
+F:Pango.Script Pango.Script.Nko
+F:Pango.Script Pango.Script.Ogham
+F:Pango.Script Pango.Script.OlChiki
+F:Pango.Script Pango.Script.OldHungarian
+F:Pango.Script Pango.Script.OldItalic
+F:Pango.Script Pango.Script.OldNorthArabian
+F:Pango.Script Pango.Script.OldPermic
+F:Pango.Script Pango.Script.OldPersian
+F:Pango.Script Pango.Script.Oriya
+F:Pango.Script Pango.Script.Osmanya
+F:Pango.Script Pango.Script.PahawhHmong
+F:Pango.Script Pango.Script.Palmyrene
+F:Pango.Script Pango.Script.PauCinHau
+F:Pango.Script Pango.Script.PhagsPa
+F:Pango.Script Pango.Script.Phoenician
+F:Pango.Script Pango.Script.PsalterPahlavi
+F:Pango.Script Pango.Script.Rejang
+F:Pango.Script Pango.Script.Runic
+F:Pango.Script Pango.Script.Saurashtra
+F:Pango.Script Pango.Script.Sharada
+F:Pango.Script Pango.Script.Shavian
+F:Pango.Script Pango.Script.Siddham
+F:Pango.Script Pango.Script.Signwriting
+F:Pango.Script Pango.Script.Sinhala
+F:Pango.Script Pango.Script.SoraSompeng
+F:Pango.Script Pango.Script.Sundanese
+F:Pango.Script Pango.Script.SylotiNagri
+F:Pango.Script Pango.Script.Syriac
+F:Pango.Script Pango.Script.Tagalog
+F:Pango.Script Pango.Script.Tagbanwa
+F:Pango.Script Pango.Script.TaiLe
+F:Pango.Script Pango.Script.Takri
+F:Pango.Script Pango.Script.Tamil
+F:Pango.Script Pango.Script.Telugu
+F:Pango.Script Pango.Script.Thaana
+F:Pango.Script Pango.Script.Thai
+F:Pango.Script Pango.Script.Tibetan
+F:Pango.Script Pango.Script.Tifinagh
+F:Pango.Script Pango.Script.Tirhuta
+F:Pango.Script Pango.Script.Ugaritic
+F:Pango.Script Pango.Script.Unknown
+F:Pango.Script Pango.Script.Vai
+F:Pango.Script Pango.Script.WarangCiti
+F:Pango.Script Pango.Script.Yi
+F:System.Int32 Pango.Script.value__
+T:Pango.ScriptIter
+C:Pango.ScriptIter..ctor(System.IntPtr)
+C:Pango.ScriptIter..ctor(System.String)
+M:System.Boolean Pango.ScriptIter.Next()
+M:System.Void Pango.ScriptIter.Free()
+M:System.Void Pango.ScriptIter.GetRange(System.Int32&,System.Int32&,Pango.Script&)
+T:Pango.Stretch
+F:Pango.Stretch Pango.Stretch.Condensed
+F:Pango.Stretch Pango.Stretch.Expanded
+F:Pango.Stretch Pango.Stretch.ExtraCondensed
+F:Pango.Stretch Pango.Stretch.ExtraExpanded
+F:Pango.Stretch Pango.Stretch.Normal
+F:Pango.Stretch Pango.Stretch.SemiCondensed
+F:Pango.Stretch Pango.Stretch.SemiExpanded
+F:Pango.Stretch Pango.Stretch.UltraCondensed
+F:Pango.Stretch Pango.Stretch.UltraExpanded
+F:System.Int32 Pango.Stretch.value__
+T:Pango.Style
+F:Pango.Style Pango.Style.Italic
+F:Pango.Style Pango.Style.Normal
+F:Pango.Style Pango.Style.Oblique
+F:System.Int32 Pango.Style.value__
+T:Pango.Tab
+C:Pango.Tab..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.Tab.abi_info
+T:Pango.TabAlign
+F:Pango.TabAlign Pango.TabAlign.Left
+F:System.Int32 Pango.TabAlign.value__
+T:Pango.TabArray
+C:Pango.TabArray..ctor(System.Int32,System.Boolean)
+C:Pango.TabArray..ctor(System.IntPtr)
+M:Pango.TabArray Pango.TabArray.Copy()
+M:System.Void Pango.TabArray.Free()
+M:System.Void Pango.TabArray.GetTab(System.Int32,Pango.TabAlign&,System.Int32&)
+M:System.Void Pango.TabArray.GetTabs(Pango.TabAlign[]&,System.Int32[]&)
+M:System.Void Pango.TabArray.Resize(System.Int32)
+M:System.Void Pango.TabArray.SetTab(System.Int32,Pango.TabAlign,System.Int32)
+P:GLib.GType Pango.TabArray.GType
+P:System.Boolean Pango.TabArray.PositionsInPixels
+P:System.Int32 Pango.TabArray.Size
+P:GLib.AbiStruct Pango.TabArray.abi_info
+T:Pango.Underline
+F:Pango.Underline Pango.Underline.Double
+F:Pango.Underline Pango.Underline.Error
+F:Pango.Underline Pango.Underline.Low
+F:Pango.Underline Pango.Underline.None
+F:Pango.Underline Pango.Underline.Single
+F:System.Int32 Pango.Underline.value__
+T:Pango.Units
+M:System.Double Pango.Units.ToDouble(System.Int32)
+M:System.Int32 Pango.Units.FromDouble(System.Double)
+M:System.Int32 Pango.Units.FromPixels(System.Int32)
+M:System.Int32 Pango.Units.ToPixels(System.Int32)
+T:Pango.Variant
+F:Pango.Variant Pango.Variant.Normal
+F:Pango.Variant Pango.Variant.SmallCaps
+F:System.Int32 Pango.Variant.value__
+T:Pango.Weight
+F:Pango.Weight Pango.Weight.Bold
+F:Pango.Weight Pango.Weight.Book
+F:Pango.Weight Pango.Weight.Heavy
+F:Pango.Weight Pango.Weight.Light
+F:Pango.Weight Pango.Weight.Medium
+F:Pango.Weight Pango.Weight.Normal
+F:Pango.Weight Pango.Weight.Semibold
+F:Pango.Weight Pango.Weight.Semilight
+F:Pango.Weight Pango.Weight.Thin
+F:Pango.Weight Pango.Weight.Ultrabold
+F:Pango.Weight Pango.Weight.Ultraheavy
+F:Pango.Weight Pango.Weight.Ultralight
+F:System.Int32 Pango.Weight.value__
+T:Pango.WidthIter
+C:Pango.WidthIter..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.WidthIter.abi_info
+T:Pango.Win32Face
+C:Pango.Win32Face..ctor(System.IntPtr)
+T:Pango.Win32Family
+C:Pango.Win32Family..ctor(System.IntPtr)
+T:Pango.Win32Font
+C:Pango.Win32Font..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.Win32Font.abi_info
+T:Pango.Win32FontClass
+C:Pango.Win32FontClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.Win32FontClass.abi_info
+T:Pango.Win32FontMap
+C:Pango.Win32FontMap..ctor(System.IntPtr)
+M:Pango.FontMap Pango.Win32FontMap.ForDisplay()
+P:GLib.AbiStruct Pango.Win32FontMap.abi_info
+T:Pango.Win32FontMapClass
+C:Pango.Win32FontMapClass..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.Win32FontMapClass.abi_info
+T:Pango.Win32GlyphInfo
+C:Pango.Win32GlyphInfo..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.Win32GlyphInfo.abi_info
+T:Pango.Win32MetricsInfo
+C:Pango.Win32MetricsInfo..ctor(System.IntPtr)
+P:GLib.AbiStruct Pango.Win32MetricsInfo.abi_info
+T:Pango.WrapMode
+F:Pango.WrapMode Pango.WrapMode.Char
+F:Pango.WrapMode Pango.WrapMode.Word
+F:Pango.WrapMode Pango.WrapMode.WordChar
+F:System.Int32 Pango.WrapMode.value__

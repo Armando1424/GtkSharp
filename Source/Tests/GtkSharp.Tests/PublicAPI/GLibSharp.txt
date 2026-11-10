@@ -1,0 +1,1021 @@
+T:GLib.AbiField
+C:GLib.AbiField..ctor(System.String,System.Collections.Specialized.OrderedDictionary,System.UInt32,System.String,System.String,System.Int64,System.UInt32)
+C:GLib.AbiField..ctor(System.String,System.Int64,System.Collections.Generic.List<System.Collections.Generic.List<System.String>>,System.String,System.String,System.UInt32)
+C:GLib.AbiField..ctor(System.String,System.Int64,System.UInt32,System.String,System.String,System.Int64,System.UInt32)
+M:System.Boolean GLib.AbiField.InUnion()
+M:System.UInt32 GLib.AbiField.GetAlign()
+M:System.UInt32 GLib.AbiField.GetEnd()
+M:System.UInt32 GLib.AbiField.GetOffset()
+M:System.UInt32 GLib.AbiField.GetSize()
+M:System.UInt32 GLib.AbiField.GetUnionSize()
+F:System.Int64 GLib.AbiField.Align
+F:System.UInt32 GLib.AbiField.Bits
+F:System.String GLib.AbiField.Name
+F:System.UInt32 GLib.AbiField.Natural_size
+F:System.String GLib.AbiField.Next_name
+F:System.Int64 GLib.AbiField.Offset
+F:System.Collections.Specialized.OrderedDictionary GLib.AbiField.Parent_fields
+F:System.String GLib.AbiField.Prev_name
+F:GLib.AbiStruct GLib.AbiField.container
+T:GLib.AbiStruct
+C:GLib.AbiStruct..ctor(System.Collections.Generic.List<GLib.AbiField>)
+C:GLib.AbiStruct..ctor(System.Collections.Specialized.OrderedDictionary)
+M:System.UInt32 GLib.AbiStruct.GetFieldOffset(System.String)
+P:System.UInt32 GLib.AbiStruct.Align
+P:System.UInt32 GLib.AbiStruct.Size
+F:System.Collections.Specialized.OrderedDictionary GLib.AbiStruct.Fields
+T:GLib.AbiStructExtension
+M:!!N GLib.AbiStructExtension.BaseOverride(GLib.AbiStruct,GLib.GType,System.String)
+T:GLib.Argv
+C:GLib.Argv..ctor(System.String[])
+C:GLib.Argv..ctor(System.String[],System.Boolean)
+M:System.String[] GLib.Argv.GetArgs(System.Int32)
+P:System.IntPtr GLib.Argv.Handle
+T:GLib.Bytes
+C:GLib.Bytes..ctor(GLib.Bytes,System.UInt64,System.UInt64)
+C:GLib.Bytes..ctor(System.Byte[])
+C:GLib.Bytes..ctor(System.IntPtr)
+M:GLib.Bytes GLib.Bytes.NewStatic(System.Byte[])
+M:GLib.Bytes GLib.Bytes.NewTake(System.Byte[])
+M:System.Boolean GLib.Bytes.Equals(GLib.Bytes)
+M:System.Int32 GLib.Bytes.CompareTo(GLib.Bytes)
+M:System.UInt32 GLib.Bytes.GetHash()
+P:System.Byte[] GLib.Bytes.Data
+P:GLib.GType GLib.Bytes.GType
+P:System.UInt64 GLib.Bytes.Size
+T:GLib.Cond
+C:GLib.Cond..ctor(System.IntPtr)
+M:System.Boolean GLib.Cond.WaitUntil(GLib.Mutex,System.Int64)
+M:System.Void GLib.Cond.Broadcast()
+M:System.Void GLib.Cond.Clear()
+M:System.Void GLib.Cond.Init()
+M:System.Void GLib.Cond.Signal()
+M:System.Void GLib.Cond.Wait(GLib.Mutex)
+T:GLib.Cond+ABI
+T:GLib.ConnectBeforeAttribute
+C:GLib.ConnectBeforeAttribute..ctor()
+T:GLib.ConnectFlags
+F:GLib.ConnectFlags GLib.ConnectFlags.After
+F:GLib.ConnectFlags GLib.ConnectFlags.Swapped
+F:System.Int32 GLib.ConnectFlags.value__
+T:GLib.Date
+C:GLib.Date..ctor()
+C:GLib.Date..ctor(System.Byte,System.Int32,System.UInt16)
+C:GLib.Date..ctor(System.IntPtr)
+C:GLib.Date..ctor(System.UInt32)
+M:System.Boolean GLib.Date.IsLeapYear(System.UInt16)
+M:System.Boolean GLib.Date.Valid()
+M:System.Boolean GLib.Date.ValidDay(System.Byte)
+M:System.Boolean GLib.Date.ValidDmy(System.Byte,System.Int32,System.UInt16)
+M:System.Boolean GLib.Date.ValidJulian(System.UInt32)
+M:System.Boolean GLib.Date.ValidMonth(System.Int32)
+M:System.Boolean GLib.Date.ValidWeekday(System.Int32)
+M:System.Boolean GLib.Date.ValidYear(System.UInt16)
+M:System.Byte GLib.Date.GetDaysInMonth(System.Int32,System.UInt16)
+M:System.Byte GLib.Date.GetMondayWeeksInYear(System.UInt16)
+M:System.Byte GLib.Date.GetSundayWeeksInYear(System.UInt16)
+M:System.Int32 GLib.Date.Compare(GLib.Date)
+M:System.Int32 GLib.Date.DaysBetween(GLib.Date)
+M:System.UInt64 GLib.Date.Strftime(System.String,System.String,GLib.Date)
+M:System.Void GLib.Date.AddDays(System.UInt32)
+M:System.Void GLib.Date.AddMonths(System.UInt32)
+M:System.Void GLib.Date.AddYears(System.UInt32)
+M:System.Void GLib.Date.Clamp(GLib.Date,GLib.Date)
+M:System.Void GLib.Date.Clear(System.UInt32)
+M:System.Void GLib.Date.Order(GLib.Date)
+M:System.Void GLib.Date.SetDmy(System.Byte,System.Int32,System.UInt16)
+M:System.Void GLib.Date.SubtractDays(System.UInt32)
+M:System.Void GLib.Date.SubtractMonths(System.UInt32)
+M:System.Void GLib.Date.SubtractYears(System.UInt32)
+M:System.Void GLib.Date.ToStructTm(System.IntPtr)
+P:System.Byte GLib.Date.Day
+P:System.UInt32 GLib.Date.DayOfYear
+P:GLib.GType GLib.Date.GType
+P:System.Boolean GLib.Date.IsFirstOfMonth
+P:System.Boolean GLib.Date.IsLastOfMonth
+P:System.UInt32 GLib.Date.Iso8601WeekOfYear
+P:System.UInt32 GLib.Date.Julian
+P:System.UInt32 GLib.Date.MondayWeekOfYear
+P:System.Int32 GLib.Date.Month
+P:System.String GLib.Date.Parse
+P:System.UInt32 GLib.Date.SundayWeekOfYear
+P:System.Int32 GLib.Date.Time
+P:System.Int64 GLib.Date.TimeT
+P:GLib.TimeVal GLib.Date.TimeVal
+P:System.Int32 GLib.Date.Weekday
+P:System.UInt16 GLib.Date.Year
+T:GLib.DateTime
+C:GLib.DateTime..ctor()
+C:GLib.DateTime..ctor(GLib.TimeVal)
+C:GLib.DateTime..ctor(GLib.TimeZone)
+C:GLib.DateTime..ctor(GLib.TimeZone,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Double)
+C:GLib.DateTime..ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Double)
+C:GLib.DateTime..ctor(System.Int64)
+C:GLib.DateTime..ctor(System.IntPtr)
+M:GLib.DateTime GLib.DateTime.Add(System.Int64)
+M:GLib.DateTime GLib.DateTime.AddDays(System.Int32)
+M:GLib.DateTime GLib.DateTime.AddFull(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Double)
+M:GLib.DateTime GLib.DateTime.AddHours(System.Int32)
+M:GLib.DateTime GLib.DateTime.AddMinutes(System.Int32)
+M:GLib.DateTime GLib.DateTime.AddMonths(System.Int32)
+M:GLib.DateTime GLib.DateTime.AddSeconds(System.Double)
+M:GLib.DateTime GLib.DateTime.AddWeeks(System.Int32)
+M:GLib.DateTime GLib.DateTime.AddYears(System.Int32)
+M:GLib.DateTime GLib.DateTime.NewFromTimevalUtc(GLib.TimeVal)
+M:GLib.DateTime GLib.DateTime.NewFromUnixUtc(System.Int64)
+M:GLib.DateTime GLib.DateTime.NewNowUtc()
+M:GLib.DateTime GLib.DateTime.NewUtc(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Double)
+M:GLib.DateTime GLib.DateTime.ToLocal()
+M:GLib.DateTime GLib.DateTime.ToTimezone(GLib.TimeZone)
+M:GLib.DateTime GLib.DateTime.ToUtc()
+M:System.Boolean GLib.DateTime.Equal(System.IntPtr,System.IntPtr)
+M:System.Boolean GLib.DateTime.ToTimeval(GLib.TimeVal)
+M:System.Int32 GLib.DateTime.Compare(System.IntPtr,System.IntPtr)
+M:System.Int64 GLib.DateTime.Difference(GLib.DateTime)
+M:System.Int64 GLib.DateTime.ToUnix()
+M:System.String GLib.DateTime.Format(System.String)
+M:System.UInt32 GLib.DateTime.Hash(System.IntPtr)
+M:System.Void GLib.DateTime.GetYmd(System.Int32&,System.Int32&,System.Int32&)
+P:System.Int32 GLib.DateTime.DayOfMonth
+P:System.Int32 GLib.DateTime.DayOfWeek
+P:System.Int32 GLib.DateTime.DayOfYear
+P:GLib.GType GLib.DateTime.GType
+P:System.Int32 GLib.DateTime.Hour
+P:System.Boolean GLib.DateTime.IsDaylightSavings
+P:System.Int32 GLib.DateTime.Microsecond
+P:System.Int32 GLib.DateTime.Minute
+P:System.Int32 GLib.DateTime.Month
+P:System.Int32 GLib.DateTime.Second
+P:System.Double GLib.DateTime.Seconds
+P:System.String GLib.DateTime.TimezoneAbbreviation
+P:System.Int64 GLib.DateTime.UtcOffset
+P:System.Int32 GLib.DateTime.WeekNumberingYear
+P:System.Int32 GLib.DateTime.WeekOfYear
+P:System.Int32 GLib.DateTime.Year
+T:GLib.DefaultSignalHandlerAttribute
+C:GLib.DefaultSignalHandlerAttribute..ctor()
+P:System.String GLib.DefaultSignalHandlerAttribute.ConnectionMethod
+P:System.Type GLib.DefaultSignalHandlerAttribute.Type
+T:GLib.DestroyHelper
+P:GLib.DestroyNotify GLib.DestroyHelper.NotifyHandler
+P:GLib.DestroyNotify GLib.DestroyHelper.SourceProxyNotifyHandler
+T:GLib.DestroyNotify
+C:GLib.DestroyNotify..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult GLib.DestroyNotify.BeginInvoke(System.IntPtr,System.AsyncCallback,System.Object)
+M:System.Void GLib.DestroyNotify.EndInvoke(System.IAsyncResult)
+M:System.Void GLib.DestroyNotify.Invoke(System.IntPtr)
+T:GLib.ExceptionManager
+M:System.Void GLib.ExceptionManager.RaiseUnhandledException(System.Exception,System.Boolean)
+E:GLib.UnhandledExceptionHandler GLib.ExceptionManager.UnhandledException
+T:GLib.FileUtils
+M:System.String GLib.FileUtils.GetFileContents(System.String)
+T:GLib.GException
+C:GLib.GException..ctor(System.IntPtr)
+P:System.Int32 GLib.GException.Code
+P:System.Int32 GLib.GException.Domain
+P:System.String GLib.GException.Message
+T:GLib.GInterfaceAdapter
+P:GLib.GType GLib.GInterfaceAdapter.GInterfaceGType
+P:System.IntPtr GLib.GInterfaceAdapter.Handle
+T:GLib.GInterfaceAttribute
+C:GLib.GInterfaceAttribute..ctor(System.Type)
+P:System.Type GLib.GInterfaceAttribute.AdapterType
+T:GLib.GInterfaceInitHandler
+C:GLib.GInterfaceInitHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult GLib.GInterfaceInitHandler.BeginInvoke(System.IntPtr,System.IntPtr,System.AsyncCallback,System.Object)
+M:System.Void GLib.GInterfaceInitHandler.EndInvoke(System.IAsyncResult)
+M:System.Void GLib.GInterfaceInitHandler.Invoke(System.IntPtr,System.IntPtr)
+T:GLib.GLibSynchronizationContext
+C:GLib.GLibSynchronizationContext..ctor()
+M:System.Void GLib.GLibSynchronizationContext.Post(System.Threading.SendOrPostCallback,System.Object)
+M:System.Void GLib.GLibSynchronizationContext.Send(System.Threading.SendOrPostCallback,System.Object)
+T:GLib.GSourceFunc
+C:GLib.GSourceFunc..ctor(System.Object,System.IntPtr)
+M:System.Boolean GLib.GSourceFunc.EndInvoke(System.IAsyncResult)
+M:System.Boolean GLib.GSourceFunc.Invoke()
+M:System.IAsyncResult GLib.GSourceFunc.BeginInvoke(System.AsyncCallback,System.Object)
+T:GLib.GString
+C:GLib.GString..ctor(System.String)
+M:System.String GLib.GString.PtrToString(System.IntPtr)
+P:System.IntPtr GLib.GString.Handle
+T:GLib.GType
+C:GLib.GType..ctor(System.IntPtr)
+M:GLib.GType GLib.GType.FromName(System.String)
+M:GLib.GType GLib.GType.GetBaseType()
+M:GLib.GType GLib.GType.GetThresholdType()
+M:System.Boolean GLib.GType.Equals(System.Object)
+M:System.Boolean GLib.GType.IsInstance(System.IntPtr)
+M:System.Boolean GLib.GType.IsManaged(GLib.GType)
+M:System.Int32 GLib.GType.GetHashCode()
+M:System.IntPtr GLib.GType.GetClassPtr()
+M:System.IntPtr GLib.GType.GetDefaultInterfacePtr()
+M:System.String GLib.GType.ToString()
+M:System.Type GLib.GType.LookupType(System.IntPtr)
+M:System.UInt32 GLib.GType.GetClassSize()
+M:System.Void GLib.GType.Init()
+M:System.Void GLib.GType.Register(GLib.GType,System.Type)
+M:System.Void GLib.GType.Register(GLib.GType,System.Type,System.Boolean)
+P:System.IntPtr GLib.GType.Val
+F:GLib.GType GLib.GType.Boolean
+F:GLib.GType GLib.GType.Boxed
+F:GLib.GType GLib.GType.Char
+F:GLib.GType GLib.GType.Double
+F:GLib.GType GLib.GType.Enum
+F:GLib.GType GLib.GType.Flags
+F:GLib.GType GLib.GType.Float
+F:GLib.GType GLib.GType.Int
+F:GLib.GType GLib.GType.Int64
+F:GLib.GType GLib.GType.Interface
+F:GLib.GType GLib.GType.Invalid
+F:GLib.GType GLib.GType.Long
+F:GLib.GType GLib.GType.None
+F:GLib.GType GLib.GType.Object
+F:GLib.GType GLib.GType.Param
+F:GLib.GType GLib.GType.Pointer
+F:GLib.GType GLib.GType.String
+F:GLib.GType GLib.GType.UChar
+F:GLib.GType GLib.GType.UInt
+F:GLib.GType GLib.GType.UInt64
+F:GLib.GType GLib.GType.ULong
+F:GLib.GType GLib.GType.Variant
+E:GLib.TypeResolutionHandler GLib.GType.ResolveType
+T:GLib.GTypeAttribute
+C:GLib.GTypeAttribute..ctor(System.Type)
+P:System.Type GLib.GTypeAttribute.WrapperType
+T:GLib.Global
+M:System.String GLib.Global.FormatSizeForDisplay(System.Int64)
+P:System.String GLib.Global.ApplicationName
+P:System.Boolean GLib.Global.IsSupported
+P:System.String GLib.Global.ProgramName
+T:GLib.HookList
+C:GLib.HookList..ctor()
+F:GLib.AbiStruct GLib.HookList.abi_info
+T:GLib.HookList+GHookList_dummy3Align
+T:GLib.HookList+GHookList_dummyAlign
+T:GLib.HookList+GHookList_finalize_hookAlign
+T:GLib.HookList+GHookList_hooksAlign
+T:GLib.HookList+GHookList_seq_idAlign
+T:GLib.IOChannel
+C:GLib.IOChannel..ctor(System.Int32)
+C:GLib.IOChannel..ctor(System.String,System.String)
+M:GLib.IOChannel GLib.IOChannel.FromHandle(System.IntPtr)
+M:GLib.IOChannelError GLib.IOChannel.ErrorFromErrno(System.Int32)
+M:GLib.IOStatus GLib.IOChannel.Flush()
+M:GLib.IOStatus GLib.IOChannel.ReadChars(System.Byte[],System.UInt64&)
+M:GLib.IOStatus GLib.IOChannel.ReadLine(System.String&)
+M:GLib.IOStatus GLib.IOChannel.ReadLine(System.String&,System.UInt64&)
+M:GLib.IOStatus GLib.IOChannel.ReadToEnd(System.String&)
+M:GLib.IOStatus GLib.IOChannel.ReadUnichar(System.UInt32&)
+M:GLib.IOStatus GLib.IOChannel.SeekPosition(System.Int64,GLib.SeekType)
+M:GLib.IOStatus GLib.IOChannel.Shutdown(System.Boolean)
+M:GLib.IOStatus GLib.IOChannel.WriteChars(System.Byte[],System.UInt64&)
+M:GLib.IOStatus GLib.IOChannel.WriteChars(System.String,System.String&)
+M:GLib.IOStatus GLib.IOChannel.WriteUnichar(System.UInt32)
+M:System.UInt32 GLib.IOChannel.AddWatch(System.Int32,GLib.IOCondition,GLib.IOFunc)
+M:System.Void GLib.IOChannel.Dispose()
+P:GLib.IOCondition GLib.IOChannel.BufferCondition
+P:System.UInt64 GLib.IOChannel.BufferSize
+P:System.Boolean GLib.IOChannel.Buffered
+P:System.Boolean GLib.IOChannel.CloseOnUnref
+P:System.String GLib.IOChannel.Encoding
+P:GLib.IOFlags GLib.IOChannel.Flags
+P:System.IntPtr GLib.IOChannel.Handle
+P:System.Char[] GLib.IOChannel.LineTerminator
+P:System.Int32 GLib.IOChannel.UnixFd
+T:GLib.IOChannelError
+F:GLib.IOChannelError GLib.IOChannelError.Failed
+F:GLib.IOChannelError GLib.IOChannelError.FileTooBig
+F:GLib.IOChannelError GLib.IOChannelError.IO
+F:GLib.IOChannelError GLib.IOChannelError.Inval
+F:GLib.IOChannelError GLib.IOChannelError.IsDir
+F:GLib.IOChannelError GLib.IOChannelError.NoSpace
+F:GLib.IOChannelError GLib.IOChannelError.Nxio
+F:GLib.IOChannelError GLib.IOChannelError.Overflow
+F:GLib.IOChannelError GLib.IOChannelError.Pipe
+F:System.Int32 GLib.IOChannelError.value__
+T:GLib.IOCondition
+F:GLib.IOCondition GLib.IOCondition.Err
+F:GLib.IOCondition GLib.IOCondition.Hup
+F:GLib.IOCondition GLib.IOCondition.In
+F:GLib.IOCondition GLib.IOCondition.Nval
+F:GLib.IOCondition GLib.IOCondition.Out
+F:GLib.IOCondition GLib.IOCondition.Pri
+F:System.Int32 GLib.IOCondition.value__
+T:GLib.IOFlags
+F:GLib.IOFlags GLib.IOFlags.Append
+F:GLib.IOFlags GLib.IOFlags.GetMask
+F:GLib.IOFlags GLib.IOFlags.IsReadable
+F:GLib.IOFlags GLib.IOFlags.IsSeekable
+F:GLib.IOFlags GLib.IOFlags.IsWriteable
+F:GLib.IOFlags GLib.IOFlags.Mask
+F:GLib.IOFlags GLib.IOFlags.Nonblock
+F:GLib.IOFlags GLib.IOFlags.SetMask
+F:System.Int32 GLib.IOFlags.value__
+T:GLib.IOFunc
+C:GLib.IOFunc..ctor(System.Object,System.IntPtr)
+M:System.Boolean GLib.IOFunc.EndInvoke(System.IAsyncResult)
+M:System.Boolean GLib.IOFunc.Invoke(GLib.IOChannel,GLib.IOCondition)
+M:System.IAsyncResult GLib.IOFunc.BeginInvoke(GLib.IOChannel,GLib.IOCondition,System.AsyncCallback,System.Object)
+T:GLib.IOStatus
+F:GLib.IOStatus GLib.IOStatus.Again
+F:GLib.IOStatus GLib.IOStatus.Eof
+F:GLib.IOStatus GLib.IOStatus.Error
+F:GLib.IOStatus GLib.IOStatus.Normal
+F:System.Int32 GLib.IOStatus.value__
+T:GLib.IWrapper
+P:System.IntPtr GLib.IWrapper.Handle
+T:GLib.Idle
+M:System.UInt32 GLib.Idle.Add(GLib.IdleHandler)
+M:System.UInt32 GLib.Idle.Add(GLib.Priority,GLib.IdleHandler)
+M:System.UInt32 GLib.Idle.Add(System.Int32,GLib.IdleHandler)
+M:System.Void GLib.Idle.Remove(System.UInt32)
+T:GLib.IdleHandler
+C:GLib.IdleHandler..ctor(System.Object,System.IntPtr)
+M:System.Boolean GLib.IdleHandler.EndInvoke(System.IAsyncResult)
+M:System.Boolean GLib.IdleHandler.Invoke()
+M:System.IAsyncResult GLib.IdleHandler.BeginInvoke(System.AsyncCallback,System.Object)
+T:GLib.InitiallyUnowned
+P:GLib.GType GLib.InitiallyUnowned.GType
+P:System.Boolean GLib.InitiallyUnowned.IsFloating
+T:GLib.KeyFile
+C:GLib.KeyFile..ctor()
+C:GLib.KeyFile..ctor(System.IntPtr)
+C:GLib.KeyFile..ctor(System.IntPtr,System.Boolean)
+C:GLib.KeyFile..ctor(System.String)
+C:GLib.KeyFile..ctor(System.String,GLib.KeyFileFlags)
+M:System.Boolean GLib.KeyFile.GetBoolean(System.String,System.String)
+M:System.Boolean GLib.KeyFile.HasGroup(System.String)
+M:System.Boolean GLib.KeyFile.HasKey(System.String,System.String)
+M:System.Boolean GLib.KeyFile.LoadFromData(System.Byte[],GLib.KeyFileFlags)
+M:System.Boolean GLib.KeyFile.LoadFromDataDirs(System.String,System.String&,GLib.KeyFileFlags)
+M:System.Boolean GLib.KeyFile.LoadFromDirs(System.String,System.String[],System.String&,GLib.KeyFileFlags)
+M:System.Boolean GLib.KeyFile.LoadFromFile(System.String,GLib.KeyFileFlags)
+M:System.Boolean GLib.KeyFile.RemoveComment(System.String,System.String)
+M:System.Boolean GLib.KeyFile.RemoveGroup(System.String)
+M:System.Boolean GLib.KeyFile.RemoveKey(System.String,System.String)
+M:System.Boolean GLib.KeyFile.SetComment(System.String,System.String,System.String)
+M:System.Boolean[] GLib.KeyFile.GetBooleanList(System.String,System.String)
+M:System.Byte[] GLib.KeyFile.ToData()
+M:System.Double GLib.KeyFile.GetDouble(System.String,System.String)
+M:System.Double[] GLib.KeyFile.GetDoubleList(System.String,System.String)
+M:System.Int32 GLib.KeyFile.GetInteger(System.String,System.String)
+M:System.Int32[] GLib.KeyFile.GetIntegerList(System.String,System.String)
+M:System.Int64 GLib.KeyFile.GetInt64(System.String,System.String)
+M:System.String GLib.KeyFile.GetComment(System.String,System.String)
+M:System.String GLib.KeyFile.GetLocaleString(System.String,System.String,System.String)
+M:System.String GLib.KeyFile.GetString(System.String,System.String)
+M:System.String GLib.KeyFile.GetValue(System.String,System.String)
+M:System.String[] GLib.KeyFile.GetKeys(System.String)
+M:System.String[] GLib.KeyFile.GetLocaleStringList(System.String,System.String,System.String)
+M:System.String[] GLib.KeyFile.GetStringList(System.String,System.String)
+M:System.UInt64 GLib.KeyFile.GetUInt64(System.String,System.String)
+M:System.Void GLib.KeyFile.Dispose()
+M:System.Void GLib.KeyFile.Save(System.String)
+M:System.Void GLib.KeyFile.SetBoolean(System.String,System.String,System.Boolean)
+M:System.Void GLib.KeyFile.SetBooleanList(System.String,System.String,System.Boolean[])
+M:System.Void GLib.KeyFile.SetDouble(System.String,System.String,System.Double)
+M:System.Void GLib.KeyFile.SetDoubleList(System.String,System.String,System.Double[])
+M:System.Void GLib.KeyFile.SetInt64(System.String,System.String,System.Int64)
+M:System.Void GLib.KeyFile.SetInteger(System.String,System.String,System.Int32)
+M:System.Void GLib.KeyFile.SetIntegerList(System.String,System.String,System.Int32[])
+M:System.Void GLib.KeyFile.SetListSeparator(System.Char)
+M:System.Void GLib.KeyFile.SetLocaleString(System.String,System.String,System.String,System.String)
+M:System.Void GLib.KeyFile.SetLocaleStringList(System.String,System.String,System.String,System.String[])
+M:System.Void GLib.KeyFile.SetString(System.String,System.String,System.String)
+M:System.Void GLib.KeyFile.SetStringList(System.String,System.String,System.String[])
+M:System.Void GLib.KeyFile.SetUInt64(System.String,System.String,System.UInt64)
+M:System.Void GLib.KeyFile.SetValue(System.String,System.String,System.String)
+P:System.String[] GLib.KeyFile.Groups
+P:System.IntPtr GLib.KeyFile.Handle
+P:System.String GLib.KeyFile.StartGroup
+T:GLib.KeyFileError
+F:GLib.KeyFileError GLib.KeyFileError.GroupNotFound
+F:GLib.KeyFileError GLib.KeyFileError.InvalidValue
+F:GLib.KeyFileError GLib.KeyFileError.KeyNotFound
+F:GLib.KeyFileError GLib.KeyFileError.NotFound
+F:GLib.KeyFileError GLib.KeyFileError.Parse
+F:GLib.KeyFileError GLib.KeyFileError.UnknownEncoding
+F:System.Int32 GLib.KeyFileError.value__
+T:GLib.KeyFileFlags
+F:GLib.KeyFileFlags GLib.KeyFileFlags.KeepComments
+F:GLib.KeyFileFlags GLib.KeyFileFlags.KeepTranslations
+F:GLib.KeyFileFlags GLib.KeyFileFlags.None
+F:System.Int32 GLib.KeyFileFlags.value__
+T:GLib.List
+C:GLib.List..ctor(System.Array,System.Type,System.Boolean,System.Boolean)
+C:GLib.List..ctor(System.IntPtr)
+C:GLib.List..ctor(System.IntPtr,System.Type)
+C:GLib.List..ctor(System.IntPtr,System.Type,System.Boolean,System.Boolean)
+C:GLib.List..ctor(System.Object[],System.Type,System.Boolean,System.Boolean)
+C:GLib.List..ctor(System.Type)
+M:System.Object GLib.List.Clone()
+T:GLib.ListBase
+M:System.Collections.IEnumerator GLib.ListBase.GetEnumerator()
+M:System.Object GLib.ListBase.Clone()
+M:System.Void GLib.ListBase.Append(System.IntPtr)
+M:System.Void GLib.ListBase.Append(System.Object)
+M:System.Void GLib.ListBase.Append(System.String)
+M:System.Void GLib.ListBase.CopyTo(System.Array,System.Int32)
+M:System.Void GLib.ListBase.Dispose()
+M:System.Void GLib.ListBase.Empty()
+M:System.Void GLib.ListBase.Prepend(System.IntPtr)
+P:System.Int32 GLib.ListBase.Count
+P:System.IntPtr GLib.ListBase.Handle
+P:System.Boolean GLib.ListBase.IsSynchronized
+P:System.Object GLib.ListBase.Item
+P:System.Boolean GLib.ListBase.Managed
+P:System.Object GLib.ListBase.SyncRoot
+T:GLib.ListBase+FilenameString
+T:GLib.Log
+C:GLib.Log..ctor()
+M:GLib.LogFunc GLib.Log.SetDefaultHandler(GLib.LogFunc)
+M:GLib.LogLevelFlags GLib.Log.SetAlwaysFatal(GLib.LogLevelFlags)
+M:GLib.LogLevelFlags GLib.Log.SetAlwaysFatal(System.String,GLib.LogLevelFlags)
+M:GLib.PrintFunc GLib.Log.SetPrintErrorHandler(GLib.PrintFunc)
+M:GLib.PrintFunc GLib.Log.SetPrintHandler(GLib.PrintFunc)
+M:System.UInt32 GLib.Log.SetLogHandler(System.String,GLib.LogLevelFlags,GLib.LogFunc)
+M:System.Void GLib.Log.DefaultHandler(System.String,GLib.LogLevelFlags,System.String)
+M:System.Void GLib.Log.PrintLogFunction(System.String,GLib.LogLevelFlags,System.String)
+M:System.Void GLib.Log.PrintTraceLogFunction(System.String,GLib.LogLevelFlags,System.String)
+M:System.Void GLib.Log.RemoveLogHandler(System.String,System.UInt32)
+M:System.Void GLib.Log.WriteLog(System.String,GLib.LogLevelFlags,System.String,System.Object[])
+T:GLib.LogFunc
+C:GLib.LogFunc..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult GLib.LogFunc.BeginInvoke(System.String,GLib.LogLevelFlags,System.String,System.AsyncCallback,System.Object)
+M:System.Void GLib.LogFunc.EndInvoke(System.IAsyncResult)
+M:System.Void GLib.LogFunc.Invoke(System.String,GLib.LogLevelFlags,System.String)
+T:GLib.LogLevelFlags
+F:GLib.LogLevelFlags GLib.LogLevelFlags.All
+F:GLib.LogLevelFlags GLib.LogLevelFlags.AllButFatal
+F:GLib.LogLevelFlags GLib.LogLevelFlags.AllButRecursion
+F:GLib.LogLevelFlags GLib.LogLevelFlags.Critical
+F:GLib.LogLevelFlags GLib.LogLevelFlags.Debug
+F:GLib.LogLevelFlags GLib.LogLevelFlags.Error
+F:GLib.LogLevelFlags GLib.LogLevelFlags.FlagFatal
+F:GLib.LogLevelFlags GLib.LogLevelFlags.FlagMask
+F:GLib.LogLevelFlags GLib.LogLevelFlags.FlagRecursion
+F:GLib.LogLevelFlags GLib.LogLevelFlags.Info
+F:GLib.LogLevelFlags GLib.LogLevelFlags.LevelMask
+F:GLib.LogLevelFlags GLib.LogLevelFlags.Message
+F:GLib.LogLevelFlags GLib.LogLevelFlags.Warning
+F:System.Int32 GLib.LogLevelFlags.value__
+T:GLib.MainContext
+C:GLib.MainContext..ctor()
+C:GLib.MainContext..ctor(System.IntPtr)
+M:System.Boolean GLib.MainContext.Equals(System.Object)
+M:System.Boolean GLib.MainContext.Iteration()
+M:System.Boolean GLib.MainContext.Iteration(System.Boolean)
+M:System.Boolean GLib.MainContext.Pending()
+M:System.Boolean GLib.MainContext.RunIteration()
+M:System.Boolean GLib.MainContext.RunIteration(System.Boolean)
+M:System.Int32 GLib.MainContext.GetHashCode()
+M:System.Void GLib.MainContext.PopThreadDefault()
+M:System.Void GLib.MainContext.PushThreadDefault()
+M:System.Void GLib.MainContext.Wakeup()
+P:GLib.MainContext GLib.MainContext.Default
+P:System.Int32 GLib.MainContext.Depth
+P:System.IntPtr GLib.MainContext.Handle
+P:System.Boolean GLib.MainContext.HasPendingEvents
+P:GLib.MainContext GLib.MainContext.ThreadDefault
+T:GLib.MainLoop
+C:GLib.MainLoop..ctor()
+C:GLib.MainLoop..ctor(GLib.MainContext)
+C:GLib.MainLoop..ctor(GLib.MainContext,System.Boolean)
+M:System.Boolean GLib.MainLoop.Equals(System.Object)
+M:System.Int32 GLib.MainLoop.GetHashCode()
+M:System.Void GLib.MainLoop.Quit()
+M:System.Void GLib.MainLoop.Run()
+P:GLib.MainContext GLib.MainLoop.Context
+P:System.Boolean GLib.MainLoop.IsRunning
+T:GLib.Markup
+M:System.String GLib.Markup.EscapeText(System.String)
+T:GLib.MarkupParser
+M:GLib.MarkupParser GLib.MarkupParser.New(System.IntPtr)
+M:System.Boolean GLib.MarkupParser.Equals(GLib.MarkupParser)
+M:System.Boolean GLib.MarkupParser.Equals(System.Object)
+M:System.Int32 GLib.MarkupParser.GetHashCode()
+F:GLib.MarkupParser GLib.MarkupParser.Zero
+T:GLib.Marshaller
+M:!!TElement[] GLib.Marshaller.ListPtrToArray(System.IntPtr,System.Boolean,System.Boolean)
+M:!!TElement[] GLib.Marshaller.ListToArray(GLib.ListBase)
+M:!!TElement[] GLib.Marshaller.PtrArrayToArray(System.IntPtr,System.Boolean,System.Boolean)
+M:!!TElement[] GLib.Marshaller.SListPtrToArray(System.IntPtr,System.Boolean,System.Boolean)
+M:!!T[] GLib.Marshaller.StructArrayFromNullTerminatedIntPtr(System.IntPtr)
+M:System.Array GLib.Marshaller.ArrayPtrToArray(System.IntPtr,System.Type,System.Int32,System.Boolean)
+M:System.Array GLib.Marshaller.ListPtrToArray(System.IntPtr,System.Type,System.Boolean,System.Boolean,System.Type)
+M:System.Array GLib.Marshaller.ListToArray(GLib.ListBase,System.Type)
+M:System.Array GLib.Marshaller.PtrArrayToArray(System.IntPtr,System.Boolean,System.Boolean,System.Type)
+M:System.Byte[] GLib.Marshaller.ArrayPtrToArray(System.IntPtr,System.Int32,System.Boolean)
+M:System.Char GLib.Marshaller.GUnicharToChar(System.UInt32)
+M:System.DateTime GLib.Marshaller.time_tToDateTime(System.IntPtr)
+M:System.IntPtr GLib.Marshaller.ArrayToArrayPtr(System.Byte[])
+M:System.IntPtr GLib.Marshaller.DateTimeTotime_t(System.DateTime)
+M:System.IntPtr GLib.Marshaller.Malloc(System.UInt64)
+M:System.IntPtr GLib.Marshaller.StringArrayToNullTermStrvPointer(System.String[])
+M:System.IntPtr GLib.Marshaller.StringArrayToStrvPtr(System.String[])
+M:System.IntPtr GLib.Marshaller.StringToFilenamePtr(System.String)
+M:System.IntPtr GLib.Marshaller.StringToPtrGStrdup(System.String)
+M:System.IntPtr GLib.Marshaller.StructArrayToNullTerminatedStructArrayIntPtr(!!T[])
+M:System.IntPtr GLib.Marshaller.StructureToPtrAlloc(System.Object)
+M:System.IntPtr[] GLib.Marshaller.StringArrayToNullTermPointer(System.String[])
+M:System.String GLib.Marshaller.FilenamePtrToString(System.IntPtr)
+M:System.String GLib.Marshaller.FilenamePtrToStringGFree(System.IntPtr)
+M:System.String GLib.Marshaller.GUnicharToString(System.UInt32)
+M:System.String GLib.Marshaller.PtrToStringGFree(System.IntPtr)
+M:System.String GLib.Marshaller.StringFormat(System.String,System.Object[])
+M:System.String GLib.Marshaller.Utf8PtrToString(System.IntPtr)
+M:System.String[] GLib.Marshaller.NullTermPtrToStringArray(System.IntPtr,System.Boolean)
+M:System.String[] GLib.Marshaller.PtrToStringArrayGFree(System.IntPtr)
+M:System.String[] GLib.Marshaller.PtrToStringGFree(System.IntPtr[])
+M:System.String[] GLib.Marshaller.Utf8PtrToString(System.IntPtr[])
+M:System.UInt32 GLib.Marshaller.CharToGUnichar(System.Char)
+M:System.Void GLib.Marshaller.Free(System.IntPtr)
+M:System.Void GLib.Marshaller.Free(System.IntPtr[])
+M:System.Void GLib.Marshaller.StrFreeV(System.IntPtr)
+T:GLib.MissingIntPtrCtorException
+C:GLib.MissingIntPtrCtorException..ctor(System.String)
+T:GLib.Mutex
+C:GLib.Mutex..ctor(System.IntPtr)
+M:System.Boolean GLib.Mutex.Trylock()
+M:System.Void GLib.Mutex.Clear()
+M:System.Void GLib.Mutex.Init()
+M:System.Void GLib.Mutex.Lock()
+M:System.Void GLib.Mutex.Unlock()
+T:GLib.Mutex+ABI
+T:GLib.NotifyArgs
+C:GLib.NotifyArgs..ctor()
+P:System.String GLib.NotifyArgs.Property
+T:GLib.NotifyHandler
+C:GLib.NotifyHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult GLib.NotifyHandler.BeginInvoke(System.Object,GLib.NotifyArgs,System.AsyncCallback,System.Object)
+M:System.Void GLib.NotifyHandler.EndInvoke(System.IAsyncResult)
+M:System.Void GLib.NotifyHandler.Invoke(System.Object,GLib.NotifyArgs)
+T:GLib.Object
+M:GLib.Object GLib.Object.GetObject(System.IntPtr)
+M:GLib.Object GLib.Object.GetObject(System.IntPtr,System.Boolean)
+M:GLib.Object GLib.Object.TryGetObject(System.IntPtr)
+M:GLib.Value GLib.Object.GetProperty(System.String)
+M:System.Int32 GLib.Object.GetHashCode()
+M:System.Void GLib.Object.AddNotification(GLib.NotifyHandler)
+M:System.Void GLib.Object.AddNotification(System.String,GLib.NotifyHandler)
+M:System.Void GLib.Object.AddSignalHandler(System.String,System.Delegate)
+M:System.Void GLib.Object.AddSignalHandler(System.String,System.Delegate,System.Delegate)
+M:System.Void GLib.Object.AddSignalHandler(System.String,System.Delegate,System.Type)
+M:System.Void GLib.Object.Dispose()
+M:System.Void GLib.Object.OverrideProperty(System.IntPtr,System.String)
+M:System.Void GLib.Object.OverrideProperty(System.IntPtr,System.UInt32,System.String)
+M:System.Void GLib.Object.QueueSignalFree()
+M:System.Void GLib.Object.RemoveNotification(GLib.NotifyHandler)
+M:System.Void GLib.Object.RemoveNotification(System.String,GLib.NotifyHandler)
+M:System.Void GLib.Object.RemoveSignalHandler(System.String,System.Delegate)
+M:System.Void GLib.Object.SetProperty(System.String,GLib.Value)
+P:System.Collections.Hashtable GLib.Object.Data
+P:GLib.GType GLib.Object.GType
+P:System.IntPtr GLib.Object.Handle
+P:GLib.GType GLib.Object.NativeType
+P:System.IntPtr GLib.Object.OwnedHandle
+P:System.Boolean GLib.Object.WarnOnFinalize
+F:System.Collections.Generic.List<GLib.Signal> GLib.Object.PendingSignalFrees
+F:GLib.AbiStruct GLib.Object.abi_info
+F:GLib.AbiStruct GLib.Object.class_abi
+T:GLib.Object+GObject
+F:System.IntPtr GLib.Object+GObject.qdata
+F:System.UInt32 GLib.Object+GObject.ref_count
+F:GLib.Object+GTypeInstance GLib.Object+GObject.type_instance
+T:GLib.Object+GObject_g_type_instanceAlign
+T:GLib.Object+GObject_qdataAlign
+T:GLib.Object+GObject_ref_countAlign
+T:GLib.Object+GTypeInstance
+F:System.IntPtr GLib.Object+GTypeInstance.g_class
+T:GLib.ObjectManager
+M:GLib.Object GLib.ObjectManager.CreateObject(System.IntPtr)
+M:System.Void GLib.ObjectManager.RegisterType(GLib.GType,System.Type)
+M:System.Void GLib.ObjectManager.RegisterType(System.String,System.String)
+M:System.Void GLib.ObjectManager.RegisterType(System.String,System.String,System.String)
+T:GLib.Opaque
+C:GLib.Opaque..ctor()
+C:GLib.Opaque..ctor(System.IntPtr)
+M:GLib.Opaque GLib.Opaque.GetOpaque(System.IntPtr,System.Type,System.Boolean)
+M:System.Boolean GLib.Opaque.Equals(System.Object)
+M:System.Int32 GLib.Opaque.GetHashCode()
+M:System.Void GLib.Opaque.Dispose()
+P:System.IntPtr GLib.Opaque.Handle
+P:System.Boolean GLib.Opaque.Owned
+P:System.IntPtr GLib.Opaque.OwnedCopy
+T:GLib.ParamSpec
+C:GLib.ParamSpec..ctor(System.IntPtr)
+C:GLib.ParamSpec..ctor(System.String,System.String,System.String,GLib.GType,System.Boolean,System.Boolean)
+M:System.String GLib.ParamSpec.ToString()
+P:System.IntPtr GLib.ParamSpec.Handle
+P:System.String GLib.ParamSpec.Name
+P:GLib.GType GLib.ParamSpec.ValueType
+T:GLib.PollFD
+M:GLib.PollFD GLib.PollFD.New(System.IntPtr)
+M:System.Boolean GLib.PollFD.Equals(GLib.PollFD)
+M:System.Boolean GLib.PollFD.Equals(System.Object)
+M:System.Int32 GLib.PollFD.GetHashCode()
+P:GLib.GType GLib.PollFD.GType
+F:System.UInt16 GLib.PollFD.Events
+F:System.Int32 GLib.PollFD.Fd
+F:System.UInt16 GLib.PollFD.Revents
+F:GLib.PollFD GLib.PollFD.Zero
+T:GLib.PrintFunc
+C:GLib.PrintFunc..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult GLib.PrintFunc.BeginInvoke(System.String,System.AsyncCallback,System.Object)
+M:System.Void GLib.PrintFunc.EndInvoke(System.IAsyncResult)
+M:System.Void GLib.PrintFunc.Invoke(System.String)
+T:GLib.Priority
+F:GLib.Priority GLib.Priority.Default
+F:GLib.Priority GLib.Priority.DefaultIdle
+F:GLib.Priority GLib.Priority.High
+F:GLib.Priority GLib.Priority.HighIdle
+F:GLib.Priority GLib.Priority.Low
+F:System.Int32 GLib.Priority.value__
+T:GLib.Process
+M:System.Boolean GLib.Process.SpawnAsync(System.String,System.String[],System.String[],GLib.SpawnFlags,GLib.SpawnChildSetupFunc,GLib.Process&)
+M:System.Boolean GLib.Process.SpawnAsyncWithPipes(System.String,System.String[],System.String[],GLib.SpawnFlags,GLib.SpawnChildSetupFunc,GLib.Process&,System.Int32&,System.Int32&,System.Int32&)
+M:System.Boolean GLib.Process.SpawnCommandLineAsync(System.String)
+M:System.Boolean GLib.Process.SpawnCommandLineSync(System.String,System.String&,System.String&,System.Int32&)
+M:System.Boolean GLib.Process.SpawnSync(System.String,System.String[],System.String[],GLib.SpawnFlags,GLib.SpawnChildSetupFunc,System.String&,System.String&,System.Int32&)
+M:System.Void GLib.Process.Close()
+F:System.Int32 GLib.Process.IgnorePipe
+F:System.Int32 GLib.Process.RequestPipe
+T:GLib.PropertyAttribute
+C:GLib.PropertyAttribute..ctor(System.String)
+C:GLib.PropertyAttribute..ctor(System.String,System.String,System.String)
+P:System.String GLib.PropertyAttribute.Blurb
+P:System.String GLib.PropertyAttribute.Name
+P:System.String GLib.PropertyAttribute.Nickname
+T:GLib.PtrArray
+C:GLib.PtrArray..ctor(System.IntPtr)
+C:GLib.PtrArray..ctor(System.IntPtr,System.Type)
+C:GLib.PtrArray..ctor(System.Type,System.Boolean,System.Boolean)
+C:GLib.PtrArray..ctor(System.UInt32,System.Type,System.Boolean,System.Boolean)
+M:System.Collections.IEnumerator GLib.PtrArray.GetEnumerator()
+M:System.Object GLib.PtrArray.Clone()
+M:System.Void GLib.PtrArray.Add(System.IntPtr)
+M:System.Void GLib.PtrArray.CopyTo(System.Array,System.Int32)
+M:System.Void GLib.PtrArray.Dispose()
+M:System.Void GLib.PtrArray.Remove(System.IntPtr)
+M:System.Void GLib.PtrArray.RemoveRange(System.IntPtr,System.UInt32,System.UInt32)
+P:System.IntPtr GLib.PtrArray.ArrayPtr
+P:System.Int32 GLib.PtrArray.Count
+P:System.IntPtr GLib.PtrArray.Handle
+P:System.Boolean GLib.PtrArray.IsSynchronized
+P:System.Object GLib.PtrArray.Item
+P:System.Object GLib.PtrArray.SyncRoot
+T:GLib.RecMutex
+C:GLib.RecMutex..ctor(System.IntPtr)
+M:System.Boolean GLib.RecMutex.Trylock()
+M:System.Void GLib.RecMutex.Clear()
+M:System.Void GLib.RecMutex.Init()
+M:System.Void GLib.RecMutex.Lock()
+M:System.Void GLib.RecMutex.Unlock()
+T:GLib.RecMutex+ABI
+T:GLib.SList
+C:GLib.SList..ctor(System.Array,System.Type,System.Boolean,System.Boolean)
+C:GLib.SList..ctor(System.IntPtr)
+C:GLib.SList..ctor(System.IntPtr,System.Type)
+C:GLib.SList..ctor(System.IntPtr,System.Type,System.Boolean,System.Boolean)
+C:GLib.SList..ctor(System.Object[],System.Type,System.Boolean,System.Boolean)
+C:GLib.SList..ctor(System.Type)
+M:System.Object GLib.SList.Clone()
+T:GLib.SeekType
+F:GLib.SeekType GLib.SeekType.Cur
+F:GLib.SeekType GLib.SeekType.End
+F:GLib.SeekType GLib.SeekType.Set
+F:System.Int32 GLib.SeekType.value__
+T:GLib.Signal
+M:System.Object GLib.Signal.Emit(GLib.Object,System.String,System.Object[])
+M:System.UInt64 GLib.Signal.AddEmissionHook(System.String,GLib.GType,GLib.Signal+EmissionHook)
+M:System.Void GLib.Signal.AddDelegate(System.Delegate)
+M:System.Void GLib.Signal.RemoveDelegate(System.Delegate)
+P:System.Delegate GLib.Signal.Handler
+T:GLib.Signal+EmissionHook
+C:GLib.Signal+EmissionHook..ctor(System.Object,System.IntPtr)
+M:System.Boolean GLib.Signal+EmissionHook.EndInvoke(System.IAsyncResult)
+M:System.Boolean GLib.Signal+EmissionHook.Invoke(GLib.Signal+InvocationHint,System.Object[])
+M:System.IAsyncResult GLib.Signal+EmissionHook.BeginInvoke(GLib.Signal+InvocationHint,System.Object[],System.AsyncCallback,System.Object)
+T:GLib.Signal+EmissionHookMarshaler
+C:GLib.Signal+EmissionHookMarshaler..ctor(GLib.Signal+EmissionHook)
+C:GLib.Signal+EmissionHookMarshaler..ctor(GLib.Signal+EmissionHookNative,System.IntPtr)
+P:GLib.Signal+EmissionHookNative GLib.Signal+EmissionHookMarshaler.Callback
+P:GLib.Signal+EmissionHook GLib.Signal+EmissionHookMarshaler.Invoker
+T:GLib.Signal+EmissionHookNative
+C:GLib.Signal+EmissionHookNative..ctor(System.Object,System.IntPtr)
+M:System.Boolean GLib.Signal+EmissionHookNative.EndInvoke(GLib.Signal+InvocationHint&,System.IAsyncResult)
+M:System.Boolean GLib.Signal+EmissionHookNative.Invoke(GLib.Signal+InvocationHint&,System.UInt32,System.IntPtr,System.IntPtr)
+M:System.IAsyncResult GLib.Signal+EmissionHookNative.BeginInvoke(GLib.Signal+InvocationHint&,System.UInt32,System.IntPtr,System.IntPtr,System.AsyncCallback,System.Object)
+T:GLib.Signal+Flags
+F:GLib.Signal+Flags GLib.Signal+Flags.Action
+F:GLib.Signal+Flags GLib.Signal+Flags.Detailed
+F:GLib.Signal+Flags GLib.Signal+Flags.NoHooks
+F:GLib.Signal+Flags GLib.Signal+Flags.NoRecurse
+F:GLib.Signal+Flags GLib.Signal+Flags.RunCleanup
+F:GLib.Signal+Flags GLib.Signal+Flags.RunFirst
+F:GLib.Signal+Flags GLib.Signal+Flags.RunLast
+F:System.Int32 GLib.Signal+Flags.value__
+T:GLib.Signal+InvocationHint
+F:System.UInt32 GLib.Signal+InvocationHint.detail
+F:GLib.Signal+Flags GLib.Signal+InvocationHint.run_type
+F:System.UInt32 GLib.Signal+InvocationHint.signal_id
+T:GLib.SignalArgs
+C:GLib.SignalArgs..ctor()
+C:GLib.SignalArgs..ctor(System.Object)
+C:GLib.SignalArgs..ctor(System.Object,System.Object[])
+P:System.Object[] GLib.SignalArgs.Args
+P:System.Object GLib.SignalArgs.RetVal
+T:GLib.SignalAttribute
+C:GLib.SignalAttribute..ctor(System.String)
+P:System.String GLib.SignalAttribute.CName
+T:GLib.Source
+C:GLib.Source..ctor(GLib.SourceFuncs,System.UInt32)
+C:GLib.Source..ctor(System.IntPtr)
+M:GLib.IOCondition GLib.Source.QueryUnixFd(System.IntPtr)
+M:System.Boolean GLib.Source.Remove(System.UInt32)
+M:System.Boolean GLib.Source.RemoveByFuncsUserData(GLib.SourceFuncs,System.IntPtr)
+M:System.Boolean GLib.Source.RemoveByUserData(System.IntPtr)
+M:System.UInt32 GLib.Source.Attach(GLib.MainContext)
+M:System.Void GLib.Source.AddChildSource(GLib.Source)
+M:System.Void GLib.Source.AddPoll(GLib.PollFD)
+M:System.Void GLib.Source.GetCurrentTime(GLib.TimeVal)
+M:System.Void GLib.Source.ModifyUnixFd(System.IntPtr,GLib.IOCondition)
+M:System.Void GLib.Source.RemoveChildSource(GLib.Source)
+M:System.Void GLib.Source.RemovePoll(GLib.PollFD)
+M:System.Void GLib.Source.RemoveUnixFd(System.IntPtr)
+M:System.Void GLib.Source.SetCallbackIndirect(System.IntPtr,GLib.SourceCallbackFuncs)
+M:System.Void GLib.Source.SetNameById(System.UInt32,System.String)
+P:System.Boolean GLib.Source.CanRecurse
+P:GLib.MainContext GLib.Source.Context
+P:GLib.SourceFuncs GLib.Source.Funcs
+P:GLib.GType GLib.Source.GType
+P:System.UInt32 GLib.Source.Id
+P:System.Boolean GLib.Source.IsDestroyed
+P:System.String GLib.Source.Name
+P:System.Int32 GLib.Source.Priority
+P:System.Int64 GLib.Source.ReadyTime
+P:System.Int64 GLib.Source.Time
+T:GLib.SourceCallbackFuncs
+M:GLib.SourceCallbackFuncs GLib.SourceCallbackFuncs.New(System.IntPtr)
+M:System.Boolean GLib.SourceCallbackFuncs.Equals(GLib.SourceCallbackFuncs)
+M:System.Boolean GLib.SourceCallbackFuncs.Equals(System.Object)
+M:System.Int32 GLib.SourceCallbackFuncs.GetHashCode()
+F:GLib.SourceCallbackFuncs GLib.SourceCallbackFuncs.Zero
+T:GLib.SourceDummyMarshal
+C:GLib.SourceDummyMarshal..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult GLib.SourceDummyMarshal.BeginInvoke(System.AsyncCallback,System.Object)
+M:System.Void GLib.SourceDummyMarshal.EndInvoke(System.IAsyncResult)
+M:System.Void GLib.SourceDummyMarshal.Invoke()
+T:GLib.SourceFunc
+C:GLib.SourceFunc..ctor(System.Object,System.IntPtr)
+M:System.Boolean GLib.SourceFunc.EndInvoke(System.IAsyncResult)
+M:System.Boolean GLib.SourceFunc.Invoke(System.IntPtr)
+M:System.IAsyncResult GLib.SourceFunc.BeginInvoke(System.IntPtr,System.AsyncCallback,System.Object)
+T:GLib.SourceFuncs
+M:GLib.SourceFuncs GLib.SourceFuncs.New(System.IntPtr)
+M:System.Boolean GLib.SourceFuncs.Equals(GLib.SourceFuncs)
+M:System.Boolean GLib.SourceFuncs.Equals(System.Object)
+M:System.Int32 GLib.SourceFuncs.GetHashCode()
+F:GLib.SourceFuncs GLib.SourceFuncs.Zero
+T:GLib.SpawnChildSetupFunc
+C:GLib.SpawnChildSetupFunc..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult GLib.SpawnChildSetupFunc.BeginInvoke(System.AsyncCallback,System.Object)
+M:System.Void GLib.SpawnChildSetupFunc.EndInvoke(System.IAsyncResult)
+M:System.Void GLib.SpawnChildSetupFunc.Invoke()
+T:GLib.SpawnError
+F:GLib.SpawnError GLib.SpawnError.Acces
+F:GLib.SpawnError GLib.SpawnError.Chdir
+F:GLib.SpawnError GLib.SpawnError.Failed
+F:GLib.SpawnError GLib.SpawnError.Fork
+F:GLib.SpawnError GLib.SpawnError.IO
+F:GLib.SpawnError GLib.SpawnError.Inval
+F:GLib.SpawnError GLib.SpawnError.IsDir
+F:GLib.SpawnError GLib.SpawnError.LibBad
+F:GLib.SpawnError GLib.SpawnError.Loop
+F:GLib.SpawnError GLib.SpawnError.MFile
+F:GLib.SpawnError GLib.SpawnError.NFile
+F:GLib.SpawnError GLib.SpawnError.NameTooLong
+F:GLib.SpawnError GLib.SpawnError.NoEnt
+F:GLib.SpawnError GLib.SpawnError.NoExec
+F:GLib.SpawnError GLib.SpawnError.NoMem
+F:GLib.SpawnError GLib.SpawnError.NotDir
+F:GLib.SpawnError GLib.SpawnError.Perm
+F:GLib.SpawnError GLib.SpawnError.Read
+F:GLib.SpawnError GLib.SpawnError.TooBig
+F:GLib.SpawnError GLib.SpawnError.TxtBusy
+F:System.Int32 GLib.SpawnError.value__
+T:GLib.SpawnFlags
+F:GLib.SpawnFlags GLib.SpawnFlags.ChildInheritsStdin
+F:GLib.SpawnFlags GLib.SpawnFlags.DoNotReapChild
+F:GLib.SpawnFlags GLib.SpawnFlags.FileAndArgvZero
+F:GLib.SpawnFlags GLib.SpawnFlags.LeaveDescriptorsOpen
+F:GLib.SpawnFlags GLib.SpawnFlags.SearchPath
+F:GLib.SpawnFlags GLib.SpawnFlags.StderrToDevNull
+F:GLib.SpawnFlags GLib.SpawnFlags.StdoutToDevNull
+F:System.Int32 GLib.SpawnFlags.value__
+T:GLib.Thread
+M:System.Void GLib.Thread.Init()
+P:System.Boolean GLib.Thread.Supported
+T:GLib.TimeVal
+M:GLib.TimeVal GLib.TimeVal.New(System.IntPtr)
+M:System.Boolean GLib.TimeVal.Equals(GLib.TimeVal)
+M:System.Boolean GLib.TimeVal.Equals(System.Object)
+M:System.Boolean GLib.TimeVal.FromIso8601(System.String,GLib.TimeVal&)
+M:System.Int32 GLib.TimeVal.GetHashCode()
+M:System.String GLib.TimeVal.ToIso8601()
+M:System.Void GLib.TimeVal.Add(System.Int64)
+P:System.Int64 GLib.TimeVal.TvSec
+P:System.Int64 GLib.TimeVal.TvUsec
+F:GLib.TimeVal GLib.TimeVal.Zero
+T:GLib.TimeZone
+C:GLib.TimeZone..ctor()
+C:GLib.TimeZone..ctor(System.IntPtr)
+C:GLib.TimeZone..ctor(System.String)
+M:GLib.TimeZone GLib.TimeZone.NewUtc()
+M:System.Boolean GLib.TimeZone.IsDst(System.Int32)
+M:System.Int32 GLib.TimeZone.AdjustTime(System.Int32,System.Int64)
+M:System.Int32 GLib.TimeZone.FindInterval(System.Int32,System.Int64)
+M:System.Int32 GLib.TimeZone.GetOffset(System.Int32)
+M:System.String GLib.TimeZone.GetAbbreviation(System.Int32)
+P:GLib.GType GLib.TimeZone.GType
+T:GLib.Timeout
+M:System.UInt32 GLib.Timeout.Add(System.UInt32,GLib.TimeoutHandler)
+M:System.UInt32 GLib.Timeout.Add(System.UInt32,GLib.TimeoutHandler,GLib.Priority)
+M:System.UInt32 GLib.Timeout.Add(System.UInt32,GLib.TimeoutHandler,System.Int32)
+M:System.UInt32 GLib.Timeout.AddSeconds(System.UInt32,GLib.TimeoutHandler)
+M:System.UInt32 GLib.Timeout.AddSeconds(System.UInt32,GLib.TimeoutHandler,GLib.Priority)
+M:System.UInt32 GLib.Timeout.AddSeconds(System.UInt32,GLib.TimeoutHandler,System.Int32)
+M:System.Void GLib.Timeout.Remove(System.UInt32)
+T:GLib.TimeoutHandler
+C:GLib.TimeoutHandler..ctor(System.Object,System.IntPtr)
+M:System.Boolean GLib.TimeoutHandler.EndInvoke(System.IAsyncResult)
+M:System.Boolean GLib.TimeoutHandler.Invoke()
+M:System.IAsyncResult GLib.TimeoutHandler.BeginInvoke(System.AsyncCallback,System.Object)
+T:GLib.TypeFundamentals
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeBoolean
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeBoxed
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeChar
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeDouble
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeEnum
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeFlags
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeFloat
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeInt
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeInt64
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeInterface
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeInvalid
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeLong
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeNone
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeObject
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeParam
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypePointer
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeString
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeUChar
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeUInt
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeUInt64
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeULong
+F:GLib.TypeFundamentals GLib.TypeFundamentals.TypeVariant
+F:System.Int32 GLib.TypeFundamentals.value__
+T:GLib.TypeInitializerAttribute
+C:GLib.TypeInitializerAttribute..ctor(System.Type,System.String)
+P:System.String GLib.TypeInitializerAttribute.MethodName
+P:System.Type GLib.TypeInitializerAttribute.Type
+T:GLib.TypeNameAttribute
+C:GLib.TypeNameAttribute..ctor(System.String)
+P:System.String GLib.TypeNameAttribute.Name
+T:GLib.TypeResolutionHandler
+C:GLib.TypeResolutionHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult GLib.TypeResolutionHandler.BeginInvoke(GLib.GType,System.String,System.AsyncCallback,System.Object)
+M:System.Type GLib.TypeResolutionHandler.EndInvoke(System.IAsyncResult)
+M:System.Type GLib.TypeResolutionHandler.Invoke(GLib.GType,System.String)
+T:GLib.UnhandledExceptionArgs
+C:GLib.UnhandledExceptionArgs..ctor(System.Exception,System.Boolean)
+P:System.Boolean GLib.UnhandledExceptionArgs.ExitApplication
+T:GLib.UnhandledExceptionHandler
+C:GLib.UnhandledExceptionHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult GLib.UnhandledExceptionHandler.BeginInvoke(GLib.UnhandledExceptionArgs,System.AsyncCallback,System.Object)
+M:System.Void GLib.UnhandledExceptionHandler.EndInvoke(System.IAsyncResult)
+M:System.Void GLib.UnhandledExceptionHandler.Invoke(GLib.UnhandledExceptionArgs)
+T:GLib.Value
+C:GLib.Value..ctor(GLib.GInterfaceAdapter)
+C:GLib.Value..ctor(GLib.GType)
+C:GLib.Value..ctor(GLib.Object)
+C:GLib.Value..ctor(GLib.Object,System.String)
+C:GLib.Value..ctor(GLib.Opaque,System.String)
+C:GLib.Value..ctor(GLib.ValueArray)
+C:GLib.Value..ctor(GLib.Variant)
+C:GLib.Value..ctor(System.Boolean)
+C:GLib.Value..ctor(System.Byte)
+C:GLib.Value..ctor(System.Double)
+C:GLib.Value..ctor(System.Int32)
+C:GLib.Value..ctor(System.Int64)
+C:GLib.Value..ctor(System.IntPtr)
+C:GLib.Value..ctor(System.IntPtr,System.String,GLib.Opaque)
+C:GLib.Value..ctor(System.Object)
+C:GLib.Value..ctor(System.SByte)
+C:GLib.Value..ctor(System.Single)
+C:GLib.Value..ctor(System.String)
+C:GLib.Value..ctor(System.String[])
+C:GLib.Value..ctor(System.UInt16)
+C:GLib.Value..ctor(System.UInt32)
+C:GLib.Value..ctor(System.UInt64)
+M:System.Void GLib.Value.Dispose()
+M:System.Void GLib.Value.Init(GLib.GType)
+P:System.Object GLib.Value.Val
+F:GLib.Value GLib.Value.Empty
+T:GLib.ValueArray
+C:GLib.ValueArray..ctor(System.IntPtr)
+C:GLib.ValueArray..ctor(System.UInt32)
+M:System.Collections.IEnumerator GLib.ValueArray.GetEnumerator()
+M:System.Object GLib.ValueArray.Clone()
+M:System.Void GLib.ValueArray.Append(GLib.Value)
+M:System.Void GLib.ValueArray.CopyTo(System.Array,System.Int32)
+M:System.Void GLib.ValueArray.Dispose()
+M:System.Void GLib.ValueArray.Insert(System.UInt32,GLib.Value)
+M:System.Void GLib.ValueArray.Prepend(GLib.Value)
+M:System.Void GLib.ValueArray.Remove(System.UInt32)
+P:System.IntPtr GLib.ValueArray.ArrayPtr
+P:System.Int32 GLib.ValueArray.Count
+P:GLib.GType GLib.ValueArray.GType
+P:System.IntPtr GLib.ValueArray.Handle
+P:System.Boolean GLib.ValueArray.IsSynchronized
+P:System.Object GLib.ValueArray.Item
+P:System.Object GLib.ValueArray.SyncRoot
+T:GLib.Variant
+C:GLib.Variant..ctor(System.Boolean)
+C:GLib.Variant..ctor(System.Byte)
+C:GLib.Variant..ctor(System.Collections.Generic.IDictionary<System.String,GLib.Variant>)
+C:GLib.Variant..ctor(System.Double)
+C:GLib.Variant..ctor(System.Int16)
+C:GLib.Variant..ctor(System.Int32)
+C:GLib.Variant..ctor(System.Int64)
+C:GLib.Variant..ctor(System.IntPtr)
+C:GLib.Variant..ctor(System.String)
+C:GLib.Variant..ctor(System.String[])
+C:GLib.Variant..ctor(System.UInt16)
+C:GLib.Variant..ctor(System.UInt32)
+C:GLib.Variant..ctor(System.UInt64)
+M:GLib.Variant GLib.Variant.NewArray(GLib.VariantType,GLib.Variant[])
+M:GLib.Variant GLib.Variant.NewArray(GLib.Variant[])
+M:GLib.Variant GLib.Variant.NewDictEntry(GLib.Variant,GLib.Variant)
+M:GLib.Variant GLib.Variant.NewTuple(GLib.Variant[])
+M:GLib.Variant GLib.Variant.NewVariant(GLib.Variant)
+M:GLib.Variant[] GLib.Variant.ToArray()
+M:System.Collections.Generic.Dictionary<System.String,GLib.Variant> GLib.Variant.ToAsv()
+M:System.String GLib.Variant.Print(System.Boolean)
+M:System.Void GLib.Variant.Dispose()
+P:System.IntPtr GLib.Variant.Handle
+P:GLib.VariantType GLib.Variant.Type
+T:GLib.VariantType
+C:GLib.VariantType..ctor(System.IntPtr)
+C:GLib.VariantType..ctor(System.String)
+M:GLib.VariantType GLib.VariantType.Copy()
+M:GLib.VariantType GLib.VariantType.Element()
+M:GLib.VariantType GLib.VariantType.First()
+M:GLib.VariantType GLib.VariantType.Key()
+M:GLib.VariantType GLib.VariantType.NewArray(GLib.VariantType)
+M:GLib.VariantType GLib.VariantType.NewDictionaryEntry(GLib.VariantType,GLib.VariantType)
+M:GLib.VariantType GLib.VariantType.NewMaybe(GLib.VariantType)
+M:GLib.VariantType GLib.VariantType.NewTuple(GLib.VariantType[])
+M:GLib.VariantType GLib.VariantType.Next()
+M:GLib.VariantType GLib.VariantType.Value()
+M:System.Boolean GLib.VariantType.Equals(System.Object)
+M:System.Boolean GLib.VariantType.IsSubtypeOf(GLib.VariantType)
+M:System.Boolean GLib.VariantType.StringIsValid(System.String)
+M:System.Int32 GLib.VariantType.GetHashCode()
+M:System.Int64 GLib.VariantType.NItems()
+M:System.String GLib.VariantType.ToString()
+M:System.Void GLib.VariantType.Dispose()
+P:System.IntPtr GLib.VariantType.Handle
+P:System.Boolean GLib.VariantType.IsArray
+P:System.Boolean GLib.VariantType.IsBasic
+P:System.Boolean GLib.VariantType.IsContainer
+P:System.Boolean GLib.VariantType.IsDefinite
+P:System.Boolean GLib.VariantType.IsDictionaryEntry
+P:System.Boolean GLib.VariantType.IsMaybe
+P:System.Boolean GLib.VariantType.IsTuple
+P:System.Boolean GLib.VariantType.IsVariant
+F:GLib.VariantType GLib.VariantType.Any
+F:GLib.VariantType GLib.VariantType.Array
+F:GLib.VariantType GLib.VariantType.Basic
+F:GLib.VariantType GLib.VariantType.Boolean
+F:GLib.VariantType GLib.VariantType.Byte
+F:GLib.VariantType GLib.VariantType.ByteString
+F:GLib.VariantType GLib.VariantType.ByteStringArray
+F:GLib.VariantType GLib.VariantType.DictEntry
+F:GLib.VariantType GLib.VariantType.Dictionary
+F:GLib.VariantType GLib.VariantType.Double
+F:GLib.VariantType GLib.VariantType.HandleType
+F:GLib.VariantType GLib.VariantType.Int16
+F:GLib.VariantType GLib.VariantType.Int32
+F:GLib.VariantType GLib.VariantType.Int64
+F:GLib.VariantType GLib.VariantType.Maybe
+F:GLib.VariantType GLib.VariantType.Path
+F:GLib.VariantType GLib.VariantType.Signature
+F:GLib.VariantType GLib.VariantType.String
+F:GLib.VariantType GLib.VariantType.StringArray
+F:GLib.VariantType GLib.VariantType.Tuple
+F:GLib.VariantType GLib.VariantType.UInt16
+F:GLib.VariantType GLib.VariantType.UInt64
+F:GLib.VariantType GLib.VariantType.Uint32
+F:GLib.VariantType GLib.VariantType.Unit
+F:GLib.VariantType GLib.VariantType.Variant

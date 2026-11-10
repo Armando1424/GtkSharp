@@ -1,0 +1,564 @@
+T:Cairo.Antialias
+F:Cairo.Antialias Cairo.Antialias.Default
+F:Cairo.Antialias Cairo.Antialias.Gray
+F:Cairo.Antialias Cairo.Antialias.None
+F:Cairo.Antialias Cairo.Antialias.Subpixel
+F:System.Int32 Cairo.Antialias.value__
+T:Cairo.CairoAPI
+P:System.Int32 Cairo.CairoAPI.Version
+P:System.String Cairo.CairoAPI.VersionString
+T:Cairo.Color
+C:Cairo.Color..ctor(System.Double,System.Double,System.Double)
+C:Cairo.Color..ctor(System.Double,System.Double,System.Double,System.Double)
+P:System.Double Cairo.Color.A
+P:System.Double Cairo.Color.B
+P:System.Double Cairo.Color.G
+P:System.Double Cairo.Color.R
+T:Cairo.Content
+F:Cairo.Content Cairo.Content.Alpha
+F:Cairo.Content Cairo.Content.Color
+F:Cairo.Content Cairo.Content.ColorAlpha
+F:System.Int32 Cairo.Content.value__
+T:Cairo.Context
+C:Cairo.Context..ctor(Cairo.Surface)
+C:Cairo.Context..ctor(System.IntPtr)
+C:Cairo.Context..ctor(System.IntPtr,System.Boolean)
+M:Cairo.FontFace Cairo.Context.GetContextFontFace()
+M:Cairo.Path Cairo.Context.CopyPath()
+M:Cairo.Path Cairo.Context.CopyPathFlat()
+M:Cairo.Pattern Cairo.Context.GetSource()
+M:Cairo.Pattern Cairo.Context.PopGroup()
+M:Cairo.Rectangle Cairo.Context.ClipExtents()
+M:Cairo.Rectangle Cairo.Context.FillExtents()
+M:Cairo.Rectangle Cairo.Context.PathExtents()
+M:Cairo.Rectangle Cairo.Context.StrokeExtents()
+M:Cairo.ScaledFont Cairo.Context.GetScaledFont()
+M:Cairo.Surface Cairo.Context.GetGroupTarget()
+M:Cairo.Surface Cairo.Context.GetTarget()
+M:Cairo.TextExtents Cairo.Context.GlyphExtents(Cairo.Glyph[])
+M:Cairo.TextExtents Cairo.Context.TextExtents(System.Byte[])
+M:Cairo.TextExtents Cairo.Context.TextExtents(System.String)
+M:System.Boolean Cairo.Context.InClip(System.Double,System.Double)
+M:System.Boolean Cairo.Context.InFill(System.Double,System.Double)
+M:System.Boolean Cairo.Context.InStroke(System.Double,System.Double)
+M:System.Void Cairo.Context.AppendPath(Cairo.Path)
+M:System.Void Cairo.Context.Arc(System.Double,System.Double,System.Double,System.Double,System.Double)
+M:System.Void Cairo.Context.ArcNegative(System.Double,System.Double,System.Double,System.Double,System.Double)
+M:System.Void Cairo.Context.Clip()
+M:System.Void Cairo.Context.ClipPreserve()
+M:System.Void Cairo.Context.ClosePath()
+M:System.Void Cairo.Context.CopyPage()
+M:System.Void Cairo.Context.CurveTo(Cairo.PointD,Cairo.PointD,Cairo.PointD)
+M:System.Void Cairo.Context.CurveTo(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)
+M:System.Void Cairo.Context.DeviceToUser(System.Double&,System.Double&)
+M:System.Void Cairo.Context.DeviceToUserDistance(System.Double&,System.Double&)
+M:System.Void Cairo.Context.Dispose()
+M:System.Void Cairo.Context.Fill()
+M:System.Void Cairo.Context.FillPreserve()
+M:System.Void Cairo.Context.FontFace(System.String,Cairo.FontSlant,Cairo.FontWeight)
+M:System.Void Cairo.Context.FontSetSize(System.Double)
+M:System.Void Cairo.Context.GlyphPath(Cairo.Glyph[])
+M:System.Void Cairo.Context.GlyphPath(Cairo.Matrix,Cairo.Glyph[])
+M:System.Void Cairo.Context.IdentityMatrix()
+M:System.Void Cairo.Context.InverseTransformDistance(System.Double&,System.Double&)
+M:System.Void Cairo.Context.InverseTransformPoint(System.Double&,System.Double&)
+M:System.Void Cairo.Context.LineTo(Cairo.PointD)
+M:System.Void Cairo.Context.LineTo(System.Double,System.Double)
+M:System.Void Cairo.Context.Mask(Cairo.Pattern)
+M:System.Void Cairo.Context.MaskSurface(Cairo.Surface,System.Double,System.Double)
+M:System.Void Cairo.Context.MoveTo(Cairo.PointD)
+M:System.Void Cairo.Context.MoveTo(System.Double,System.Double)
+M:System.Void Cairo.Context.NewPath()
+M:System.Void Cairo.Context.NewSubPath()
+M:System.Void Cairo.Context.Paint()
+M:System.Void Cairo.Context.PaintWithAlpha(System.Double)
+M:System.Void Cairo.Context.PopGroupToSource()
+M:System.Void Cairo.Context.PushGroup()
+M:System.Void Cairo.Context.PushGroup(Cairo.Content)
+M:System.Void Cairo.Context.Rectangle(Cairo.PointD,System.Double,System.Double)
+M:System.Void Cairo.Context.Rectangle(Cairo.Rectangle)
+M:System.Void Cairo.Context.Rectangle(System.Double,System.Double,System.Double,System.Double)
+M:System.Void Cairo.Context.RelCurveTo(Cairo.Distance,Cairo.Distance,Cairo.Distance)
+M:System.Void Cairo.Context.RelCurveTo(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)
+M:System.Void Cairo.Context.RelLineTo(Cairo.Distance)
+M:System.Void Cairo.Context.RelLineTo(System.Double,System.Double)
+M:System.Void Cairo.Context.RelMoveTo(Cairo.Distance)
+M:System.Void Cairo.Context.RelMoveTo(System.Double,System.Double)
+M:System.Void Cairo.Context.ResetClip()
+M:System.Void Cairo.Context.Restore()
+M:System.Void Cairo.Context.Rotate(System.Double)
+M:System.Void Cairo.Context.Save()
+M:System.Void Cairo.Context.Scale(System.Double,System.Double)
+M:System.Void Cairo.Context.SelectFontFace(System.String,Cairo.FontSlant,Cairo.FontWeight)
+M:System.Void Cairo.Context.SetContextFontFace(Cairo.FontFace)
+M:System.Void Cairo.Context.SetDash(System.Double[],System.Double)
+M:System.Void Cairo.Context.SetFontSize(System.Double)
+M:System.Void Cairo.Context.SetScaledFont(Cairo.ScaledFont)
+M:System.Void Cairo.Context.SetSource(Cairo.Pattern)
+M:System.Void Cairo.Context.SetSource(Cairo.Surface)
+M:System.Void Cairo.Context.SetSource(Cairo.Surface,System.Double,System.Double)
+M:System.Void Cairo.Context.SetSourceColor(Cairo.Color)
+M:System.Void Cairo.Context.SetSourceRGB(System.Double,System.Double,System.Double)
+M:System.Void Cairo.Context.SetSourceRGBA(System.Double,System.Double,System.Double,System.Double)
+M:System.Void Cairo.Context.SetSourceSurface(Cairo.Surface,System.Int32,System.Int32)
+M:System.Void Cairo.Context.SetTarget(Cairo.Surface)
+M:System.Void Cairo.Context.ShowGlyphs(Cairo.Glyph[])
+M:System.Void Cairo.Context.ShowGlyphs(Cairo.Matrix,Cairo.Glyph[])
+M:System.Void Cairo.Context.ShowPage()
+M:System.Void Cairo.Context.ShowText(System.Byte[])
+M:System.Void Cairo.Context.ShowText(System.String)
+M:System.Void Cairo.Context.Stroke()
+M:System.Void Cairo.Context.StrokePreserve()
+M:System.Void Cairo.Context.TextPath(System.Byte[])
+M:System.Void Cairo.Context.TextPath(System.String)
+M:System.Void Cairo.Context.Transform(Cairo.Matrix)
+M:System.Void Cairo.Context.TransformDistance(System.Double&,System.Double&)
+M:System.Void Cairo.Context.TransformPoint(System.Double&,System.Double&)
+M:System.Void Cairo.Context.Translate(System.Double,System.Double)
+M:System.Void Cairo.Context.UserToDevice(System.Double&,System.Double&)
+M:System.Void Cairo.Context.UserToDeviceDistance(System.Double&,System.Double&)
+P:Cairo.Antialias Cairo.Context.Antialias
+P:Cairo.Color Cairo.Context.Color
+P:Cairo.Color Cairo.Context.ColorRgb
+P:Cairo.FontFace Cairo.Context.ContextFontFace
+P:Cairo.PointD Cairo.Context.CurrentPoint
+P:Cairo.FillRule Cairo.Context.FillRule
+P:Cairo.FontExtents Cairo.Context.FontExtents
+P:Cairo.Matrix Cairo.Context.FontMatrix
+P:Cairo.FontOptions Cairo.Context.FontOptions
+P:System.Double Cairo.Context.FontSize
+P:Cairo.Surface Cairo.Context.GroupTarget
+P:System.IntPtr Cairo.Context.Handle
+P:System.Boolean Cairo.Context.HasCurrentPoint
+P:Cairo.LineCap Cairo.Context.LineCap
+P:Cairo.LineJoin Cairo.Context.LineJoin
+P:System.Double Cairo.Context.LineWidth
+P:Cairo.Matrix Cairo.Context.Matrix
+P:System.Double Cairo.Context.MiterLimit
+P:Cairo.Operator Cairo.Context.Operator
+P:Cairo.Pattern Cairo.Context.Pattern
+P:System.UInt32 Cairo.Context.ReferenceCount
+P:Cairo.ScaledFont Cairo.Context.ScaledFont
+P:Cairo.Pattern Cairo.Context.Source
+P:Cairo.Status Cairo.Context.Status
+P:Cairo.Surface Cairo.Context.Target
+P:System.Double Cairo.Context.Tolerance
+T:Cairo.Device
+M:Cairo.Status Cairo.Device.Acquire()
+M:System.Void Cairo.Device.Dispose()
+M:System.Void Cairo.Device.Finish()
+M:System.Void Cairo.Device.Flush()
+M:System.Void Cairo.Device.Release()
+P:Cairo.Status Cairo.Device.Status
+P:Cairo.DeviceType Cairo.Device.Type
+T:Cairo.DeviceType
+F:Cairo.DeviceType Cairo.DeviceType.Drm
+F:Cairo.DeviceType Cairo.DeviceType.GL
+F:Cairo.DeviceType Cairo.DeviceType.Script
+F:Cairo.DeviceType Cairo.DeviceType.Xcb
+F:Cairo.DeviceType Cairo.DeviceType.Xlib
+F:Cairo.DeviceType Cairo.DeviceType.Xml
+F:System.Int32 Cairo.DeviceType.value__
+T:Cairo.DirectFBSurface
+C:Cairo.DirectFBSurface..ctor(System.IntPtr,System.IntPtr)
+T:Cairo.Distance
+C:Cairo.Distance..ctor(System.Double,System.Double)
+P:System.Double Cairo.Distance.Dx
+P:System.Double Cairo.Distance.Dy
+T:Cairo.Extend
+F:Cairo.Extend Cairo.Extend.None
+F:Cairo.Extend Cairo.Extend.Pad
+F:Cairo.Extend Cairo.Extend.Reflect
+F:Cairo.Extend Cairo.Extend.Repeat
+F:System.Int32 Cairo.Extend.value__
+T:Cairo.FillRule
+F:Cairo.FillRule Cairo.FillRule.EvenOdd
+F:Cairo.FillRule Cairo.FillRule.Winding
+F:System.Int32 Cairo.FillRule.value__
+T:Cairo.Filter
+F:Cairo.Filter Cairo.Filter.Best
+F:Cairo.Filter Cairo.Filter.Bilinear
+F:Cairo.Filter Cairo.Filter.Fast
+F:Cairo.Filter Cairo.Filter.Gaussian
+F:Cairo.Filter Cairo.Filter.Good
+F:Cairo.Filter Cairo.Filter.Nearest
+F:System.Int32 Cairo.Filter.value__
+T:Cairo.FontExtents
+C:Cairo.FontExtents..ctor(System.Double,System.Double,System.Double,System.Double,System.Double)
+M:System.Boolean Cairo.FontExtents.Equals(System.Object)
+M:System.Int32 Cairo.FontExtents.GetHashCode()
+P:System.Double Cairo.FontExtents.Ascent
+P:System.Double Cairo.FontExtents.Descent
+P:System.Double Cairo.FontExtents.Height
+P:System.Double Cairo.FontExtents.MaxXAdvance
+P:System.Double Cairo.FontExtents.MaxYAdvance
+T:Cairo.FontFace
+C:Cairo.FontFace..ctor(System.IntPtr)
+C:Cairo.FontFace..ctor(System.IntPtr,System.Boolean)
+M:System.Void Cairo.FontFace.Dispose()
+P:Cairo.FontType Cairo.FontFace.FontType
+P:System.IntPtr Cairo.FontFace.Handle
+P:System.UInt32 Cairo.FontFace.ReferenceCount
+P:Cairo.Status Cairo.FontFace.Status
+T:Cairo.FontOptions
+C:Cairo.FontOptions..ctor()
+C:Cairo.FontOptions..ctor(System.IntPtr)
+M:Cairo.FontOptions Cairo.FontOptions.Copy()
+M:System.Boolean Cairo.FontOptions.Equals(System.Object)
+M:System.Int32 Cairo.FontOptions.GetHashCode()
+M:System.Void Cairo.FontOptions.Destroy()
+M:System.Void Cairo.FontOptions.Dispose()
+M:System.Void Cairo.FontOptions.Merge(Cairo.FontOptions)
+P:Cairo.Antialias Cairo.FontOptions.Antialias
+P:System.IntPtr Cairo.FontOptions.Handle
+P:Cairo.HintMetrics Cairo.FontOptions.HintMetrics
+P:Cairo.HintStyle Cairo.FontOptions.HintStyle
+P:Cairo.Status Cairo.FontOptions.Status
+P:Cairo.SubpixelOrder Cairo.FontOptions.SubpixelOrder
+T:Cairo.FontSlant
+F:Cairo.FontSlant Cairo.FontSlant.Italic
+F:Cairo.FontSlant Cairo.FontSlant.Normal
+F:Cairo.FontSlant Cairo.FontSlant.Oblique
+F:System.Int32 Cairo.FontSlant.value__
+T:Cairo.FontType
+F:Cairo.FontType Cairo.FontType.Atsui
+F:Cairo.FontType Cairo.FontType.FreeType
+F:Cairo.FontType Cairo.FontType.Toy
+F:Cairo.FontType Cairo.FontType.Win32
+F:System.Int32 Cairo.FontType.value__
+T:Cairo.FontWeight
+F:Cairo.FontWeight Cairo.FontWeight.Bold
+F:Cairo.FontWeight Cairo.FontWeight.Normal
+F:System.Int32 Cairo.FontWeight.value__
+T:Cairo.Format
+F:Cairo.Format Cairo.Format.A1
+F:Cairo.Format Cairo.Format.A8
+F:Cairo.Format Cairo.Format.ARGB32
+F:Cairo.Format Cairo.Format.Argb32
+F:Cairo.Format Cairo.Format.RGB24
+F:Cairo.Format Cairo.Format.Rgb16565
+F:Cairo.Format Cairo.Format.Rgb24
+F:System.Int32 Cairo.Format.value__
+T:Cairo.GlitzSurface
+C:Cairo.GlitzSurface..ctor(System.IntPtr)
+T:Cairo.Global
+C:Cairo.Global..ctor()
+P:System.Boolean Cairo.Global.IsSupported
+T:Cairo.Glyph
+C:Cairo.Glyph..ctor(System.Int64,System.Double,System.Double)
+M:System.Boolean Cairo.Glyph.Equals(System.Object)
+M:System.Int32 Cairo.Glyph.GetHashCode()
+P:System.Int64 Cairo.Glyph.Index
+P:System.Double Cairo.Glyph.X
+P:System.Double Cairo.Glyph.Y
+T:Cairo.Gradient
+M:Cairo.Status Cairo.Gradient.AddColorStop(System.Double,Cairo.Color)
+M:Cairo.Status Cairo.Gradient.AddColorStopRgb(System.Double,Cairo.Color)
+P:System.Int32 Cairo.Gradient.ColorStopCount
+T:Cairo.Graphics
+C:Cairo.Graphics..ctor(Cairo.Surface)
+C:Cairo.Graphics..ctor(System.IntPtr)
+T:Cairo.HintMetrics
+F:Cairo.HintMetrics Cairo.HintMetrics.Default
+F:Cairo.HintMetrics Cairo.HintMetrics.Off
+F:Cairo.HintMetrics Cairo.HintMetrics.On
+F:System.Int32 Cairo.HintMetrics.value__
+T:Cairo.HintStyle
+F:Cairo.HintStyle Cairo.HintStyle.Default
+F:Cairo.HintStyle Cairo.HintStyle.Full
+F:Cairo.HintStyle Cairo.HintStyle.Medium
+F:Cairo.HintStyle Cairo.HintStyle.None
+F:Cairo.HintStyle Cairo.HintStyle.Slight
+F:System.Int32 Cairo.HintStyle.value__
+T:Cairo.ImageSurface
+C:Cairo.ImageSurface..ctor(Cairo.Format,System.Int32,System.Int32)
+C:Cairo.ImageSurface..ctor(System.Byte[]&,Cairo.Format,System.Int32,System.Int32,System.Int32)
+C:Cairo.ImageSurface..ctor(System.Byte[],Cairo.Format,System.Int32,System.Int32,System.Int32)
+C:Cairo.ImageSurface..ctor(System.IntPtr,Cairo.Format,System.Int32,System.Int32,System.Int32)
+C:Cairo.ImageSurface..ctor(System.String)
+P:System.Byte[] Cairo.ImageSurface.Data
+P:System.IntPtr Cairo.ImageSurface.DataPtr
+P:Cairo.Format Cairo.ImageSurface.Format
+P:System.Int32 Cairo.ImageSurface.Height
+P:System.Int32 Cairo.ImageSurface.Stride
+P:System.Int32 Cairo.ImageSurface.Width
+T:Cairo.LineCap
+F:Cairo.LineCap Cairo.LineCap.Butt
+F:Cairo.LineCap Cairo.LineCap.Round
+F:Cairo.LineCap Cairo.LineCap.Square
+F:System.Int32 Cairo.LineCap.value__
+T:Cairo.LineJoin
+F:Cairo.LineJoin Cairo.LineJoin.Bevel
+F:Cairo.LineJoin Cairo.LineJoin.Miter
+F:Cairo.LineJoin Cairo.LineJoin.Round
+F:System.Int32 Cairo.LineJoin.value__
+T:Cairo.LinearGradient
+C:Cairo.LinearGradient..ctor(System.Double,System.Double,System.Double,System.Double)
+P:Cairo.PointD[] Cairo.LinearGradient.LinearPoints
+T:Cairo.Matrix
+C:Cairo.Matrix..ctor()
+C:Cairo.Matrix..ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)
+M:Cairo.Matrix Cairo.Matrix.Multiply(Cairo.Matrix,Cairo.Matrix)
+M:Cairo.Status Cairo.Matrix.Invert()
+M:System.Boolean Cairo.Matrix.Equals(System.Object)
+M:System.Boolean Cairo.Matrix.IsIdentity()
+M:System.Int32 Cairo.Matrix.GetHashCode()
+M:System.Object Cairo.Matrix.Clone()
+M:System.String Cairo.Matrix.ToString()
+M:System.Void Cairo.Matrix.Init(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)
+M:System.Void Cairo.Matrix.InitIdentity()
+M:System.Void Cairo.Matrix.InitRotate(System.Double)
+M:System.Void Cairo.Matrix.InitScale(System.Double,System.Double)
+M:System.Void Cairo.Matrix.InitTranslate(System.Double,System.Double)
+M:System.Void Cairo.Matrix.Multiply(Cairo.Matrix)
+M:System.Void Cairo.Matrix.Rotate(System.Double)
+M:System.Void Cairo.Matrix.Scale(System.Double,System.Double)
+M:System.Void Cairo.Matrix.TransformDistance(System.Double&,System.Double&)
+M:System.Void Cairo.Matrix.TransformPoint(System.Double&,System.Double&)
+M:System.Void Cairo.Matrix.Translate(System.Double,System.Double)
+F:System.Double Cairo.Matrix.X0
+F:System.Double Cairo.Matrix.Xx
+F:System.Double Cairo.Matrix.Xy
+F:System.Double Cairo.Matrix.Y0
+F:System.Double Cairo.Matrix.Yx
+F:System.Double Cairo.Matrix.Yy
+T:Cairo.Operator
+F:Cairo.Operator Cairo.Operator.Add
+F:Cairo.Operator Cairo.Operator.Atop
+F:Cairo.Operator Cairo.Operator.Clear
+F:Cairo.Operator Cairo.Operator.Dest
+F:Cairo.Operator Cairo.Operator.DestAtop
+F:Cairo.Operator Cairo.Operator.DestIn
+F:Cairo.Operator Cairo.Operator.DestOut
+F:Cairo.Operator Cairo.Operator.DestOver
+F:Cairo.Operator Cairo.Operator.In
+F:Cairo.Operator Cairo.Operator.Out
+F:Cairo.Operator Cairo.Operator.Over
+F:Cairo.Operator Cairo.Operator.Saturate
+F:Cairo.Operator Cairo.Operator.Source
+F:Cairo.Operator Cairo.Operator.Xor
+F:System.Int32 Cairo.Operator.value__
+T:Cairo.PSSurface
+C:Cairo.PSSurface..ctor(System.String,System.Double,System.Double)
+M:System.Void Cairo.PSSurface.BeginPageSetup()
+M:System.Void Cairo.PSSurface.BeginSetup()
+M:System.Void Cairo.PSSurface.DscComment(System.String)
+M:System.Void Cairo.PSSurface.SetSize(System.Double,System.Double)
+T:Cairo.Path
+M:System.Void Cairo.Path.Dispose()
+P:Cairo.PathData[] Cairo.Path.Data
+P:System.IntPtr Cairo.Path.Handle
+P:System.Int32 Cairo.Path.NumData
+P:Cairo.Status Cairo.Path.Status
+T:Cairo.PathData
+F:Cairo.PathDataHeader Cairo.PathData.Header
+F:Cairo.PathDataPoint Cairo.PathData.Point
+T:Cairo.PathDataHeader
+F:System.Int32 Cairo.PathDataHeader.Length
+F:Cairo.PathDataType Cairo.PathDataHeader.Type
+T:Cairo.PathDataPoint
+F:System.Double Cairo.PathDataPoint.X
+F:System.Double Cairo.PathDataPoint.Y
+T:Cairo.PathDataType
+F:Cairo.PathDataType Cairo.PathDataType.ClosePath
+F:Cairo.PathDataType Cairo.PathDataType.CurveTo
+F:Cairo.PathDataType Cairo.PathDataType.LineTo
+F:Cairo.PathDataType Cairo.PathDataType.MoveTo
+F:System.Int32 Cairo.PathDataType.value__
+T:Cairo.Pattern
+C:Cairo.Pattern..ctor(Cairo.Surface)
+M:Cairo.Pattern Cairo.Pattern.Lookup(System.IntPtr,System.Boolean)
+M:System.Void Cairo.Pattern.Destroy()
+M:System.Void Cairo.Pattern.Dispose()
+P:Cairo.Extend Cairo.Pattern.Extend
+P:System.IntPtr Cairo.Pattern.Handle
+P:Cairo.Matrix Cairo.Pattern.Matrix
+P:Cairo.PatternType Cairo.Pattern.PatternType
+P:System.IntPtr Cairo.Pattern.Pointer
+P:Cairo.Status Cairo.Pattern.Status
+T:Cairo.PatternType
+F:Cairo.PatternType Cairo.PatternType.Linear
+F:Cairo.PatternType Cairo.PatternType.Radial
+F:Cairo.PatternType Cairo.PatternType.Solid
+F:Cairo.PatternType Cairo.PatternType.Surface
+F:System.Int32 Cairo.PatternType.value__
+T:Cairo.PdfSurface
+C:Cairo.PdfSurface..ctor(System.String,System.Double,System.Double)
+M:System.Void Cairo.PdfSurface.SetSize(System.Double,System.Double)
+T:Cairo.Point
+C:Cairo.Point..ctor(System.Int32,System.Int32)
+P:System.Int32 Cairo.Point.X
+P:System.Int32 Cairo.Point.Y
+T:Cairo.PointD
+C:Cairo.PointD..ctor(System.Double,System.Double)
+P:System.Double Cairo.PointD.X
+P:System.Double Cairo.PointD.Y
+T:Cairo.RadialGradient
+C:Cairo.RadialGradient..ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)
+T:Cairo.Rectangle
+C:Cairo.Rectangle..ctor(Cairo.Point,System.Double,System.Double)
+C:Cairo.Rectangle..ctor(System.Double,System.Double,System.Double,System.Double)
+M:System.Boolean Cairo.Rectangle.Equals(System.Object)
+M:System.Int32 Cairo.Rectangle.GetHashCode()
+M:System.String Cairo.Rectangle.ToString()
+P:System.Double Cairo.Rectangle.Height
+P:System.Double Cairo.Rectangle.Width
+P:System.Double Cairo.Rectangle.X
+P:System.Double Cairo.Rectangle.Y
+T:Cairo.RectangleInt
+F:System.Int32 Cairo.RectangleInt.Height
+F:System.Int32 Cairo.RectangleInt.Width
+F:System.Int32 Cairo.RectangleInt.X
+F:System.Int32 Cairo.RectangleInt.Y
+T:Cairo.Region
+C:Cairo.Region..ctor()
+C:Cairo.Region..ctor(Cairo.RectangleInt)
+C:Cairo.Region..ctor(Cairo.RectangleInt[])
+C:Cairo.Region..ctor(System.IntPtr)
+C:Cairo.Region..ctor(System.IntPtr,System.Boolean)
+M:Cairo.RectangleInt Cairo.Region.GetRectangle(System.Int32)
+M:Cairo.Region Cairo.Region.Copy()
+M:Cairo.RegionOverlap Cairo.Region.ContainsPoint(Cairo.RectangleInt)
+M:Cairo.Status Cairo.Region.Intersect(Cairo.Region)
+M:Cairo.Status Cairo.Region.IntersectRectangle(Cairo.RectangleInt)
+M:Cairo.Status Cairo.Region.Subtract(Cairo.Region)
+M:Cairo.Status Cairo.Region.SubtractRectangle(Cairo.RectangleInt)
+M:Cairo.Status Cairo.Region.Union(Cairo.Region)
+M:Cairo.Status Cairo.Region.UnionRectangle(Cairo.RectangleInt)
+M:Cairo.Status Cairo.Region.Xor(Cairo.Region)
+M:Cairo.Status Cairo.Region.XorRectangle(Cairo.RectangleInt)
+M:System.Boolean Cairo.Region.ContainsPoint(System.Int32,System.Int32)
+M:System.Boolean Cairo.Region.Equals(System.Object)
+M:System.Int32 Cairo.Region.GetHashCode()
+M:System.Void Cairo.Region.Dispose()
+M:System.Void Cairo.Region.Translate(System.Int32,System.Int32)
+P:Cairo.RectangleInt Cairo.Region.Extents
+P:System.IntPtr Cairo.Region.Handle
+P:System.Boolean Cairo.Region.IsEmpty
+P:System.Int32 Cairo.Region.NumRectangles
+P:Cairo.Status Cairo.Region.Status
+T:Cairo.RegionOverlap
+F:Cairo.RegionOverlap Cairo.RegionOverlap.In
+F:Cairo.RegionOverlap Cairo.RegionOverlap.Out
+F:Cairo.RegionOverlap Cairo.RegionOverlap.Part
+F:System.Int32 Cairo.RegionOverlap.value__
+T:Cairo.ScaledFont
+C:Cairo.ScaledFont..ctor(Cairo.FontFace,Cairo.Matrix,Cairo.Matrix,Cairo.FontOptions)
+M:Cairo.TextExtents Cairo.ScaledFont.GlyphExtents(Cairo.Glyph[])
+M:System.Void Cairo.ScaledFont.Dispose()
+P:Cairo.FontExtents Cairo.ScaledFont.FontExtents
+P:Cairo.Matrix Cairo.ScaledFont.FontMatrix
+P:Cairo.FontType Cairo.ScaledFont.FontType
+P:System.IntPtr Cairo.ScaledFont.Handle
+P:Cairo.Status Cairo.ScaledFont.Status
+T:Cairo.SolidPattern
+C:Cairo.SolidPattern..ctor(Cairo.Color)
+C:Cairo.SolidPattern..ctor(Cairo.Color,System.Boolean)
+C:Cairo.SolidPattern..ctor(System.Double,System.Double,System.Double)
+C:Cairo.SolidPattern..ctor(System.Double,System.Double,System.Double,System.Double)
+P:Cairo.Color Cairo.SolidPattern.Color
+T:Cairo.Status
+F:Cairo.Status Cairo.Status.ClipNotRepresentable
+F:Cairo.Status Cairo.Status.FileNotFound
+F:Cairo.Status Cairo.Status.InvalidContent
+F:Cairo.Status Cairo.Status.InvalidDash
+F:Cairo.Status Cairo.Status.InvalidDscComment
+F:Cairo.Status Cairo.Status.InvalidFormat
+F:Cairo.Status Cairo.Status.InvalidIndex
+F:Cairo.Status Cairo.Status.InvalidMatrix
+F:Cairo.Status Cairo.Status.InvalidPathData
+F:Cairo.Status Cairo.Status.InvalidPopGroup
+F:Cairo.Status Cairo.Status.InvalidRestore
+F:Cairo.Status Cairo.Status.InvalidStatus
+F:Cairo.Status Cairo.Status.InvalidString
+F:Cairo.Status Cairo.Status.InvalidVisual
+F:Cairo.Status Cairo.Status.NoCurrentPoint
+F:Cairo.Status Cairo.Status.NoMemory
+F:Cairo.Status Cairo.Status.NullPointer
+F:Cairo.Status Cairo.Status.PatternTypeMismatch
+F:Cairo.Status Cairo.Status.ReadError
+F:Cairo.Status Cairo.Status.Success
+F:Cairo.Status Cairo.Status.SurfaceFinished
+F:Cairo.Status Cairo.Status.SurfaceTypeMismatch
+F:Cairo.Status Cairo.Status.WriteError
+F:System.Int32 Cairo.Status.value__
+T:Cairo.SubpixelOrder
+F:Cairo.SubpixelOrder Cairo.SubpixelOrder.Bgr
+F:Cairo.SubpixelOrder Cairo.SubpixelOrder.Default
+F:Cairo.SubpixelOrder Cairo.SubpixelOrder.Rgb
+F:Cairo.SubpixelOrder Cairo.SubpixelOrder.Vbgr
+F:Cairo.SubpixelOrder Cairo.SubpixelOrder.Vrgb
+F:System.Int32 Cairo.SubpixelOrder.value__
+T:Cairo.Surface
+M:Cairo.Status Cairo.Surface.Finish()
+M:Cairo.Surface Cairo.Surface.CreateForImage(Cairo.Format,System.Int32,System.Int32)
+M:Cairo.Surface Cairo.Surface.CreateForImage(System.Byte[]&,Cairo.Format,System.Int32,System.Int32,System.Int32)
+M:Cairo.Surface Cairo.Surface.CreateSimilar(Cairo.Content,System.Int32,System.Int32)
+M:Cairo.Surface Cairo.Surface.Lookup(System.IntPtr,System.Boolean)
+M:System.Void Cairo.Surface.Destroy()
+M:System.Void Cairo.Surface.Dispose()
+M:System.Void Cairo.Surface.Flush()
+M:System.Void Cairo.Surface.MarkDirty()
+M:System.Void Cairo.Surface.MarkDirty(Cairo.Rectangle)
+M:System.Void Cairo.Surface.SetFallbackResolution(System.Double,System.Double)
+M:System.Void Cairo.Surface.Show(Cairo.Context,System.Double,System.Double)
+M:System.Void Cairo.Surface.WriteToPng(System.String)
+P:Cairo.Content Cairo.Surface.Content
+P:Cairo.PointD Cairo.Surface.DeviceOffset
+P:Cairo.PointD Cairo.Surface.DeviceScale
+P:System.IntPtr Cairo.Surface.Handle
+P:System.IntPtr Cairo.Surface.Pointer
+P:System.UInt32 Cairo.Surface.ReferenceCount
+P:Cairo.Status Cairo.Surface.Status
+P:Cairo.SurfaceType Cairo.Surface.SurfaceType
+T:Cairo.SurfacePattern
+C:Cairo.SurfacePattern..ctor(Cairo.Surface)
+P:Cairo.Filter Cairo.SurfacePattern.Filter
+T:Cairo.SurfaceType
+F:Cairo.SurfaceType Cairo.SurfaceType.BeOS
+F:Cairo.SurfaceType Cairo.SurfaceType.DirectFB
+F:Cairo.SurfaceType Cairo.SurfaceType.Glitz
+F:Cairo.SurfaceType Cairo.SurfaceType.Image
+F:Cairo.SurfaceType Cairo.SurfaceType.PS
+F:Cairo.SurfaceType Cairo.SurfaceType.Pdf
+F:Cairo.SurfaceType Cairo.SurfaceType.Quartz
+F:Cairo.SurfaceType Cairo.SurfaceType.Svg
+F:Cairo.SurfaceType Cairo.SurfaceType.Win32
+F:Cairo.SurfaceType Cairo.SurfaceType.Xcb
+F:Cairo.SurfaceType Cairo.SurfaceType.Xlib
+F:System.Int32 Cairo.SurfaceType.value__
+T:Cairo.SvgSurface
+C:Cairo.SvgSurface..ctor(System.String,System.Double,System.Double)
+M:System.Void Cairo.SvgSurface.RestrictToVersion(Cairo.SvgVersion)
+T:Cairo.SvgVersion
+F:Cairo.SvgVersion Cairo.SvgVersion.OnePointOne
+F:Cairo.SvgVersion Cairo.SvgVersion.OnePointTwo
+F:System.Int32 Cairo.SvgVersion.value__
+T:Cairo.TextExtents
+M:System.Boolean Cairo.TextExtents.Equals(System.Object)
+M:System.Int32 Cairo.TextExtents.GetHashCode()
+P:System.Double Cairo.TextExtents.Height
+P:System.Double Cairo.TextExtents.Width
+P:System.Double Cairo.TextExtents.XAdvance
+P:System.Double Cairo.TextExtents.XBearing
+P:System.Double Cairo.TextExtents.YAdvance
+P:System.Double Cairo.TextExtents.YBearing
+T:Cairo.Win32Surface
+C:Cairo.Win32Surface..ctor(System.IntPtr)
+T:Cairo.XcbSurface
+C:Cairo.XcbSurface..ctor(System.IntPtr,System.UInt32,System.IntPtr,System.Int32,System.Int32)
+M:Cairo.XcbSurface Cairo.XcbSurface.FromBitmap(System.IntPtr,System.UInt32,System.IntPtr,System.Int32,System.Int32)
+M:System.Void Cairo.XcbSurface.SetSize(System.Int32,System.Int32)
+T:Cairo.XlibSurface
+C:Cairo.XlibSurface..ctor(System.IntPtr,System.Boolean)
+C:Cairo.XlibSurface..ctor(System.IntPtr,System.IntPtr,System.IntPtr,System.Int32,System.Int32)
+M:Cairo.XlibSurface Cairo.XlibSurface.FromBitmap(System.IntPtr,System.IntPtr,System.IntPtr,System.Int32,System.Int32)
+M:System.Void Cairo.XlibSurface.SetDrawable(System.IntPtr,System.Int32,System.Int32)
+M:System.Void Cairo.XlibSurface.SetSize(System.Int32,System.Int32)
+P:System.Int32 Cairo.XlibSurface.Depth
+P:System.IntPtr Cairo.XlibSurface.Display
+P:System.IntPtr Cairo.XlibSurface.Drawable
+P:System.Int32 Cairo.XlibSurface.Height
+P:System.IntPtr Cairo.XlibSurface.Screen
+P:System.IntPtr Cairo.XlibSurface.Visual
+P:System.Int32 Cairo.XlibSurface.Width

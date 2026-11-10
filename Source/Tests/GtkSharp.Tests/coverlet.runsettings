@@ -1,0 +1,17 @@
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat code coverage">
+        <Configuration>
+          <Format>cobertura</Format>
+          <Include>[GtkSharp]*,[GLibSharp]*,[GdkSharp]*,[GioSharp]*,[AtkSharp]*,[PangoSharp]*,[CairoSharp]*</Include>
+          <!-- The bindings under Generated/ are produced by GapiCodegen; they are
+               covered indirectly by the tests but the interesting logic lives in
+               the hand-written partial classes. -->
+          <ExcludeByFile>**/Generated/**/*.cs</ExcludeByFile>
+          <SkipAutoProps>true</SkipAutoProps>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>

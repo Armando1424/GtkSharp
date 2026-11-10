@@ -5,6 +5,7 @@ using Xunit;
 namespace GtkSharp.Tests.Widgets;
 
 [Collection(GtkCollection.Name)]
+[Trait("Category", "UI")]
 public sealed class ButtonTests
 {
     [GtkFact]

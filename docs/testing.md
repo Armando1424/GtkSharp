@@ -13,13 +13,13 @@ xvfb-run -a dotnet test Source/Tests/GtkSharp.Tests -c Release
 Expected output on a healthy checkout:
 
 ```text
-Passed! - Failed: 0, Passed: 62, Skipped: 0, Total: 62
+Passed! - Failed: 0, Passed: 184, Skipped: 0, Total: 184
 ```
 
 Without a display, the GTK tests are skipped:
 
 ```text
-Passed! - Failed: 0, Passed: <n>, Skipped: <gtk tests>, Total: 62
+Passed! - Failed: 0, Passed: <n>, Skipped: <gtk tests>, Total: 184
 ```
 
 ## Why GTK tests are different
@@ -176,6 +176,36 @@ xvfb-run -a dotnet test Source/Tests/GtkSharp.Tests \
 * Do not assert on window sizes after `Show()`; use `SetDefaultSize` and the
   `default-width`/`default-height` properties, which are deterministic.
 * Do not depend on theme colours, fonts or DPI.
+
+## API surface guard
+
+`Core/ApiSurfaceTests` reflects over every wrapper assembly and compares the
+public types and members against `PublicAPI/<Assembly>.txt`. Removing,
+renaming or changing a public signature fails the suite.
+
+If the change is intentional, regenerate the baselines and review the diff:
+
+```sh
+UPDATE_API_BASELINE=1 xvfb-run -a dotnet test Source/Tests/GtkSharp.Tests \
+  --filter "FullyQualifiedName~ApiSurfaceTests"
+
+git diff Source/Tests/GtkSharp.Tests/PublicAPI
+```
+
+## Coverage
+
+Coverage is collected with coverlet and excludes the generated bindings under
+`Generated/`, because what matters is the hand-written wrapper code.
+
+```sh
+xvfb-run -a dotnet test Source/Tests/GtkSharp.Tests -c Release \
+  --settings Source/Tests/GtkSharp.Tests/coverlet.runsettings \
+  --collect:"XPlat Code Coverage" --results-directory TestResults
+```
+
+The report is written to `TestResults/<guid>/coverage.cobertura.xml`. The CI
+publishes it as an artifact. There is no hard threshold yet: keep the
+hand-written coverage from going down.
 
 ## CI
 

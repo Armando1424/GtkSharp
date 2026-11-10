@@ -10,6 +10,7 @@ namespace GtkSharp.Tests.Core;
 /// registration. Leaks and premature finalization are frequent regressions.
 /// </summary>
 [Collection(GtkCollection.Name)]
+[Trait("Category", "UI")]
 public sealed class ObjectLifecycleTests
 {
     [GtkFact]

@@ -117,7 +117,11 @@ Task("Test")
     {
         Configuration = configuration,
         NoBuild = true,
-        MSBuildSettings = msbuildsettings
+        MSBuildSettings = msbuildsettings,
+        ArgumentCustomization = args => args
+            .Append("--settings Source/Tests/GtkSharp.Tests/coverlet.runsettings")
+            .Append("--collect:\"XPlat Code Coverage\"")
+            .Append("--results-directory TestResults")
     };
 
     // GTK based tests are skipped automatically when no display is available.

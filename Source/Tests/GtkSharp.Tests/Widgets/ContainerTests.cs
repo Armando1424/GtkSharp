@@ -11,6 +11,7 @@ namespace GtkSharp.Tests.Widgets;
 /// instance for the same native object.
 /// </summary>
 [Collection(GtkCollection.Name)]
+[Trait("Category", "UI")]
 public sealed class ContainerTests
 {
     [GtkFact]

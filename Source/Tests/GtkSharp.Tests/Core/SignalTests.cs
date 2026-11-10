@@ -11,6 +11,7 @@ namespace GtkSharp.Tests.Core;
 /// common source of regressions in binding changes.
 /// </summary>
 [Collection(GtkCollection.Name)]
+[Trait("Category", "UI")]
 public sealed class SignalTests
 {
     [GtkFact]

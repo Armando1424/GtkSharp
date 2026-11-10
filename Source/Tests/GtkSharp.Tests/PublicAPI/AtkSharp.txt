@@ -1,0 +1,1565 @@
+T:Atk.ActionAdapter
+C:Atk.ActionAdapter..ctor()
+C:Atk.ActionAdapter..ctor(Atk.IActionImplementor)
+C:Atk.ActionAdapter..ctor(System.IntPtr)
+M:Atk.IAction Atk.ActionAdapter.GetObject(GLib.Object)
+M:Atk.IAction Atk.ActionAdapter.GetObject(System.IntPtr,System.Boolean)
+M:System.Boolean Atk.ActionAdapter.DoAction(System.Int32)
+M:System.Boolean Atk.ActionAdapter.SetDescription(System.Int32,System.String)
+M:System.String Atk.ActionAdapter.GetDescription(System.Int32)
+M:System.String Atk.ActionAdapter.GetKeybinding(System.Int32)
+M:System.String Atk.ActionAdapter.GetLocalizedName(System.Int32)
+M:System.String Atk.ActionAdapter.GetName(System.Int32)
+P:GLib.GType Atk.ActionAdapter.GInterfaceGType
+P:GLib.GType Atk.ActionAdapter.GType
+P:System.IntPtr Atk.ActionAdapter.Handle
+P:Atk.IActionImplementor Atk.ActionAdapter.Implementor
+P:System.Int32 Atk.ActionAdapter.NActions
+P:System.IntPtr Atk.ActionAdapter.OwnedHandle
+T:Atk.ActiveDescendantChangedArgs
+C:Atk.ActiveDescendantChangedArgs..ctor()
+P:System.IntPtr Atk.ActiveDescendantChangedArgs.Child
+T:Atk.ActiveDescendantChangedHandler
+C:Atk.ActiveDescendantChangedHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.ActiveDescendantChangedHandler.BeginInvoke(System.Object,Atk.ActiveDescendantChangedArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.ActiveDescendantChangedHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.ActiveDescendantChangedHandler.Invoke(System.Object,Atk.ActiveDescendantChangedArgs)
+T:Atk.Attribute
+M:Atk.Attribute Atk.Attribute.New(System.IntPtr)
+M:System.Boolean Atk.Attribute.Equals(Atk.Attribute)
+M:System.Boolean Atk.Attribute.Equals(System.Object)
+M:System.Int32 Atk.Attribute.GetHashCode()
+F:System.String Atk.Attribute.Name
+F:System.String Atk.Attribute.Value
+F:Atk.Attribute Atk.Attribute.Zero
+T:Atk.BoundsChangedArgs
+C:Atk.BoundsChangedArgs..ctor()
+P:Atk.Rectangle Atk.BoundsChangedArgs.Bounds
+T:Atk.BoundsChangedHandler
+C:Atk.BoundsChangedHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.BoundsChangedHandler.BeginInvoke(System.Object,Atk.BoundsChangedArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.BoundsChangedHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.BoundsChangedHandler.Invoke(System.Object,Atk.BoundsChangedArgs)
+T:Atk.ChildrenChangedArgs
+C:Atk.ChildrenChangedArgs..ctor()
+P:System.UInt32 Atk.ChildrenChangedArgs.ChangeIndex
+P:System.IntPtr Atk.ChildrenChangedArgs.ChangedChild
+T:Atk.ChildrenChangedHandler
+C:Atk.ChildrenChangedHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.ChildrenChangedHandler.BeginInvoke(System.Object,Atk.ChildrenChangedArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.ChildrenChangedHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.ChildrenChangedHandler.Invoke(System.Object,Atk.ChildrenChangedArgs)
+T:Atk.ColumnDeletedArgs
+C:Atk.ColumnDeletedArgs..ctor()
+P:System.Int32 Atk.ColumnDeletedArgs.Column
+P:System.Int32 Atk.ColumnDeletedArgs.NumDeleted
+T:Atk.ColumnDeletedHandler
+C:Atk.ColumnDeletedHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.ColumnDeletedHandler.BeginInvoke(System.Object,Atk.ColumnDeletedArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.ColumnDeletedHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.ColumnDeletedHandler.Invoke(System.Object,Atk.ColumnDeletedArgs)
+T:Atk.ColumnInsertedArgs
+C:Atk.ColumnInsertedArgs..ctor()
+P:System.Int32 Atk.ColumnInsertedArgs.Column
+P:System.Int32 Atk.ColumnInsertedArgs.NumInserted
+T:Atk.ColumnInsertedHandler
+C:Atk.ColumnInsertedHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.ColumnInsertedHandler.BeginInvoke(System.Object,Atk.ColumnInsertedArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.ColumnInsertedHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.ColumnInsertedHandler.Invoke(System.Object,Atk.ColumnInsertedArgs)
+T:Atk.ComponentAdapter
+C:Atk.ComponentAdapter..ctor()
+C:Atk.ComponentAdapter..ctor(Atk.IComponentImplementor)
+C:Atk.ComponentAdapter..ctor(System.IntPtr)
+M:Atk.IComponent Atk.ComponentAdapter.GetObject(GLib.Object)
+M:Atk.IComponent Atk.ComponentAdapter.GetObject(System.IntPtr,System.Boolean)
+M:Atk.Object Atk.ComponentAdapter.RefAccessibleAtPoint(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.ComponentAdapter.Contains(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.ComponentAdapter.GrabFocus()
+M:System.Boolean Atk.ComponentAdapter.SetExtents(System.Int32,System.Int32,System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.ComponentAdapter.SetPosition(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.ComponentAdapter.SetSize(System.Int32,System.Int32)
+M:System.UInt32 Atk.ComponentAdapter.AddFocusHandler(Atk.FocusHandler)
+M:System.Void Atk.ComponentAdapter.GetExtents(System.Int32&,System.Int32&,System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.ComponentAdapter.GetPosition(System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.ComponentAdapter.GetSize(System.Int32&,System.Int32&)
+M:System.Void Atk.ComponentAdapter.RemoveFocusHandler(System.UInt32)
+P:System.Double Atk.ComponentAdapter.Alpha
+P:GLib.GType Atk.ComponentAdapter.GInterfaceGType
+P:GLib.GType Atk.ComponentAdapter.GType
+P:System.IntPtr Atk.ComponentAdapter.Handle
+P:Atk.IComponentImplementor Atk.ComponentAdapter.Implementor
+P:Atk.Layer Atk.ComponentAdapter.Layer
+P:System.Int32 Atk.ComponentAdapter.MdiZorder
+P:System.IntPtr Atk.ComponentAdapter.OwnedHandle
+E:Atk.BoundsChangedHandler Atk.ComponentAdapter.BoundsChanged
+T:Atk.CoordType
+F:Atk.CoordType Atk.CoordType.Screen
+F:Atk.CoordType Atk.CoordType.Window
+F:System.Int32 Atk.CoordType.value__
+T:Atk.DocumentAdapter
+C:Atk.DocumentAdapter..ctor()
+C:Atk.DocumentAdapter..ctor(Atk.IDocumentImplementor)
+C:Atk.DocumentAdapter..ctor(System.IntPtr)
+M:Atk.IDocument Atk.DocumentAdapter.GetObject(GLib.Object)
+M:Atk.IDocument Atk.DocumentAdapter.GetObject(System.IntPtr,System.Boolean)
+M:System.Boolean Atk.DocumentAdapter.SetAttributeValue(System.String,System.String)
+M:System.String Atk.DocumentAdapter.GetAttributeValue(System.String)
+P:Atk.Attribute[] Atk.DocumentAdapter.Attributes
+P:System.Int32 Atk.DocumentAdapter.CurrentPageNumber
+P:System.String Atk.DocumentAdapter.DocumentType
+P:GLib.GType Atk.DocumentAdapter.GInterfaceGType
+P:GLib.GType Atk.DocumentAdapter.GType
+P:System.IntPtr Atk.DocumentAdapter.Handle
+P:Atk.IDocumentImplementor Atk.DocumentAdapter.Implementor
+P:System.String Atk.DocumentAdapter.Locale
+P:System.IntPtr Atk.DocumentAdapter.OwnedHandle
+P:System.Int32 Atk.DocumentAdapter.PageCount
+P:System.IntPtr Atk.DocumentAdapter.TheDocument
+E:System.EventHandler Atk.DocumentAdapter.LoadComplete
+E:System.EventHandler Atk.DocumentAdapter.LoadStopped
+E:Atk.PageChangedHandler Atk.DocumentAdapter.PageChanged
+E:System.EventHandler Atk.DocumentAdapter.Reload
+T:Atk.EditableTextAdapter
+C:Atk.EditableTextAdapter..ctor()
+C:Atk.EditableTextAdapter..ctor(Atk.IEditableTextImplementor)
+C:Atk.EditableTextAdapter..ctor(System.IntPtr)
+M:Atk.IEditableText Atk.EditableTextAdapter.GetObject(GLib.Object)
+M:Atk.IEditableText Atk.EditableTextAdapter.GetObject(System.IntPtr,System.Boolean)
+M:System.Boolean Atk.EditableTextAdapter.SetRunAttributes(GLib.SList,System.Int32,System.Int32)
+M:System.Void Atk.EditableTextAdapter.CopyText(System.Int32,System.Int32)
+M:System.Void Atk.EditableTextAdapter.CutText(System.Int32,System.Int32)
+M:System.Void Atk.EditableTextAdapter.DeleteText(System.Int32,System.Int32)
+M:System.Void Atk.EditableTextAdapter.InsertText(System.String,System.Int32&)
+M:System.Void Atk.EditableTextAdapter.PasteText(System.Int32)
+P:GLib.GType Atk.EditableTextAdapter.GInterfaceGType
+P:GLib.GType Atk.EditableTextAdapter.GType
+P:System.IntPtr Atk.EditableTextAdapter.Handle
+P:Atk.IEditableTextImplementor Atk.EditableTextAdapter.Implementor
+P:System.IntPtr Atk.EditableTextAdapter.OwnedHandle
+P:System.String Atk.EditableTextAdapter.TextContents
+T:Atk.EventListener
+C:Atk.EventListener..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.EventListener.BeginInvoke(Atk.Object,System.AsyncCallback,System.Object)
+M:System.Void Atk.EventListener.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.EventListener.Invoke(Atk.Object)
+T:Atk.EventListenerInit
+C:Atk.EventListenerInit..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.EventListenerInit.BeginInvoke(System.AsyncCallback,System.Object)
+M:System.Void Atk.EventListenerInit.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.EventListenerInit.Invoke()
+T:Atk.Focus
+C:Atk.Focus..ctor()
+M:System.Void Atk.Focus.TrackerInit(Atk.EventListenerInit)
+M:System.Void Atk.Focus.TrackerNotify(Atk.Object)
+T:Atk.FocusEventArgs
+C:Atk.FocusEventArgs..ctor()
+P:System.Boolean Atk.FocusEventArgs.FocusIn
+T:Atk.FocusEventHandler
+C:Atk.FocusEventHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.FocusEventHandler.BeginInvoke(System.Object,Atk.FocusEventArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.FocusEventHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.FocusEventHandler.Invoke(System.Object,Atk.FocusEventArgs)
+T:Atk.FocusHandler
+C:Atk.FocusHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.FocusHandler.BeginInvoke(Atk.Object,System.Boolean,System.AsyncCallback,System.Object)
+M:System.Void Atk.FocusHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.FocusHandler.Invoke(Atk.Object,System.Boolean)
+T:Atk.FocusTracker
+C:Atk.FocusTracker..ctor(System.IntPtr)
+P:GLib.AbiStruct Atk.FocusTracker.abi_info
+T:Atk.Function
+C:Atk.Function..ctor(System.Object,System.IntPtr)
+M:System.Boolean Atk.Function.EndInvoke(System.IAsyncResult)
+M:System.Boolean Atk.Function.Invoke()
+M:System.IAsyncResult Atk.Function.BeginInvoke(System.AsyncCallback,System.Object)
+T:Atk.GObjectAccessible
+C:Atk.GObjectAccessible..ctor(System.IntPtr)
+M:Atk.Object Atk.GObjectAccessible.ForObject(GLib.Object)
+P:GLib.GType Atk.GObjectAccessible.GType
+P:GLib.Object Atk.GObjectAccessible.Object
+P:GLib.AbiStruct Atk.GObjectAccessible.abi_info
+P:GLib.AbiStruct Atk.GObjectAccessible.class_abi
+T:Atk.Global
+C:Atk.Global..ctor()
+M:Atk.Role Atk.Global.RoleForName(System.String)
+M:Atk.Role Atk.Global.RoleRegister(System.String)
+M:System.String Atk.Global.RoleGetLocalizedName(Atk.Role)
+M:System.String Atk.Global.RoleGetName(Atk.Role)
+M:System.UInt32 Atk.Global.AddFocusTracker(Atk.EventListener)
+M:System.UInt32 Atk.Global.AddGlobalEventListener(GLib.Signal+EmissionHook,System.String)
+M:System.UInt32 Atk.Global.AddKeyEventListener(Atk.KeySnoopFunc)
+M:System.Void Atk.Global.RemoveFocusTracker(System.UInt32)
+M:System.Void Atk.Global.RemoveGlobalEventListener(System.UInt32)
+M:System.Void Atk.Global.RemoveKeyEventListener(System.UInt32)
+P:System.UInt32 Atk.Global.BinaryAge
+P:Atk.Registry Atk.Global.DefaultRegistry
+P:Atk.Object Atk.Global.FocusObject
+P:System.UInt32 Atk.Global.InterfaceAge
+P:System.Boolean Atk.Global.IsSupported
+P:System.UInt32 Atk.Global.MajorVersion
+P:System.UInt32 Atk.Global.MicroVersion
+P:System.UInt32 Atk.Global.MinorVersion
+P:Atk.Object Atk.Global.Root
+P:System.String Atk.Global.ToolkitName
+P:System.String Atk.Global.ToolkitVersion
+P:System.String Atk.Global.Version
+T:Atk.Hyperlink
+C:Atk.Hyperlink..ctor(System.IntPtr)
+M:Atk.Object Atk.Hyperlink.GetObject(System.Int32)
+M:System.Boolean Atk.Hyperlink.DoAction(System.Int32)
+M:System.Boolean Atk.Hyperlink.SetDescription(System.Int32,System.String)
+M:System.String Atk.Hyperlink.GetDescription(System.Int32)
+M:System.String Atk.Hyperlink.GetKeybinding(System.Int32)
+M:System.String Atk.Hyperlink.GetLocalizedName(System.Int32)
+M:System.String Atk.Hyperlink.GetName(System.Int32)
+M:System.String Atk.Hyperlink.GetUri(System.Int32)
+P:System.Int32 Atk.Hyperlink.EndIndex
+P:GLib.GType Atk.Hyperlink.GType
+P:System.Boolean Atk.Hyperlink.IsInline
+P:System.Boolean Atk.Hyperlink.IsSelectedLink
+P:System.Boolean Atk.Hyperlink.IsValid
+P:System.Int32 Atk.Hyperlink.NActions
+P:System.Int32 Atk.Hyperlink.NAnchors
+P:System.Int32 Atk.Hyperlink.NumberOfAnchors
+P:System.Boolean Atk.Hyperlink.SelectedLink
+P:System.Int32 Atk.Hyperlink.StartIndex
+P:GLib.AbiStruct Atk.Hyperlink.abi_info
+P:GLib.AbiStruct Atk.Hyperlink.class_abi
+E:System.EventHandler Atk.Hyperlink.LinkActivated
+T:Atk.HyperlinkImplAdapter
+C:Atk.HyperlinkImplAdapter..ctor()
+C:Atk.HyperlinkImplAdapter..ctor(Atk.IHyperlinkImplImplementor)
+C:Atk.HyperlinkImplAdapter..ctor(System.IntPtr)
+M:Atk.IHyperlinkImpl Atk.HyperlinkImplAdapter.GetObject(GLib.Object)
+M:Atk.IHyperlinkImpl Atk.HyperlinkImplAdapter.GetObject(System.IntPtr,System.Boolean)
+P:GLib.GType Atk.HyperlinkImplAdapter.GInterfaceGType
+P:GLib.GType Atk.HyperlinkImplAdapter.GType
+P:System.IntPtr Atk.HyperlinkImplAdapter.Handle
+P:Atk.Hyperlink Atk.HyperlinkImplAdapter.Hyperlink
+P:Atk.IHyperlinkImplImplementor Atk.HyperlinkImplAdapter.Implementor
+P:System.IntPtr Atk.HyperlinkImplAdapter.OwnedHandle
+T:Atk.HyperlinkStateFlags
+F:Atk.HyperlinkStateFlags Atk.HyperlinkStateFlags.Inline
+F:System.Int32 Atk.HyperlinkStateFlags.value__
+T:Atk.HypertextAdapter
+C:Atk.HypertextAdapter..ctor()
+C:Atk.HypertextAdapter..ctor(Atk.IHypertextImplementor)
+C:Atk.HypertextAdapter..ctor(System.IntPtr)
+M:Atk.Hyperlink Atk.HypertextAdapter.GetLink(System.Int32)
+M:Atk.IHypertext Atk.HypertextAdapter.GetObject(GLib.Object)
+M:Atk.IHypertext Atk.HypertextAdapter.GetObject(System.IntPtr,System.Boolean)
+M:System.Int32 Atk.HypertextAdapter.GetLinkIndex(System.Int32)
+P:GLib.GType Atk.HypertextAdapter.GInterfaceGType
+P:GLib.GType Atk.HypertextAdapter.GType
+P:System.IntPtr Atk.HypertextAdapter.Handle
+P:Atk.IHypertextImplementor Atk.HypertextAdapter.Implementor
+P:System.Int32 Atk.HypertextAdapter.NLinks
+P:System.IntPtr Atk.HypertextAdapter.OwnedHandle
+E:Atk.LinkSelectedHandler Atk.HypertextAdapter.LinkSelected
+T:Atk.IAction
+M:System.Boolean Atk.IAction.DoAction(System.Int32)
+M:System.Boolean Atk.IAction.SetDescription(System.Int32,System.String)
+M:System.String Atk.IAction.GetDescription(System.Int32)
+M:System.String Atk.IAction.GetKeybinding(System.Int32)
+M:System.String Atk.IAction.GetLocalizedName(System.Int32)
+M:System.String Atk.IAction.GetName(System.Int32)
+P:System.Int32 Atk.IAction.NActions
+T:Atk.IActionImplementor
+M:System.Boolean Atk.IActionImplementor.DoAction(System.Int32)
+M:System.Boolean Atk.IActionImplementor.SetDescription(System.Int32,System.String)
+M:System.String Atk.IActionImplementor.GetDescription(System.Int32)
+M:System.String Atk.IActionImplementor.GetKeybinding(System.Int32)
+M:System.String Atk.IActionImplementor.GetLocalizedName(System.Int32)
+M:System.String Atk.IActionImplementor.GetName(System.Int32)
+P:System.Int32 Atk.IActionImplementor.NActions
+T:Atk.IComponent
+M:Atk.Object Atk.IComponent.RefAccessibleAtPoint(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.IComponent.Contains(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.IComponent.GrabFocus()
+M:System.Boolean Atk.IComponent.SetExtents(System.Int32,System.Int32,System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.IComponent.SetPosition(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.IComponent.SetSize(System.Int32,System.Int32)
+M:System.UInt32 Atk.IComponent.AddFocusHandler(Atk.FocusHandler)
+M:System.Void Atk.IComponent.GetExtents(System.Int32&,System.Int32&,System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.IComponent.GetPosition(System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.IComponent.GetSize(System.Int32&,System.Int32&)
+M:System.Void Atk.IComponent.RemoveFocusHandler(System.UInt32)
+P:System.Double Atk.IComponent.Alpha
+P:Atk.Layer Atk.IComponent.Layer
+P:System.Int32 Atk.IComponent.MdiZorder
+E:Atk.BoundsChangedHandler Atk.IComponent.BoundsChanged
+T:Atk.IComponentImplementor
+M:Atk.Object Atk.IComponentImplementor.RefAccessibleAtPoint(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.IComponentImplementor.Contains(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.IComponentImplementor.GrabFocus()
+M:System.Boolean Atk.IComponentImplementor.SetExtents(System.Int32,System.Int32,System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.IComponentImplementor.SetPosition(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.IComponentImplementor.SetSize(System.Int32,System.Int32)
+M:System.UInt32 Atk.IComponentImplementor.AddFocusHandler(Atk.FocusHandler)
+M:System.Void Atk.IComponentImplementor.GetExtents(System.Int32&,System.Int32&,System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.IComponentImplementor.GetPosition(System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.IComponentImplementor.GetSize(System.Int32&,System.Int32&)
+M:System.Void Atk.IComponentImplementor.RemoveFocusHandler(System.UInt32)
+P:System.Double Atk.IComponentImplementor.Alpha
+P:Atk.Layer Atk.IComponentImplementor.Layer
+P:System.Int32 Atk.IComponentImplementor.MdiZorder
+T:Atk.IDocument
+M:System.Boolean Atk.IDocument.SetAttributeValue(System.String,System.String)
+M:System.String Atk.IDocument.GetAttributeValue(System.String)
+P:Atk.Attribute[] Atk.IDocument.Attributes
+P:System.Int32 Atk.IDocument.CurrentPageNumber
+P:System.String Atk.IDocument.DocumentType
+P:System.String Atk.IDocument.Locale
+P:System.Int32 Atk.IDocument.PageCount
+P:System.IntPtr Atk.IDocument.TheDocument
+E:System.EventHandler Atk.IDocument.LoadComplete
+E:System.EventHandler Atk.IDocument.LoadStopped
+E:Atk.PageChangedHandler Atk.IDocument.PageChanged
+E:System.EventHandler Atk.IDocument.Reload
+T:Atk.IDocumentImplementor
+M:System.Boolean Atk.IDocumentImplementor.SetAttributeValue(System.String,System.String)
+M:System.String Atk.IDocumentImplementor.GetAttributeValue(System.String)
+P:Atk.Attribute[] Atk.IDocumentImplementor.Attributes
+P:System.Int32 Atk.IDocumentImplementor.CurrentPageNumber
+P:System.String Atk.IDocumentImplementor.DocumentType
+P:System.String Atk.IDocumentImplementor.Locale
+P:System.Int32 Atk.IDocumentImplementor.PageCount
+P:System.IntPtr Atk.IDocumentImplementor.TheDocument
+T:Atk.IEditableText
+M:System.Boolean Atk.IEditableText.SetRunAttributes(GLib.SList,System.Int32,System.Int32)
+M:System.Void Atk.IEditableText.CopyText(System.Int32,System.Int32)
+M:System.Void Atk.IEditableText.CutText(System.Int32,System.Int32)
+M:System.Void Atk.IEditableText.DeleteText(System.Int32,System.Int32)
+M:System.Void Atk.IEditableText.InsertText(System.String,System.Int32&)
+M:System.Void Atk.IEditableText.PasteText(System.Int32)
+P:System.String Atk.IEditableText.TextContents
+T:Atk.IEditableTextImplementor
+M:System.Boolean Atk.IEditableTextImplementor.SetRunAttributes(GLib.SList,System.Int32,System.Int32)
+M:System.Void Atk.IEditableTextImplementor.CopyText(System.Int32,System.Int32)
+M:System.Void Atk.IEditableTextImplementor.CutText(System.Int32,System.Int32)
+M:System.Void Atk.IEditableTextImplementor.DeleteText(System.Int32,System.Int32)
+M:System.Void Atk.IEditableTextImplementor.InsertText(System.String,System.Int32&)
+M:System.Void Atk.IEditableTextImplementor.PasteText(System.Int32)
+P:System.String Atk.IEditableTextImplementor.TextContents
+T:Atk.IHyperlinkImpl
+P:Atk.Hyperlink Atk.IHyperlinkImpl.Hyperlink
+T:Atk.IHyperlinkImplImplementor
+P:Atk.Hyperlink Atk.IHyperlinkImplImplementor.Hyperlink
+T:Atk.IHypertext
+M:Atk.Hyperlink Atk.IHypertext.GetLink(System.Int32)
+M:System.Int32 Atk.IHypertext.GetLinkIndex(System.Int32)
+P:System.Int32 Atk.IHypertext.NLinks
+E:Atk.LinkSelectedHandler Atk.IHypertext.LinkSelected
+T:Atk.IHypertextImplementor
+M:Atk.Hyperlink Atk.IHypertextImplementor.GetLink(System.Int32)
+M:System.Int32 Atk.IHypertextImplementor.GetLinkIndex(System.Int32)
+P:System.Int32 Atk.IHypertextImplementor.NLinks
+T:Atk.IImage
+M:System.Boolean Atk.IImage.SetImageDescription(System.String)
+M:System.Void Atk.IImage.GetImagePosition(System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.IImage.GetImageSize(System.Int32&,System.Int32&)
+P:System.String Atk.IImage.ImageDescription
+P:System.String Atk.IImage.ImageLocale
+T:Atk.IImageImplementor
+M:System.Boolean Atk.IImageImplementor.SetImageDescription(System.String)
+M:System.Void Atk.IImageImplementor.GetImagePosition(System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.IImageImplementor.GetImageSize(System.Int32&,System.Int32&)
+P:System.String Atk.IImageImplementor.ImageDescription
+P:System.String Atk.IImageImplementor.ImageLocale
+T:Atk.IImplementor
+M:Atk.Object Atk.IImplementor.RefAccessible()
+T:Atk.IImplementorImplementor
+M:Atk.Object Atk.IImplementorImplementor.RefAccessible()
+T:Atk.ISelection
+M:Atk.Object Atk.ISelection.RefSelection(System.Int32)
+M:System.Boolean Atk.ISelection.AddSelection(System.Int32)
+M:System.Boolean Atk.ISelection.ClearSelection()
+M:System.Boolean Atk.ISelection.IsChildSelected(System.Int32)
+M:System.Boolean Atk.ISelection.RemoveSelection(System.Int32)
+M:System.Boolean Atk.ISelection.SelectAllSelection()
+P:System.Int32 Atk.ISelection.SelectionCount
+E:System.EventHandler Atk.ISelection.SelectionChanged
+T:Atk.ISelectionImplementor
+M:Atk.Object Atk.ISelectionImplementor.RefSelection(System.Int32)
+M:System.Boolean Atk.ISelectionImplementor.AddSelection(System.Int32)
+M:System.Boolean Atk.ISelectionImplementor.ClearSelection()
+M:System.Boolean Atk.ISelectionImplementor.IsChildSelected(System.Int32)
+M:System.Boolean Atk.ISelectionImplementor.RemoveSelection(System.Int32)
+M:System.Boolean Atk.ISelectionImplementor.SelectAllSelection()
+P:System.Int32 Atk.ISelectionImplementor.SelectionCount
+T:Atk.IStreamableContent
+M:System.IntPtr Atk.IStreamableContent.GetStream(System.String)
+M:System.String Atk.IStreamableContent.GetMimeType(System.Int32)
+M:System.String Atk.IStreamableContent.GetUri(System.String)
+P:System.Int32 Atk.IStreamableContent.NMimeTypes
+T:Atk.IStreamableContentImplementor
+M:System.IntPtr Atk.IStreamableContentImplementor.GetStream(System.String)
+M:System.String Atk.IStreamableContentImplementor.GetMimeType(System.Int32)
+M:System.String Atk.IStreamableContentImplementor.GetUri(System.String)
+P:System.Int32 Atk.IStreamableContentImplementor.NMimeTypes
+T:Atk.ITable
+M:Atk.Object Atk.ITable.GetColumnHeader(System.Int32)
+M:Atk.Object Atk.ITable.GetRowHeader(System.Int32)
+M:Atk.Object Atk.ITable.RefAt(System.Int32,System.Int32)
+M:System.Boolean Atk.ITable.AddColumnSelection(System.Int32)
+M:System.Boolean Atk.ITable.AddRowSelection(System.Int32)
+M:System.Boolean Atk.ITable.IsColumnSelected(System.Int32)
+M:System.Boolean Atk.ITable.IsRowSelected(System.Int32)
+M:System.Boolean Atk.ITable.IsSelected(System.Int32,System.Int32)
+M:System.Boolean Atk.ITable.RemoveColumnSelection(System.Int32)
+M:System.Boolean Atk.ITable.RemoveRowSelection(System.Int32)
+M:System.Int32 Atk.ITable.GetColumnAtIndex(System.Int32)
+M:System.Int32 Atk.ITable.GetColumnExtentAt(System.Int32,System.Int32)
+M:System.Int32 Atk.ITable.GetIndexAt(System.Int32,System.Int32)
+M:System.Int32 Atk.ITable.GetRowAtIndex(System.Int32)
+M:System.Int32 Atk.ITable.GetRowExtentAt(System.Int32,System.Int32)
+M:System.Int32 Atk.ITable.GetSelectedColumns(System.Int32&)
+M:System.Int32 Atk.ITable.GetSelectedRows(System.Int32&)
+M:System.String Atk.ITable.GetColumnDescription(System.Int32)
+M:System.String Atk.ITable.GetRowDescription(System.Int32)
+M:System.Void Atk.ITable.SetColumnDescription(System.Int32,System.String)
+M:System.Void Atk.ITable.SetColumnHeader(System.Int32,Atk.Object)
+M:System.Void Atk.ITable.SetRowDescription(System.Int32,System.String)
+M:System.Void Atk.ITable.SetRowHeader(System.Int32,Atk.Object)
+P:Atk.Object Atk.ITable.Caption
+P:System.Int32 Atk.ITable.NColumns
+P:System.Int32 Atk.ITable.NRows
+P:Atk.Object Atk.ITable.Summary
+E:Atk.ColumnDeletedHandler Atk.ITable.ColumnDeleted
+E:Atk.ColumnInsertedHandler Atk.ITable.ColumnInserted
+E:System.EventHandler Atk.ITable.ColumnReordered
+E:System.EventHandler Atk.ITable.ModelChanged
+E:Atk.RowDeletedHandler Atk.ITable.RowDeleted
+E:Atk.RowInsertedHandler Atk.ITable.RowInserted
+E:System.EventHandler Atk.ITable.RowReordered
+T:Atk.ITableCell
+M:System.Boolean Atk.ITableCell.GetPosition(System.Int32&,System.Int32&)
+M:System.Boolean Atk.ITableCell.GetRowColumnSpan(System.Int32&,System.Int32&,System.Int32&,System.Int32&)
+P:GLib.PtrArray Atk.ITableCell.ColumnHeaderCells
+P:System.Int32 Atk.ITableCell.ColumnSpan
+P:GLib.PtrArray Atk.ITableCell.RowHeaderCells
+P:System.Int32 Atk.ITableCell.RowSpan
+P:Atk.Object Atk.ITableCell.Table
+T:Atk.ITableCellImplementor
+M:System.Boolean Atk.ITableCellImplementor.GetPosition(System.Int32&,System.Int32&)
+M:System.Boolean Atk.ITableCellImplementor.GetRowColumnSpan(System.Int32&,System.Int32&,System.Int32&,System.Int32&)
+P:GLib.PtrArray Atk.ITableCellImplementor.ColumnHeaderCells
+P:System.Int32 Atk.ITableCellImplementor.ColumnSpan
+P:GLib.PtrArray Atk.ITableCellImplementor.RowHeaderCells
+P:System.Int32 Atk.ITableCellImplementor.RowSpan
+P:Atk.Object Atk.ITableCellImplementor.Table
+T:Atk.ITableImplementor
+M:Atk.Object Atk.ITableImplementor.GetColumnHeader(System.Int32)
+M:Atk.Object Atk.ITableImplementor.GetRowHeader(System.Int32)
+M:Atk.Object Atk.ITableImplementor.RefAt(System.Int32,System.Int32)
+M:System.Boolean Atk.ITableImplementor.AddColumnSelection(System.Int32)
+M:System.Boolean Atk.ITableImplementor.AddRowSelection(System.Int32)
+M:System.Boolean Atk.ITableImplementor.IsColumnSelected(System.Int32)
+M:System.Boolean Atk.ITableImplementor.IsRowSelected(System.Int32)
+M:System.Boolean Atk.ITableImplementor.IsSelected(System.Int32,System.Int32)
+M:System.Boolean Atk.ITableImplementor.RemoveColumnSelection(System.Int32)
+M:System.Boolean Atk.ITableImplementor.RemoveRowSelection(System.Int32)
+M:System.Int32 Atk.ITableImplementor.GetColumnAtIndex(System.Int32)
+M:System.Int32 Atk.ITableImplementor.GetColumnExtentAt(System.Int32,System.Int32)
+M:System.Int32 Atk.ITableImplementor.GetIndexAt(System.Int32,System.Int32)
+M:System.Int32 Atk.ITableImplementor.GetRowAtIndex(System.Int32)
+M:System.Int32 Atk.ITableImplementor.GetRowExtentAt(System.Int32,System.Int32)
+M:System.Int32 Atk.ITableImplementor.GetSelectedColumns(System.Int32&)
+M:System.Int32 Atk.ITableImplementor.GetSelectedRows(System.Int32&)
+M:System.String Atk.ITableImplementor.GetColumnDescription(System.Int32)
+M:System.String Atk.ITableImplementor.GetRowDescription(System.Int32)
+M:System.Void Atk.ITableImplementor.SetColumnDescription(System.Int32,System.String)
+M:System.Void Atk.ITableImplementor.SetColumnHeader(System.Int32,Atk.Object)
+M:System.Void Atk.ITableImplementor.SetRowDescription(System.Int32,System.String)
+M:System.Void Atk.ITableImplementor.SetRowHeader(System.Int32,Atk.Object)
+P:Atk.Object Atk.ITableImplementor.Caption
+P:System.Int32 Atk.ITableImplementor.NColumns
+P:System.Int32 Atk.ITableImplementor.NRows
+P:Atk.Object Atk.ITableImplementor.Summary
+T:Atk.IText
+M:Atk.Attribute[] Atk.IText.GetRunAttributes(System.Int32,System.Int32&,System.Int32&)
+M:Atk.TextRange Atk.IText.GetBoundedRanges(Atk.TextRectangle,Atk.CoordType,Atk.TextClipType,Atk.TextClipType)
+M:Atk.TextRectangle Atk.IText.GetRangeExtents(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.IText.AddSelection(System.Int32,System.Int32)
+M:System.Boolean Atk.IText.RemoveSelection(System.Int32)
+M:System.Boolean Atk.IText.SetCaretOffset(System.Int32)
+M:System.Boolean Atk.IText.SetSelection(System.Int32,System.Int32,System.Int32)
+M:System.Char Atk.IText.GetCharacterAtOffset(System.Int32)
+M:System.Int32 Atk.IText.GetOffsetAtPoint(System.Int32,System.Int32,Atk.CoordType)
+M:System.String Atk.IText.GetSelection(System.Int32,System.Int32&,System.Int32&)
+M:System.String Atk.IText.GetStringAtOffset(System.Int32,Atk.TextGranularity,System.Int32&,System.Int32&)
+M:System.String Atk.IText.GetText(System.Int32,System.Int32)
+M:System.String Atk.IText.GetTextAfterOffset(System.Int32,Atk.TextBoundary,System.Int32&,System.Int32&)
+M:System.String Atk.IText.GetTextAtOffset(System.Int32,Atk.TextBoundary,System.Int32&,System.Int32&)
+M:System.String Atk.IText.GetTextBeforeOffset(System.Int32,Atk.TextBoundary,System.Int32&,System.Int32&)
+M:System.Void Atk.IText.GetCharacterExtents(System.Int32,System.Int32&,System.Int32&,System.Int32&,System.Int32&,Atk.CoordType)
+P:System.Int32 Atk.IText.CaretOffset
+P:System.Int32 Atk.IText.CharacterCount
+P:Atk.Attribute[] Atk.IText.DefaultAttributes
+P:System.Int32 Atk.IText.NSelections
+E:System.EventHandler Atk.IText.TextAttributesChanged
+E:Atk.TextCaretMovedHandler Atk.IText.TextCaretMoved
+E:Atk.TextChangedHandler Atk.IText.TextChanged
+E:Atk.TextInsertHandler Atk.IText.TextInsert
+E:Atk.TextRemoveHandler Atk.IText.TextRemove
+E:System.EventHandler Atk.IText.TextSelectionChanged
+T:Atk.ITextImplementor
+M:Atk.Attribute[] Atk.ITextImplementor.GetRunAttributes(System.Int32,System.Int32&,System.Int32&)
+M:Atk.TextRange Atk.ITextImplementor.GetBoundedRanges(Atk.TextRectangle,Atk.CoordType,Atk.TextClipType,Atk.TextClipType)
+M:System.Boolean Atk.ITextImplementor.AddSelection(System.Int32,System.Int32)
+M:System.Boolean Atk.ITextImplementor.RemoveSelection(System.Int32)
+M:System.Boolean Atk.ITextImplementor.SetCaretOffset(System.Int32)
+M:System.Boolean Atk.ITextImplementor.SetSelection(System.Int32,System.Int32,System.Int32)
+M:System.Char Atk.ITextImplementor.GetCharacterAtOffset(System.Int32)
+M:System.Int32 Atk.ITextImplementor.GetOffsetAtPoint(System.Int32,System.Int32,Atk.CoordType)
+M:System.String Atk.ITextImplementor.GetSelection(System.Int32,System.Int32&,System.Int32&)
+M:System.String Atk.ITextImplementor.GetStringAtOffset(System.Int32,Atk.TextGranularity,System.Int32&,System.Int32&)
+M:System.String Atk.ITextImplementor.GetText(System.Int32,System.Int32)
+M:System.String Atk.ITextImplementor.GetTextAfterOffset(System.Int32,Atk.TextBoundary,System.Int32&,System.Int32&)
+M:System.String Atk.ITextImplementor.GetTextAtOffset(System.Int32,Atk.TextBoundary,System.Int32&,System.Int32&)
+M:System.String Atk.ITextImplementor.GetTextBeforeOffset(System.Int32,Atk.TextBoundary,System.Int32&,System.Int32&)
+M:System.Void Atk.ITextImplementor.GetCharacterExtents(System.Int32,System.Int32&,System.Int32&,System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.ITextImplementor.GetRangeExtents(System.Int32,System.Int32,Atk.CoordType,Atk.TextRectangle&)
+P:System.Int32 Atk.ITextImplementor.CaretOffset
+P:System.Int32 Atk.ITextImplementor.CharacterCount
+P:Atk.Attribute[] Atk.ITextImplementor.DefaultAttributes
+P:System.Int32 Atk.ITextImplementor.NSelections
+T:Atk.IValue
+M:System.Boolean Atk.IValue.SetCurrentValue(GLib.Value)
+M:System.Double Atk.IValue.GetValueAndText(System.String)
+M:System.Void Atk.IValue.GetCurrentValue(GLib.Value&)
+M:System.Void Atk.IValue.GetMaximumValue(GLib.Value&)
+M:System.Void Atk.IValue.GetMinimumIncrement(GLib.Value&)
+M:System.Void Atk.IValue.GetMinimumValue(GLib.Value&)
+P:System.Double Atk.IValue.Increment
+P:Atk.Range Atk.IValue.Range
+P:GLib.SList Atk.IValue.SubRanges
+P:System.Double Atk.IValue.Value
+E:Atk.ValueChangedHandler Atk.IValue.ValueChanged
+T:Atk.IValueImplementor
+M:System.Boolean Atk.IValueImplementor.SetCurrentValue(GLib.Value)
+M:System.Void Atk.IValueImplementor.GetCurrentValue(GLib.Value&)
+M:System.Void Atk.IValueImplementor.GetMaximumValue(GLib.Value&)
+M:System.Void Atk.IValueImplementor.GetMinimumIncrement(GLib.Value&)
+M:System.Void Atk.IValueImplementor.GetMinimumValue(GLib.Value&)
+M:System.Void Atk.IValueImplementor.GetValueAndText(System.Double&,System.String)
+P:System.Double Atk.IValueImplementor.Increment
+P:Atk.Range Atk.IValueImplementor.Range
+P:GLib.SList Atk.IValueImplementor.SubRanges
+P:System.Double Atk.IValueImplementor.Value
+T:Atk.IWindow
+T:Atk.IWindowImplementor
+T:Atk.ImageAdapter
+C:Atk.ImageAdapter..ctor()
+C:Atk.ImageAdapter..ctor(Atk.IImageImplementor)
+C:Atk.ImageAdapter..ctor(System.IntPtr)
+M:Atk.IImage Atk.ImageAdapter.GetObject(GLib.Object)
+M:Atk.IImage Atk.ImageAdapter.GetObject(System.IntPtr,System.Boolean)
+M:System.Boolean Atk.ImageAdapter.SetImageDescription(System.String)
+M:System.Void Atk.ImageAdapter.GetImagePosition(System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.ImageAdapter.GetImageSize(System.Int32&,System.Int32&)
+P:GLib.GType Atk.ImageAdapter.GInterfaceGType
+P:GLib.GType Atk.ImageAdapter.GType
+P:System.IntPtr Atk.ImageAdapter.Handle
+P:System.String Atk.ImageAdapter.ImageDescription
+P:System.String Atk.ImageAdapter.ImageLocale
+P:Atk.IImageImplementor Atk.ImageAdapter.Implementor
+P:System.IntPtr Atk.ImageAdapter.OwnedHandle
+T:Atk.ImplementorAdapter
+C:Atk.ImplementorAdapter..ctor()
+C:Atk.ImplementorAdapter..ctor(Atk.IImplementorImplementor)
+C:Atk.ImplementorAdapter..ctor(System.IntPtr)
+M:Atk.IImplementor Atk.ImplementorAdapter.GetObject(GLib.Object)
+M:Atk.IImplementor Atk.ImplementorAdapter.GetObject(System.IntPtr,System.Boolean)
+M:Atk.Object Atk.ImplementorAdapter.RefAccessible()
+P:GLib.GType Atk.ImplementorAdapter.GInterfaceGType
+P:GLib.GType Atk.ImplementorAdapter.GType
+P:System.IntPtr Atk.ImplementorAdapter.Handle
+P:Atk.IImplementorImplementor Atk.ImplementorAdapter.Implementor
+P:System.IntPtr Atk.ImplementorAdapter.OwnedHandle
+T:Atk.KeyEventStruct
+M:Atk.KeyEventStruct Atk.KeyEventStruct.New(System.IntPtr)
+M:System.Boolean Atk.KeyEventStruct.Equals(Atk.KeyEventStruct)
+M:System.Boolean Atk.KeyEventStruct.Equals(System.Object)
+M:System.Int32 Atk.KeyEventStruct.GetHashCode()
+F:System.UInt16 Atk.KeyEventStruct.Keycode
+F:System.UInt32 Atk.KeyEventStruct.Keyval
+F:System.Int32 Atk.KeyEventStruct.Length
+F:System.UInt32 Atk.KeyEventStruct.State
+F:System.String Atk.KeyEventStruct.String
+F:System.UInt32 Atk.KeyEventStruct.Timestamp
+F:System.Int32 Atk.KeyEventStruct.Type
+F:Atk.KeyEventStruct Atk.KeyEventStruct.Zero
+T:Atk.KeyEventType
+F:Atk.KeyEventType Atk.KeyEventType.LastDefined
+F:Atk.KeyEventType Atk.KeyEventType.Press
+F:Atk.KeyEventType Atk.KeyEventType.Release
+F:System.Int32 Atk.KeyEventType.value__
+T:Atk.KeySnoopFunc
+C:Atk.KeySnoopFunc..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.KeySnoopFunc.BeginInvoke(Atk.KeyEventStruct,System.AsyncCallback,System.Object)
+M:System.Int32 Atk.KeySnoopFunc.EndInvoke(System.IAsyncResult)
+M:System.Int32 Atk.KeySnoopFunc.Invoke(Atk.KeyEventStruct)
+T:Atk.Layer
+F:Atk.Layer Atk.Layer.Background
+F:Atk.Layer Atk.Layer.Canvas
+F:Atk.Layer Atk.Layer.Invalid
+F:Atk.Layer Atk.Layer.Mdi
+F:Atk.Layer Atk.Layer.Overlay
+F:Atk.Layer Atk.Layer.Popup
+F:Atk.Layer Atk.Layer.Widget
+F:Atk.Layer Atk.Layer.Window
+F:System.Int32 Atk.Layer.value__
+T:Atk.LinkSelectedArgs
+C:Atk.LinkSelectedArgs..ctor()
+P:System.Int32 Atk.LinkSelectedArgs.LinkIndex
+T:Atk.LinkSelectedHandler
+C:Atk.LinkSelectedHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.LinkSelectedHandler.BeginInvoke(System.Object,Atk.LinkSelectedArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.LinkSelectedHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.LinkSelectedHandler.Invoke(System.Object,Atk.LinkSelectedArgs)
+T:Atk.Misc
+C:Atk.Misc..ctor(System.IntPtr)
+M:System.Void Atk.Misc.ThreadsEnter()
+M:System.Void Atk.Misc.ThreadsLeave()
+P:GLib.GType Atk.Misc.GType
+P:Atk.Misc Atk.Misc.Instance
+P:GLib.AbiStruct Atk.Misc.abi_info
+P:GLib.AbiStruct Atk.Misc.class_abi
+T:Atk.NoOpObject
+C:Atk.NoOpObject..ctor(GLib.Object)
+C:Atk.NoOpObject..ctor(System.IntPtr)
+M:Atk.Attribute[] Atk.NoOpObject.GetRunAttributes(System.Int32,System.Int32&,System.Int32&)
+M:Atk.Hyperlink Atk.NoOpObject.GetLink(System.Int32)
+M:Atk.Object Atk.NoOpObject.GetColumnHeader(System.Int32)
+M:Atk.Object Atk.NoOpObject.GetRowHeader(System.Int32)
+M:Atk.Object Atk.NoOpObject.RefAccessibleAtPoint(System.Int32,System.Int32,Atk.CoordType)
+M:Atk.Object Atk.NoOpObject.RefAt(System.Int32,System.Int32)
+M:Atk.Object Atk.NoOpObject.RefSelection(System.Int32)
+M:Atk.TextRange Atk.NoOpObject.GetBoundedRanges(Atk.TextRectangle,Atk.CoordType,Atk.TextClipType,Atk.TextClipType)
+M:Atk.TextRectangle Atk.NoOpObject.GetRangeExtents(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.NoOpObject.AddColumnSelection(System.Int32)
+M:System.Boolean Atk.NoOpObject.AddRowSelection(System.Int32)
+M:System.Boolean Atk.NoOpObject.AddSelection(System.Int32)
+M:System.Boolean Atk.NoOpObject.AddSelection(System.Int32,System.Int32)
+M:System.Boolean Atk.NoOpObject.ClearSelection()
+M:System.Boolean Atk.NoOpObject.Contains(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.NoOpObject.DoAction(System.Int32)
+M:System.Boolean Atk.NoOpObject.GetPosition(System.Int32&,System.Int32&)
+M:System.Boolean Atk.NoOpObject.GetRowColumnSpan(System.Int32&,System.Int32&,System.Int32&,System.Int32&)
+M:System.Boolean Atk.NoOpObject.GrabFocus()
+M:System.Boolean Atk.NoOpObject.IsChildSelected(System.Int32)
+M:System.Boolean Atk.NoOpObject.IsColumnSelected(System.Int32)
+M:System.Boolean Atk.NoOpObject.IsRowSelected(System.Int32)
+M:System.Boolean Atk.NoOpObject.IsSelected(System.Int32,System.Int32)
+M:System.Boolean Atk.NoOpObject.RemoveColumnSelection(System.Int32)
+M:System.Boolean Atk.NoOpObject.RemoveRowSelection(System.Int32)
+M:System.Boolean Atk.NoOpObject.SelectAllSelection()
+M:System.Boolean Atk.NoOpObject.SetAttributeValue(System.String,System.String)
+M:System.Boolean Atk.NoOpObject.SetCaretOffset(System.Int32)
+M:System.Boolean Atk.NoOpObject.SetCurrentValue(GLib.Value)
+M:System.Boolean Atk.NoOpObject.SetDescription(System.Int32,System.String)
+M:System.Boolean Atk.NoOpObject.SetExtents(System.Int32,System.Int32,System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.NoOpObject.SetImageDescription(System.String)
+M:System.Boolean Atk.NoOpObject.SetPosition(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.NoOpObject.SetRunAttributes(GLib.SList,System.Int32,System.Int32)
+M:System.Boolean Atk.NoOpObject.SetSelection(System.Int32,System.Int32,System.Int32)
+M:System.Boolean Atk.NoOpObject.SetSize(System.Int32,System.Int32)
+M:System.Char Atk.NoOpObject.GetCharacterAtOffset(System.Int32)
+M:System.Double Atk.NoOpObject.GetValueAndText(System.String)
+M:System.Int32 Atk.NoOpObject.GetColumnAtIndex(System.Int32)
+M:System.Int32 Atk.NoOpObject.GetColumnExtentAt(System.Int32,System.Int32)
+M:System.Int32 Atk.NoOpObject.GetIndexAt(System.Int32,System.Int32)
+M:System.Int32 Atk.NoOpObject.GetLinkIndex(System.Int32)
+M:System.Int32 Atk.NoOpObject.GetOffsetAtPoint(System.Int32,System.Int32,Atk.CoordType)
+M:System.Int32 Atk.NoOpObject.GetRowAtIndex(System.Int32)
+M:System.Int32 Atk.NoOpObject.GetRowExtentAt(System.Int32,System.Int32)
+M:System.Int32 Atk.NoOpObject.GetSelectedColumns(System.Int32&)
+M:System.Int32 Atk.NoOpObject.GetSelectedRows(System.Int32&)
+M:System.String Atk.NoOpObject.GetAttributeValue(System.String)
+M:System.String Atk.NoOpObject.GetColumnDescription(System.Int32)
+M:System.String Atk.NoOpObject.GetDescription(System.Int32)
+M:System.String Atk.NoOpObject.GetKeybinding(System.Int32)
+M:System.String Atk.NoOpObject.GetLocalizedName(System.Int32)
+M:System.String Atk.NoOpObject.GetName(System.Int32)
+M:System.String Atk.NoOpObject.GetRowDescription(System.Int32)
+M:System.String Atk.NoOpObject.GetSelection(System.Int32,System.Int32&,System.Int32&)
+M:System.String Atk.NoOpObject.GetStringAtOffset(System.Int32,Atk.TextGranularity,System.Int32&,System.Int32&)
+M:System.String Atk.NoOpObject.GetText(System.Int32,System.Int32)
+M:System.String Atk.NoOpObject.GetTextAfterOffset(System.Int32,Atk.TextBoundary,System.Int32&,System.Int32&)
+M:System.String Atk.NoOpObject.GetTextAtOffset(System.Int32,Atk.TextBoundary,System.Int32&,System.Int32&)
+M:System.String Atk.NoOpObject.GetTextBeforeOffset(System.Int32,Atk.TextBoundary,System.Int32&,System.Int32&)
+M:System.UInt32 Atk.NoOpObject.AddFocusHandler(Atk.FocusHandler)
+M:System.Void Atk.NoOpObject.CopyText(System.Int32,System.Int32)
+M:System.Void Atk.NoOpObject.CutText(System.Int32,System.Int32)
+M:System.Void Atk.NoOpObject.DeleteText(System.Int32,System.Int32)
+M:System.Void Atk.NoOpObject.GetCharacterExtents(System.Int32,System.Int32&,System.Int32&,System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.NoOpObject.GetCurrentValue(GLib.Value&)
+M:System.Void Atk.NoOpObject.GetExtents(System.Int32&,System.Int32&,System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.NoOpObject.GetImagePosition(System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.NoOpObject.GetImageSize(System.Int32&,System.Int32&)
+M:System.Void Atk.NoOpObject.GetMaximumValue(GLib.Value&)
+M:System.Void Atk.NoOpObject.GetMinimumIncrement(GLib.Value&)
+M:System.Void Atk.NoOpObject.GetMinimumValue(GLib.Value&)
+M:System.Void Atk.NoOpObject.GetPosition(System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.NoOpObject.GetSize(System.Int32&,System.Int32&)
+M:System.Void Atk.NoOpObject.InsertText(System.String,System.Int32&)
+M:System.Void Atk.NoOpObject.PasteText(System.Int32)
+M:System.Void Atk.NoOpObject.RemoveFocusHandler(System.UInt32)
+M:System.Void Atk.NoOpObject.SetColumnDescription(System.Int32,System.String)
+M:System.Void Atk.NoOpObject.SetColumnHeader(System.Int32,Atk.Object)
+M:System.Void Atk.NoOpObject.SetRowDescription(System.Int32,System.String)
+M:System.Void Atk.NoOpObject.SetRowHeader(System.Int32,Atk.Object)
+P:System.Double Atk.NoOpObject.Alpha
+P:Atk.Attribute[] Atk.NoOpObject.Attributes
+P:Atk.Object Atk.NoOpObject.Caption
+P:System.Int32 Atk.NoOpObject.CaretOffset
+P:System.Int32 Atk.NoOpObject.CharacterCount
+P:GLib.PtrArray Atk.NoOpObject.ColumnHeaderCells
+P:System.Int32 Atk.NoOpObject.ColumnSpan
+P:System.Int32 Atk.NoOpObject.CurrentPageNumber
+P:Atk.Attribute[] Atk.NoOpObject.DefaultAttributes
+P:System.String Atk.NoOpObject.DocumentType
+P:GLib.GType Atk.NoOpObject.GType
+P:System.String Atk.NoOpObject.ImageDescription
+P:System.String Atk.NoOpObject.ImageLocale
+P:System.Double Atk.NoOpObject.Increment
+P:Atk.Layer Atk.NoOpObject.Layer
+P:System.String Atk.NoOpObject.Locale
+P:System.Int32 Atk.NoOpObject.MdiZorder
+P:System.Int32 Atk.NoOpObject.NActions
+P:System.Int32 Atk.NoOpObject.NColumns
+P:System.Int32 Atk.NoOpObject.NLinks
+P:System.Int32 Atk.NoOpObject.NRows
+P:System.Int32 Atk.NoOpObject.NSelections
+P:System.Int32 Atk.NoOpObject.PageCount
+P:Atk.Range Atk.NoOpObject.Range
+P:GLib.PtrArray Atk.NoOpObject.RowHeaderCells
+P:System.Int32 Atk.NoOpObject.RowSpan
+P:System.Int32 Atk.NoOpObject.SelectionCount
+P:GLib.SList Atk.NoOpObject.SubRanges
+P:Atk.Object Atk.NoOpObject.Summary
+P:Atk.Object Atk.NoOpObject.Table
+P:System.String Atk.NoOpObject.TextContents
+P:System.IntPtr Atk.NoOpObject.TheDocument
+P:System.Double Atk.NoOpObject.Value
+P:GLib.AbiStruct Atk.NoOpObject.abi_info
+P:GLib.AbiStruct Atk.NoOpObject.class_abi
+E:Atk.BoundsChangedHandler Atk.NoOpObject.BoundsChanged
+E:Atk.ColumnDeletedHandler Atk.NoOpObject.ColumnDeleted
+E:Atk.ColumnInsertedHandler Atk.NoOpObject.ColumnInserted
+E:System.EventHandler Atk.NoOpObject.ColumnReordered
+E:Atk.LinkSelectedHandler Atk.NoOpObject.LinkSelected
+E:System.EventHandler Atk.NoOpObject.LoadComplete
+E:System.EventHandler Atk.NoOpObject.LoadStopped
+E:System.EventHandler Atk.NoOpObject.ModelChanged
+E:Atk.PageChangedHandler Atk.NoOpObject.PageChanged
+E:System.EventHandler Atk.NoOpObject.Reload
+E:Atk.RowDeletedHandler Atk.NoOpObject.RowDeleted
+E:Atk.RowInsertedHandler Atk.NoOpObject.RowInserted
+E:System.EventHandler Atk.NoOpObject.RowReordered
+E:System.EventHandler Atk.NoOpObject.SelectionChanged
+E:System.EventHandler Atk.NoOpObject.TextAttributesChanged
+E:Atk.TextCaretMovedHandler Atk.NoOpObject.TextCaretMoved
+E:Atk.TextChangedHandler Atk.NoOpObject.TextChanged
+E:Atk.TextInsertHandler Atk.NoOpObject.TextInsert
+E:Atk.TextRemoveHandler Atk.NoOpObject.TextRemove
+E:System.EventHandler Atk.NoOpObject.TextSelectionChanged
+E:Atk.ValueChangedHandler Atk.NoOpObject.ValueChanged
+T:Atk.NoOpObjectFactory
+C:Atk.NoOpObjectFactory..ctor()
+C:Atk.NoOpObjectFactory..ctor(System.IntPtr)
+P:GLib.GType Atk.NoOpObjectFactory.GType
+P:GLib.AbiStruct Atk.NoOpObjectFactory.abi_info
+P:GLib.AbiStruct Atk.NoOpObjectFactory.class_abi
+T:Atk.Object
+C:Atk.Object..ctor(System.IntPtr)
+M:Atk.Object Atk.Object.PeekParent()
+M:Atk.Object Atk.Object.RefAccessibleChild(System.Int32)
+M:Atk.RelationSet Atk.Object.RefRelationSet()
+M:Atk.StateSet Atk.Object.RefStateSet()
+M:System.Boolean Atk.Object.AddRelationship(Atk.RelationType,Atk.Object)
+M:System.Boolean Atk.Object.RemoveRelationship(Atk.RelationType,Atk.Object)
+M:System.UInt32 Atk.Object.ConnectPropertyChangeHandler(Atk.PropertyChangeHandler)
+M:System.Void Atk.Object.Initialize(System.IntPtr)
+M:System.Void Atk.Object.NotifyStateChange(Atk.StateType,System.Boolean)
+M:System.Void Atk.Object.NotifyStateChange(System.UInt64,System.Boolean)
+M:System.Void Atk.Object.RemovePropertyChangeHandler(System.UInt32)
+P:System.Int32 Atk.Object.AtkObjectNamePropertyComponentLayer
+P:System.Int32 Atk.Object.AtkObjectNamePropertyComponentMdiZorder
+P:System.String Atk.Object.AtkObjectNamePropertyDescription
+P:System.Int32 Atk.Object.AtkObjectNamePropertyHypertextNumLinks
+P:System.String Atk.Object.AtkObjectNamePropertyName
+P:Atk.Object Atk.Object.AtkObjectNamePropertyParent
+P:System.Int32 Atk.Object.AtkObjectNamePropertyRole
+P:System.String Atk.Object.AtkObjectNamePropertyTableCaption
+P:Atk.Object Atk.Object.AtkObjectNamePropertyTableCaptionObject
+P:System.String Atk.Object.AtkObjectNamePropertyTableColumnDescription
+P:Atk.Object Atk.Object.AtkObjectNamePropertyTableColumnHeader
+P:System.String Atk.Object.AtkObjectNamePropertyTableRowDescription
+P:Atk.Object Atk.Object.AtkObjectNamePropertyTableRowHeader
+P:Atk.Object Atk.Object.AtkObjectNamePropertyTableSummary
+P:System.Double Atk.Object.AtkObjectNamePropertyValue
+P:Atk.Attribute[] Atk.Object.Attributes
+P:System.String Atk.Object.Description
+P:GLib.GType Atk.Object.GType
+P:System.Int32 Atk.Object.IndexInParent
+P:System.Int32 Atk.Object.NAccessibleChildren
+P:System.String Atk.Object.Name
+P:System.String Atk.Object.ObjectLocale
+P:Atk.Object Atk.Object.Parent
+P:Atk.Role Atk.Object.Role
+P:GLib.AbiStruct Atk.Object.abi_info
+P:GLib.AbiStruct Atk.Object.class_abi
+E:Atk.ActiveDescendantChangedHandler Atk.Object.ActiveDescendantChanged
+E:Atk.ChildrenChangedHandler Atk.Object.ChildrenChanged
+E:Atk.FocusEventHandler Atk.Object.FocusEvent
+E:Atk.PropertyChangeEventHandler Atk.Object.PropertyChange
+E:Atk.StateChangeHandler Atk.Object.StateChange
+E:System.EventHandler Atk.Object.VisibleDataChanged
+T:Atk.Object+AtkObject_layerAlign
+T:Atk.Object+AtkObject_roleAlign
+T:Atk.ObjectFactory
+C:Atk.ObjectFactory..ctor(System.IntPtr)
+M:Atk.Object Atk.ObjectFactory.CreateAccessible(GLib.Object)
+M:System.Void Atk.ObjectFactory.Invalidate()
+P:GLib.GType Atk.ObjectFactory.AccessibleType
+P:Atk.ObjectFactory+CreateAccessibleDelegate Atk.ObjectFactory.CreateAccessibleHandler
+P:GLib.GType Atk.ObjectFactory.GType
+P:Atk.ObjectFactory+GetAccessibleTypeDelegate Atk.ObjectFactory.GetAccessibleTypeHandler
+P:GLib.AbiStruct Atk.ObjectFactory.abi_info
+P:GLib.AbiStruct Atk.ObjectFactory.class_abi
+T:Atk.ObjectFactory+CreateAccessibleDelegate
+C:Atk.ObjectFactory+CreateAccessibleDelegate..ctor(System.Object,System.IntPtr)
+M:Atk.Object Atk.ObjectFactory+CreateAccessibleDelegate.EndInvoke(System.IAsyncResult)
+M:Atk.Object Atk.ObjectFactory+CreateAccessibleDelegate.Invoke(GLib.Object)
+M:System.IAsyncResult Atk.ObjectFactory+CreateAccessibleDelegate.BeginInvoke(GLib.Object,System.AsyncCallback,System.Object)
+T:Atk.ObjectFactory+GetAccessibleTypeDelegate
+C:Atk.ObjectFactory+GetAccessibleTypeDelegate..ctor(System.Object,System.IntPtr)
+M:GLib.GType Atk.ObjectFactory+GetAccessibleTypeDelegate.EndInvoke(System.IAsyncResult)
+M:GLib.GType Atk.ObjectFactory+GetAccessibleTypeDelegate.Invoke()
+M:System.IAsyncResult Atk.ObjectFactory+GetAccessibleTypeDelegate.BeginInvoke(System.AsyncCallback,System.Object)
+T:Atk.PageChangedArgs
+C:Atk.PageChangedArgs..ctor()
+P:System.Int32 Atk.PageChangedArgs.P0
+T:Atk.PageChangedHandler
+C:Atk.PageChangedHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.PageChangedHandler.BeginInvoke(System.Object,Atk.PageChangedArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.PageChangedHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.PageChangedHandler.Invoke(System.Object,Atk.PageChangedArgs)
+T:Atk.Plug
+C:Atk.Plug..ctor()
+C:Atk.Plug..ctor(System.IntPtr)
+M:Atk.Object Atk.Plug.RefAccessibleAtPoint(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.Plug.Contains(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.Plug.GrabFocus()
+M:System.Boolean Atk.Plug.SetExtents(System.Int32,System.Int32,System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.Plug.SetPosition(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.Plug.SetSize(System.Int32,System.Int32)
+M:System.UInt32 Atk.Plug.AddFocusHandler(Atk.FocusHandler)
+M:System.Void Atk.Plug.GetExtents(System.Int32&,System.Int32&,System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.Plug.GetPosition(System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.Plug.GetSize(System.Int32&,System.Int32&)
+M:System.Void Atk.Plug.RemoveFocusHandler(System.UInt32)
+P:System.Double Atk.Plug.Alpha
+P:GLib.GType Atk.Plug.GType
+P:System.String Atk.Plug.Id
+P:Atk.Layer Atk.Plug.Layer
+P:System.Int32 Atk.Plug.MdiZorder
+P:GLib.AbiStruct Atk.Plug.abi_info
+P:GLib.AbiStruct Atk.Plug.class_abi
+E:Atk.BoundsChangedHandler Atk.Plug.BoundsChanged
+T:Atk.PropertyChangeArgs
+C:Atk.PropertyChangeArgs..ctor()
+P:Atk.PropertyValues Atk.PropertyChangeArgs.Values
+T:Atk.PropertyChangeEventHandler
+C:Atk.PropertyChangeEventHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.PropertyChangeEventHandler.BeginInvoke(System.Object,Atk.PropertyChangeArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.PropertyChangeEventHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.PropertyChangeEventHandler.Invoke(System.Object,Atk.PropertyChangeArgs)
+T:Atk.PropertyChangeHandler
+C:Atk.PropertyChangeHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.PropertyChangeHandler.BeginInvoke(Atk.Object,Atk.PropertyValues,System.AsyncCallback,System.Object)
+M:System.Void Atk.PropertyChangeHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.PropertyChangeHandler.Invoke(Atk.Object,Atk.PropertyValues)
+T:Atk.PropertyValues
+M:Atk.PropertyValues Atk.PropertyValues.New(System.IntPtr)
+M:System.Boolean Atk.PropertyValues.Equals(Atk.PropertyValues)
+M:System.Boolean Atk.PropertyValues.Equals(System.Object)
+M:System.Int32 Atk.PropertyValues.GetHashCode()
+F:GLib.Value Atk.PropertyValues.NewValue
+F:GLib.Value Atk.PropertyValues.OldValue
+F:System.String Atk.PropertyValues.PropertyName
+F:Atk.PropertyValues Atk.PropertyValues.Zero
+T:Atk.Range
+C:Atk.Range..ctor(System.Double,System.Double,System.String)
+C:Atk.Range..ctor(System.IntPtr)
+M:Atk.Range Atk.Range.Copy()
+P:System.String Atk.Range.Description
+P:GLib.GType Atk.Range.GType
+P:System.Double Atk.Range.LowerLimit
+P:System.Double Atk.Range.UpperLimit
+P:GLib.AbiStruct Atk.Range.abi_info
+T:Atk.RealStateSet
+C:Atk.RealStateSet..ctor(System.IntPtr)
+P:GLib.AbiStruct Atk.RealStateSet.abi_info
+T:Atk.Rectangle
+M:Atk.Rectangle Atk.Rectangle.New(System.IntPtr)
+M:System.Boolean Atk.Rectangle.Equals(Atk.Rectangle)
+M:System.Boolean Atk.Rectangle.Equals(System.Object)
+M:System.Int32 Atk.Rectangle.GetHashCode()
+P:GLib.GType Atk.Rectangle.GType
+F:System.Int32 Atk.Rectangle.Height
+F:System.Int32 Atk.Rectangle.Width
+F:System.Int32 Atk.Rectangle.X
+F:System.Int32 Atk.Rectangle.Y
+F:Atk.Rectangle Atk.Rectangle.Zero
+T:Atk.Registry
+C:Atk.Registry..ctor(System.IntPtr)
+M:Atk.ObjectFactory Atk.Registry.GetFactory(GLib.GType)
+M:GLib.GType Atk.Registry.GetFactoryType(GLib.GType)
+M:System.Void Atk.Registry.SetFactoryType(GLib.GType,GLib.GType)
+P:GLib.GType Atk.Registry.GType
+P:GLib.AbiStruct Atk.Registry.abi_info
+P:GLib.AbiStruct Atk.Registry.class_abi
+T:Atk.Relation
+C:Atk.Relation..ctor(Atk.Object[],Atk.RelationType)
+C:Atk.Relation..ctor(System.IntPtr)
+M:Atk.RelationType Atk.Relation.TypeForName(System.String)
+M:Atk.RelationType Atk.Relation.TypeRegister(System.String)
+M:System.Boolean Atk.Relation.RemoveTarget(Atk.Object)
+M:System.String Atk.Relation.TypeGetName(Atk.RelationType)
+M:System.Void Atk.Relation.AddTarget(Atk.Object)
+P:GLib.GType Atk.Relation.GType
+P:Atk.RelationType Atk.Relation.RelationType
+P:Atk.Object[] Atk.Relation.Target
+P:GLib.AbiStruct Atk.Relation.abi_info
+P:GLib.AbiStruct Atk.Relation.class_abi
+T:Atk.Relation+AtkRelation_relationshipAlign
+T:Atk.RelationSet
+C:Atk.RelationSet..ctor()
+C:Atk.RelationSet..ctor(System.IntPtr)
+M:Atk.Relation Atk.RelationSet.GetRelation(System.Int32)
+M:Atk.Relation Atk.RelationSet.GetRelationByType(Atk.RelationType)
+M:System.Boolean Atk.RelationSet.Contains(Atk.RelationType)
+M:System.Boolean Atk.RelationSet.ContainsTarget(Atk.RelationType,Atk.Object)
+M:System.Void Atk.RelationSet.Add(Atk.Relation)
+M:System.Void Atk.RelationSet.AddRelationByType(Atk.RelationType,Atk.Object)
+M:System.Void Atk.RelationSet.Remove(Atk.Relation)
+P:GLib.GType Atk.RelationSet.GType
+P:System.Int32 Atk.RelationSet.NRelations
+P:GLib.AbiStruct Atk.RelationSet.abi_info
+P:GLib.AbiStruct Atk.RelationSet.class_abi
+T:Atk.RelationType
+F:Atk.RelationType Atk.RelationType.ControlledBy
+F:Atk.RelationType Atk.RelationType.ControllerFor
+F:Atk.RelationType Atk.RelationType.DescribedBy
+F:Atk.RelationType Atk.RelationType.DescriptionFor
+F:Atk.RelationType Atk.RelationType.EmbeddedBy
+F:Atk.RelationType Atk.RelationType.Embeds
+F:Atk.RelationType Atk.RelationType.FlowsFrom
+F:Atk.RelationType Atk.RelationType.FlowsTo
+F:Atk.RelationType Atk.RelationType.LabelFor
+F:Atk.RelationType Atk.RelationType.LabelledBy
+F:Atk.RelationType Atk.RelationType.LastDefined
+F:Atk.RelationType Atk.RelationType.MemberOf
+F:Atk.RelationType Atk.RelationType.NodeChildOf
+F:Atk.RelationType Atk.RelationType.NodeParentOf
+F:Atk.RelationType Atk.RelationType.Null
+F:Atk.RelationType Atk.RelationType.ParentWindowOf
+F:Atk.RelationType Atk.RelationType.PopupFor
+F:Atk.RelationType Atk.RelationType.SubwindowOf
+F:System.Int32 Atk.RelationType.value__
+T:Atk.Role
+F:Atk.Role Atk.Role.AccelLabel
+F:Atk.Role Atk.Role.Alert
+F:Atk.Role Atk.Role.Animation
+F:Atk.Role Atk.Role.Application
+F:Atk.Role Atk.Role.Arrow
+F:Atk.Role Atk.Role.Article
+F:Atk.Role Atk.Role.Audio
+F:Atk.Role Atk.Role.Autocomplete
+F:Atk.Role Atk.Role.BlockQuote
+F:Atk.Role Atk.Role.Calendar
+F:Atk.Role Atk.Role.Canvas
+F:Atk.Role Atk.Role.Caption
+F:Atk.Role Atk.Role.Chart
+F:Atk.Role Atk.Role.CheckBox
+F:Atk.Role Atk.Role.CheckMenuItem
+F:Atk.Role Atk.Role.ColorChooser
+F:Atk.Role Atk.Role.ColumnHeader
+F:Atk.Role Atk.Role.ComboBox
+F:Atk.Role Atk.Role.Comment
+F:Atk.Role Atk.Role.DateEditor
+F:Atk.Role Atk.Role.Definition
+F:Atk.Role Atk.Role.DescriptionList
+F:Atk.Role Atk.Role.DescriptionTerm
+F:Atk.Role Atk.Role.DescriptionValue
+F:Atk.Role Atk.Role.DesktopFrame
+F:Atk.Role Atk.Role.DesktopIcon
+F:Atk.Role Atk.Role.Dial
+F:Atk.Role Atk.Role.Dialog
+F:Atk.Role Atk.Role.DirectoryPane
+F:Atk.Role Atk.Role.DocumentEmail
+F:Atk.Role Atk.Role.DocumentFrame
+F:Atk.Role Atk.Role.DocumentPresentation
+F:Atk.Role Atk.Role.DocumentSpreadsheet
+F:Atk.Role Atk.Role.DocumentText
+F:Atk.Role Atk.Role.DocumentWeb
+F:Atk.Role Atk.Role.DrawingArea
+F:Atk.Role Atk.Role.Editbar
+F:Atk.Role Atk.Role.Embedded
+F:Atk.Role Atk.Role.Entry
+F:Atk.Role Atk.Role.FileChooser
+F:Atk.Role Atk.Role.Filler
+F:Atk.Role Atk.Role.FontChooser
+F:Atk.Role Atk.Role.Footer
+F:Atk.Role Atk.Role.Form
+F:Atk.Role Atk.Role.Frame
+F:Atk.Role Atk.Role.GlassPane
+F:Atk.Role Atk.Role.Grouping
+F:Atk.Role Atk.Role.Header
+F:Atk.Role Atk.Role.Heading
+F:Atk.Role Atk.Role.HtmlContainer
+F:Atk.Role Atk.Role.Icon
+F:Atk.Role Atk.Role.Image
+F:Atk.Role Atk.Role.ImageMap
+F:Atk.Role Atk.Role.InfoBar
+F:Atk.Role Atk.Role.InputMethodWindow
+F:Atk.Role Atk.Role.InternalFrame
+F:Atk.Role Atk.Role.Invalid
+F:Atk.Role Atk.Role.Label
+F:Atk.Role Atk.Role.Landmark
+F:Atk.Role Atk.Role.LastDefined
+F:Atk.Role Atk.Role.LayeredPane
+F:Atk.Role Atk.Role.LevelBar
+F:Atk.Role Atk.Role.Link
+F:Atk.Role Atk.Role.List
+F:Atk.Role Atk.Role.ListBox
+F:Atk.Role Atk.Role.ListItem
+F:Atk.Role Atk.Role.Log
+F:Atk.Role Atk.Role.Marquee
+F:Atk.Role Atk.Role.Math
+F:Atk.Role Atk.Role.MathFraction
+F:Atk.Role Atk.Role.MathRoot
+F:Atk.Role Atk.Role.Menu
+F:Atk.Role Atk.Role.MenuBar
+F:Atk.Role Atk.Role.MenuItem
+F:Atk.Role Atk.Role.Notification
+F:Atk.Role Atk.Role.OptionPane
+F:Atk.Role Atk.Role.Page
+F:Atk.Role Atk.Role.PageTab
+F:Atk.Role Atk.Role.PageTabList
+F:Atk.Role Atk.Role.Panel
+F:Atk.Role Atk.Role.Paragraph
+F:Atk.Role Atk.Role.PasswordText
+F:Atk.Role Atk.Role.PopupMenu
+F:Atk.Role Atk.Role.ProgressBar
+F:Atk.Role Atk.Role.PushButton
+F:Atk.Role Atk.Role.RadioButton
+F:Atk.Role Atk.Role.RadioMenuItem
+F:Atk.Role Atk.Role.Rating
+F:Atk.Role Atk.Role.RedundantObject
+F:Atk.Role Atk.Role.RootPane
+F:Atk.Role Atk.Role.RowHeader
+F:Atk.Role Atk.Role.Ruler
+F:Atk.Role Atk.Role.ScrollBar
+F:Atk.Role Atk.Role.ScrollPane
+F:Atk.Role Atk.Role.Section
+F:Atk.Role Atk.Role.Separator
+F:Atk.Role Atk.Role.Slider
+F:Atk.Role Atk.Role.SpinButton
+F:Atk.Role Atk.Role.SplitPane
+F:Atk.Role Atk.Role.Static
+F:Atk.Role Atk.Role.Statusbar
+F:Atk.Role Atk.Role.Subscript
+F:Atk.Role Atk.Role.Superscript
+F:Atk.Role Atk.Role.Table
+F:Atk.Role Atk.Role.TableCell
+F:Atk.Role Atk.Role.TableColumnHeader
+F:Atk.Role Atk.Role.TableRow
+F:Atk.Role Atk.Role.TableRowHeader
+F:Atk.Role Atk.Role.TearOffMenuItem
+F:Atk.Role Atk.Role.Terminal
+F:Atk.Role Atk.Role.Text
+F:Atk.Role Atk.Role.Timer
+F:Atk.Role Atk.Role.TitleBar
+F:Atk.Role Atk.Role.ToggleButton
+F:Atk.Role Atk.Role.ToolBar
+F:Atk.Role Atk.Role.ToolTip
+F:Atk.Role Atk.Role.Tree
+F:Atk.Role Atk.Role.TreeItem
+F:Atk.Role Atk.Role.TreeTable
+F:Atk.Role Atk.Role.Unknown
+F:Atk.Role Atk.Role.Video
+F:Atk.Role Atk.Role.Viewport
+F:Atk.Role Atk.Role.Window
+F:System.Int32 Atk.Role.value__
+T:Atk.RowDeletedArgs
+C:Atk.RowDeletedArgs..ctor()
+P:System.Int32 Atk.RowDeletedArgs.NumDeleted
+P:System.Int32 Atk.RowDeletedArgs.Row
+T:Atk.RowDeletedHandler
+C:Atk.RowDeletedHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.RowDeletedHandler.BeginInvoke(System.Object,Atk.RowDeletedArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.RowDeletedHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.RowDeletedHandler.Invoke(System.Object,Atk.RowDeletedArgs)
+T:Atk.RowInsertedArgs
+C:Atk.RowInsertedArgs..ctor()
+P:System.Int32 Atk.RowInsertedArgs.NumInserted
+P:System.Int32 Atk.RowInsertedArgs.Row
+T:Atk.RowInsertedHandler
+C:Atk.RowInsertedHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.RowInsertedHandler.BeginInvoke(System.Object,Atk.RowInsertedArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.RowInsertedHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.RowInsertedHandler.Invoke(System.Object,Atk.RowInsertedArgs)
+T:Atk.SelectionAdapter
+C:Atk.SelectionAdapter..ctor()
+C:Atk.SelectionAdapter..ctor(Atk.ISelectionImplementor)
+C:Atk.SelectionAdapter..ctor(System.IntPtr)
+M:Atk.ISelection Atk.SelectionAdapter.GetObject(GLib.Object)
+M:Atk.ISelection Atk.SelectionAdapter.GetObject(System.IntPtr,System.Boolean)
+M:Atk.Object Atk.SelectionAdapter.RefSelection(System.Int32)
+M:System.Boolean Atk.SelectionAdapter.AddSelection(System.Int32)
+M:System.Boolean Atk.SelectionAdapter.ClearSelection()
+M:System.Boolean Atk.SelectionAdapter.IsChildSelected(System.Int32)
+M:System.Boolean Atk.SelectionAdapter.RemoveSelection(System.Int32)
+M:System.Boolean Atk.SelectionAdapter.SelectAllSelection()
+M:System.Void Atk.SelectionAdapter.EmitSelectionChanged()
+P:GLib.GType Atk.SelectionAdapter.GInterfaceGType
+P:GLib.GType Atk.SelectionAdapter.GType
+P:System.IntPtr Atk.SelectionAdapter.Handle
+P:Atk.ISelectionImplementor Atk.SelectionAdapter.Implementor
+P:System.IntPtr Atk.SelectionAdapter.OwnedHandle
+P:System.Int32 Atk.SelectionAdapter.SelectionCount
+E:System.EventHandler Atk.SelectionAdapter.SelectionChanged
+T:Atk.Socket
+C:Atk.Socket..ctor()
+C:Atk.Socket..ctor(System.IntPtr)
+M:Atk.Object Atk.Socket.RefAccessibleAtPoint(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.Socket.Contains(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.Socket.GrabFocus()
+M:System.Boolean Atk.Socket.SetExtents(System.Int32,System.Int32,System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.Socket.SetPosition(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.Socket.SetSize(System.Int32,System.Int32)
+M:System.UInt32 Atk.Socket.AddFocusHandler(Atk.FocusHandler)
+M:System.Void Atk.Socket.Embed(System.String)
+M:System.Void Atk.Socket.GetExtents(System.Int32&,System.Int32&,System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.Socket.GetPosition(System.Int32&,System.Int32&,Atk.CoordType)
+M:System.Void Atk.Socket.GetSize(System.Int32&,System.Int32&)
+M:System.Void Atk.Socket.RemoveFocusHandler(System.UInt32)
+P:System.Double Atk.Socket.Alpha
+P:GLib.GType Atk.Socket.GType
+P:System.Boolean Atk.Socket.IsOccupied
+P:Atk.Layer Atk.Socket.Layer
+P:System.Int32 Atk.Socket.MdiZorder
+P:GLib.AbiStruct Atk.Socket.abi_info
+P:GLib.AbiStruct Atk.Socket.class_abi
+E:Atk.BoundsChangedHandler Atk.Socket.BoundsChanged
+T:Atk.StateChangeArgs
+C:Atk.StateChangeArgs..ctor()
+P:System.String Atk.StateChangeArgs.Name
+P:System.Boolean Atk.StateChangeArgs.StateSet
+T:Atk.StateChangeHandler
+C:Atk.StateChangeHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.StateChangeHandler.BeginInvoke(System.Object,Atk.StateChangeArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.StateChangeHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.StateChangeHandler.Invoke(System.Object,Atk.StateChangeArgs)
+T:Atk.StateManager
+C:Atk.StateManager..ctor()
+M:Atk.StateType Atk.StateManager.TypeForName(System.String)
+M:Atk.StateType Atk.StateManager.TypeRegister(System.String)
+M:System.String Atk.StateManager.TypeGetName(Atk.StateType)
+T:Atk.StateSet
+C:Atk.StateSet..ctor()
+C:Atk.StateSet..ctor(System.IntPtr)
+M:Atk.StateSet Atk.StateSet.AndSets(Atk.StateSet)
+M:Atk.StateSet Atk.StateSet.OrSets(Atk.StateSet)
+M:Atk.StateSet Atk.StateSet.XorSets(Atk.StateSet)
+M:Atk.StateType Atk.StateSet.AddStates(System.Int32)
+M:System.Boolean Atk.StateSet.AddState(Atk.StateType)
+M:System.Boolean Atk.StateSet.ContainsState(Atk.StateType)
+M:System.Boolean Atk.StateSet.ContainsStates(Atk.StateType&,System.Int32)
+M:System.Boolean Atk.StateSet.RemoveState(Atk.StateType)
+M:System.Void Atk.StateSet.ClearStates()
+P:GLib.GType Atk.StateSet.GType
+P:System.Boolean Atk.StateSet.IsEmpty
+P:GLib.AbiStruct Atk.StateSet.abi_info
+P:GLib.AbiStruct Atk.StateSet.class_abi
+T:Atk.StateType
+F:Atk.StateType Atk.StateType.Active
+F:Atk.StateType Atk.StateType.Animated
+F:Atk.StateType Atk.StateType.Armed
+F:Atk.StateType Atk.StateType.Busy
+F:Atk.StateType Atk.StateType.Checkable
+F:Atk.StateType Atk.StateType.Checked
+F:Atk.StateType Atk.StateType.Default
+F:Atk.StateType Atk.StateType.Defunct
+F:Atk.StateType Atk.StateType.Editable
+F:Atk.StateType Atk.StateType.Enabled
+F:Atk.StateType Atk.StateType.Expandable
+F:Atk.StateType Atk.StateType.Expanded
+F:Atk.StateType Atk.StateType.Focusable
+F:Atk.StateType Atk.StateType.Focused
+F:Atk.StateType Atk.StateType.HasPopup
+F:Atk.StateType Atk.StateType.HasTooltip
+F:Atk.StateType Atk.StateType.Horizontal
+F:Atk.StateType Atk.StateType.Iconified
+F:Atk.StateType Atk.StateType.Indeterminate
+F:Atk.StateType Atk.StateType.Invalid
+F:Atk.StateType Atk.StateType.InvalidEntry
+F:Atk.StateType Atk.StateType.LastDefined
+F:Atk.StateType Atk.StateType.ManagesDescendants
+F:Atk.StateType Atk.StateType.Modal
+F:Atk.StateType Atk.StateType.MultiLine
+F:Atk.StateType Atk.StateType.Multiselectable
+F:Atk.StateType Atk.StateType.Opaque
+F:Atk.StateType Atk.StateType.Pressed
+F:Atk.StateType Atk.StateType.ReadOnly
+F:Atk.StateType Atk.StateType.Required
+F:Atk.StateType Atk.StateType.Resizable
+F:Atk.StateType Atk.StateType.Selectable
+F:Atk.StateType Atk.StateType.SelectableText
+F:Atk.StateType Atk.StateType.Selected
+F:Atk.StateType Atk.StateType.Sensitive
+F:Atk.StateType Atk.StateType.Showing
+F:Atk.StateType Atk.StateType.SingleLine
+F:Atk.StateType Atk.StateType.Stale
+F:Atk.StateType Atk.StateType.SupportsAutocompletion
+F:Atk.StateType Atk.StateType.Transient
+F:Atk.StateType Atk.StateType.Truncated
+F:Atk.StateType Atk.StateType.Vertical
+F:Atk.StateType Atk.StateType.Visible
+F:Atk.StateType Atk.StateType.Visited
+F:System.Int32 Atk.StateType.value__
+T:Atk.StreamableContentAdapter
+C:Atk.StreamableContentAdapter..ctor()
+C:Atk.StreamableContentAdapter..ctor(Atk.IStreamableContentImplementor)
+C:Atk.StreamableContentAdapter..ctor(System.IntPtr)
+M:Atk.IStreamableContent Atk.StreamableContentAdapter.GetObject(GLib.Object)
+M:Atk.IStreamableContent Atk.StreamableContentAdapter.GetObject(System.IntPtr,System.Boolean)
+M:System.IntPtr Atk.StreamableContentAdapter.GetStream(System.String)
+M:System.String Atk.StreamableContentAdapter.GetMimeType(System.Int32)
+M:System.String Atk.StreamableContentAdapter.GetUri(System.String)
+P:GLib.GType Atk.StreamableContentAdapter.GInterfaceGType
+P:GLib.GType Atk.StreamableContentAdapter.GType
+P:System.IntPtr Atk.StreamableContentAdapter.Handle
+P:Atk.IStreamableContentImplementor Atk.StreamableContentAdapter.Implementor
+P:System.Int32 Atk.StreamableContentAdapter.NMimeTypes
+P:System.IntPtr Atk.StreamableContentAdapter.OwnedHandle
+T:Atk.TableAdapter
+C:Atk.TableAdapter..ctor()
+C:Atk.TableAdapter..ctor(Atk.ITableImplementor)
+C:Atk.TableAdapter..ctor(System.IntPtr)
+M:Atk.ITable Atk.TableAdapter.GetObject(GLib.Object)
+M:Atk.ITable Atk.TableAdapter.GetObject(System.IntPtr,System.Boolean)
+M:Atk.Object Atk.TableAdapter.GetColumnHeader(System.Int32)
+M:Atk.Object Atk.TableAdapter.GetRowHeader(System.Int32)
+M:Atk.Object Atk.TableAdapter.RefAt(System.Int32,System.Int32)
+M:System.Boolean Atk.TableAdapter.AddColumnSelection(System.Int32)
+M:System.Boolean Atk.TableAdapter.AddRowSelection(System.Int32)
+M:System.Boolean Atk.TableAdapter.IsColumnSelected(System.Int32)
+M:System.Boolean Atk.TableAdapter.IsRowSelected(System.Int32)
+M:System.Boolean Atk.TableAdapter.IsSelected(System.Int32,System.Int32)
+M:System.Boolean Atk.TableAdapter.RemoveColumnSelection(System.Int32)
+M:System.Boolean Atk.TableAdapter.RemoveRowSelection(System.Int32)
+M:System.Int32 Atk.TableAdapter.GetColumnAtIndex(System.Int32)
+M:System.Int32 Atk.TableAdapter.GetColumnExtentAt(System.Int32,System.Int32)
+M:System.Int32 Atk.TableAdapter.GetIndexAt(System.Int32,System.Int32)
+M:System.Int32 Atk.TableAdapter.GetRowAtIndex(System.Int32)
+M:System.Int32 Atk.TableAdapter.GetRowExtentAt(System.Int32,System.Int32)
+M:System.Int32 Atk.TableAdapter.GetSelectedColumns(System.Int32&)
+M:System.Int32 Atk.TableAdapter.GetSelectedRows(System.Int32&)
+M:System.String Atk.TableAdapter.GetColumnDescription(System.Int32)
+M:System.String Atk.TableAdapter.GetRowDescription(System.Int32)
+M:System.Void Atk.TableAdapter.SetColumnDescription(System.Int32,System.String)
+M:System.Void Atk.TableAdapter.SetColumnHeader(System.Int32,Atk.Object)
+M:System.Void Atk.TableAdapter.SetRowDescription(System.Int32,System.String)
+M:System.Void Atk.TableAdapter.SetRowHeader(System.Int32,Atk.Object)
+P:Atk.Object Atk.TableAdapter.Caption
+P:GLib.GType Atk.TableAdapter.GInterfaceGType
+P:GLib.GType Atk.TableAdapter.GType
+P:System.IntPtr Atk.TableAdapter.Handle
+P:Atk.ITableImplementor Atk.TableAdapter.Implementor
+P:System.Int32 Atk.TableAdapter.NColumns
+P:System.Int32 Atk.TableAdapter.NRows
+P:System.IntPtr Atk.TableAdapter.OwnedHandle
+P:Atk.Object Atk.TableAdapter.Summary
+E:Atk.ColumnDeletedHandler Atk.TableAdapter.ColumnDeleted
+E:Atk.ColumnInsertedHandler Atk.TableAdapter.ColumnInserted
+E:System.EventHandler Atk.TableAdapter.ColumnReordered
+E:System.EventHandler Atk.TableAdapter.ModelChanged
+E:Atk.RowDeletedHandler Atk.TableAdapter.RowDeleted
+E:Atk.RowInsertedHandler Atk.TableAdapter.RowInserted
+E:System.EventHandler Atk.TableAdapter.RowReordered
+T:Atk.TableCellAdapter
+C:Atk.TableCellAdapter..ctor()
+C:Atk.TableCellAdapter..ctor(Atk.ITableCellImplementor)
+C:Atk.TableCellAdapter..ctor(System.IntPtr)
+M:Atk.ITableCell Atk.TableCellAdapter.GetObject(GLib.Object)
+M:Atk.ITableCell Atk.TableCellAdapter.GetObject(System.IntPtr,System.Boolean)
+M:System.Boolean Atk.TableCellAdapter.GetPosition(System.Int32&,System.Int32&)
+M:System.Boolean Atk.TableCellAdapter.GetRowColumnSpan(System.Int32&,System.Int32&,System.Int32&,System.Int32&)
+P:GLib.PtrArray Atk.TableCellAdapter.ColumnHeaderCells
+P:System.Int32 Atk.TableCellAdapter.ColumnSpan
+P:GLib.GType Atk.TableCellAdapter.GInterfaceGType
+P:GLib.GType Atk.TableCellAdapter.GType
+P:System.IntPtr Atk.TableCellAdapter.Handle
+P:Atk.ITableCellImplementor Atk.TableCellAdapter.Implementor
+P:System.IntPtr Atk.TableCellAdapter.OwnedHandle
+P:GLib.PtrArray Atk.TableCellAdapter.RowHeaderCells
+P:System.Int32 Atk.TableCellAdapter.RowSpan
+P:Atk.Object Atk.TableCellAdapter.Table
+T:Atk.TextAdapter
+C:Atk.TextAdapter..ctor()
+C:Atk.TextAdapter..ctor(Atk.ITextImplementor)
+C:Atk.TextAdapter..ctor(System.IntPtr)
+M:Atk.Attribute[] Atk.TextAdapter.GetRunAttributes(System.Int32,System.Int32&,System.Int32&)
+M:Atk.IText Atk.TextAdapter.GetObject(GLib.Object)
+M:Atk.IText Atk.TextAdapter.GetObject(System.IntPtr,System.Boolean)
+M:Atk.TextAttribute Atk.TextAdapter.AttributeForName(System.String)
+M:Atk.TextAttribute Atk.TextAdapter.AttributeRegister(System.String)
+M:Atk.TextRange Atk.TextAdapter.GetBoundedRanges(Atk.TextRectangle,Atk.CoordType,Atk.TextClipType,Atk.TextClipType)
+M:Atk.TextRectangle Atk.TextAdapter.GetRangeExtents(System.Int32,System.Int32,Atk.CoordType)
+M:System.Boolean Atk.TextAdapter.AddSelection(System.Int32,System.Int32)
+M:System.Boolean Atk.TextAdapter.RemoveSelection(System.Int32)
+M:System.Boolean Atk.TextAdapter.SetCaretOffset(System.Int32)
+M:System.Boolean Atk.TextAdapter.SetSelection(System.Int32,System.Int32,System.Int32)
+M:System.Char Atk.TextAdapter.GetCharacterAtOffset(System.Int32)
+M:System.Int32 Atk.TextAdapter.GetOffsetAtPoint(System.Int32,System.Int32,Atk.CoordType)
+M:System.String Atk.TextAdapter.AttributeGetName(Atk.TextAttribute)
+M:System.String Atk.TextAdapter.AttributeGetValue(Atk.TextAttribute,System.Int32)
+M:System.String Atk.TextAdapter.GetSelection(System.Int32,System.Int32&,System.Int32&)
+M:System.String Atk.TextAdapter.GetStringAtOffset(System.Int32,Atk.TextGranularity,System.Int32&,System.Int32&)
+M:System.String Atk.TextAdapter.GetText(System.Int32,System.Int32)
+M:System.String Atk.TextAdapter.GetTextAfterOffset(System.Int32,Atk.TextBoundary,System.Int32&,System.Int32&)
+M:System.String Atk.TextAdapter.GetTextAtOffset(System.Int32,Atk.TextBoundary,System.Int32&,System.Int32&)
+M:System.String Atk.TextAdapter.GetTextBeforeOffset(System.Int32,Atk.TextBoundary,System.Int32&,System.Int32&)
+M:System.Void Atk.TextAdapter.EmitTextChanged(Atk.TextChangedDetail,System.Int32,System.Int32)
+M:System.Void Atk.TextAdapter.FreeRanges(Atk.TextRange)
+M:System.Void Atk.TextAdapter.GetCharacterExtents(System.Int32,System.Int32&,System.Int32&,System.Int32&,System.Int32&,Atk.CoordType)
+P:System.Int32 Atk.TextAdapter.CaretOffset
+P:System.Int32 Atk.TextAdapter.CharacterCount
+P:Atk.Attribute[] Atk.TextAdapter.DefaultAttributes
+P:GLib.GType Atk.TextAdapter.GInterfaceGType
+P:GLib.GType Atk.TextAdapter.GType
+P:System.IntPtr Atk.TextAdapter.Handle
+P:Atk.ITextImplementor Atk.TextAdapter.Implementor
+P:System.Int32 Atk.TextAdapter.NSelections
+P:System.IntPtr Atk.TextAdapter.OwnedHandle
+E:System.EventHandler Atk.TextAdapter.TextAttributesChanged
+E:Atk.TextCaretMovedHandler Atk.TextAdapter.TextCaretMoved
+E:Atk.TextChangedHandler Atk.TextAdapter.TextChanged
+E:Atk.TextInsertHandler Atk.TextAdapter.TextInsert
+E:Atk.TextRemoveHandler Atk.TextAdapter.TextRemove
+E:System.EventHandler Atk.TextAdapter.TextSelectionChanged
+T:Atk.TextAttribute
+F:Atk.TextAttribute Atk.TextAttribute.BgColor
+F:Atk.TextAttribute Atk.TextAttribute.BgFullHeight
+F:Atk.TextAttribute Atk.TextAttribute.BgStipple
+F:Atk.TextAttribute Atk.TextAttribute.Direction
+F:Atk.TextAttribute Atk.TextAttribute.Editable
+F:Atk.TextAttribute Atk.TextAttribute.FamilyName
+F:Atk.TextAttribute Atk.TextAttribute.FgColor
+F:Atk.TextAttribute Atk.TextAttribute.FgStipple
+F:Atk.TextAttribute Atk.TextAttribute.Indent
+F:Atk.TextAttribute Atk.TextAttribute.Invalid
+F:Atk.TextAttribute Atk.TextAttribute.Invisible
+F:Atk.TextAttribute Atk.TextAttribute.Justification
+F:Atk.TextAttribute Atk.TextAttribute.Language
+F:Atk.TextAttribute Atk.TextAttribute.LastDefined
+F:Atk.TextAttribute Atk.TextAttribute.LeftMargin
+F:Atk.TextAttribute Atk.TextAttribute.PixelsAboveLines
+F:Atk.TextAttribute Atk.TextAttribute.PixelsBelowLines
+F:Atk.TextAttribute Atk.TextAttribute.PixelsInsideWrap
+F:Atk.TextAttribute Atk.TextAttribute.RightMargin
+F:Atk.TextAttribute Atk.TextAttribute.Rise
+F:Atk.TextAttribute Atk.TextAttribute.Scale
+F:Atk.TextAttribute Atk.TextAttribute.Size
+F:Atk.TextAttribute Atk.TextAttribute.Stretch
+F:Atk.TextAttribute Atk.TextAttribute.Strikethrough
+F:Atk.TextAttribute Atk.TextAttribute.Style
+F:Atk.TextAttribute Atk.TextAttribute.Underline
+F:Atk.TextAttribute Atk.TextAttribute.Variant
+F:Atk.TextAttribute Atk.TextAttribute.Weight
+F:Atk.TextAttribute Atk.TextAttribute.WrapMode
+F:System.Int32 Atk.TextAttribute.value__
+T:Atk.TextBoundary
+F:Atk.TextBoundary Atk.TextBoundary.Char
+F:Atk.TextBoundary Atk.TextBoundary.LineEnd
+F:Atk.TextBoundary Atk.TextBoundary.LineStart
+F:Atk.TextBoundary Atk.TextBoundary.SentenceEnd
+F:Atk.TextBoundary Atk.TextBoundary.SentenceStart
+F:Atk.TextBoundary Atk.TextBoundary.WordEnd
+F:Atk.TextBoundary Atk.TextBoundary.WordStart
+F:System.Int32 Atk.TextBoundary.value__
+T:Atk.TextCaretMovedArgs
+C:Atk.TextCaretMovedArgs..ctor()
+P:System.Int32 Atk.TextCaretMovedArgs.Location
+T:Atk.TextCaretMovedHandler
+C:Atk.TextCaretMovedHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.TextCaretMovedHandler.BeginInvoke(System.Object,Atk.TextCaretMovedArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.TextCaretMovedHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.TextCaretMovedHandler.Invoke(System.Object,Atk.TextCaretMovedArgs)
+T:Atk.TextChangedArgs
+C:Atk.TextChangedArgs..ctor()
+P:System.Int32 Atk.TextChangedArgs.Length
+P:System.Int32 Atk.TextChangedArgs.Position
+T:Atk.TextChangedDetail
+F:Atk.TextChangedDetail Atk.TextChangedDetail.Delete
+F:Atk.TextChangedDetail Atk.TextChangedDetail.Insert
+F:System.Int32 Atk.TextChangedDetail.value__
+T:Atk.TextChangedHandler
+C:Atk.TextChangedHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.TextChangedHandler.BeginInvoke(System.Object,Atk.TextChangedArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.TextChangedHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.TextChangedHandler.Invoke(System.Object,Atk.TextChangedArgs)
+T:Atk.TextClipType
+F:Atk.TextClipType Atk.TextClipType.Both
+F:Atk.TextClipType Atk.TextClipType.Max
+F:Atk.TextClipType Atk.TextClipType.Min
+F:Atk.TextClipType Atk.TextClipType.None
+F:System.Int32 Atk.TextClipType.value__
+T:Atk.TextGranularity
+F:Atk.TextGranularity Atk.TextGranularity.Char
+F:Atk.TextGranularity Atk.TextGranularity.Line
+F:Atk.TextGranularity Atk.TextGranularity.Paragraph
+F:Atk.TextGranularity Atk.TextGranularity.Sentence
+F:Atk.TextGranularity Atk.TextGranularity.Word
+F:System.Int32 Atk.TextGranularity.value__
+T:Atk.TextInsertArgs
+C:Atk.TextInsertArgs..ctor()
+P:System.Int32 Atk.TextInsertArgs.P0
+P:System.Int32 Atk.TextInsertArgs.P1
+P:System.String Atk.TextInsertArgs.P2
+T:Atk.TextInsertHandler
+C:Atk.TextInsertHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.TextInsertHandler.BeginInvoke(System.Object,Atk.TextInsertArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.TextInsertHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.TextInsertHandler.Invoke(System.Object,Atk.TextInsertArgs)
+T:Atk.TextRange
+M:Atk.TextRange Atk.TextRange.New(System.IntPtr)
+M:System.Boolean Atk.TextRange.Equals(Atk.TextRange)
+M:System.Boolean Atk.TextRange.Equals(System.Object)
+M:System.Int32 Atk.TextRange.GetHashCode()
+P:GLib.GType Atk.TextRange.GType
+F:Atk.TextRectangle Atk.TextRange.Bounds
+F:System.String Atk.TextRange.Content
+F:System.Int32 Atk.TextRange.EndOffset
+F:System.Int32 Atk.TextRange.StartOffset
+F:Atk.TextRange Atk.TextRange.Zero
+T:Atk.TextRectangle
+M:Atk.TextRectangle Atk.TextRectangle.New(System.IntPtr)
+M:System.Boolean Atk.TextRectangle.Equals(Atk.TextRectangle)
+M:System.Boolean Atk.TextRectangle.Equals(System.Object)
+M:System.Int32 Atk.TextRectangle.GetHashCode()
+F:System.Int32 Atk.TextRectangle.Height
+F:System.Int32 Atk.TextRectangle.Width
+F:System.Int32 Atk.TextRectangle.X
+F:System.Int32 Atk.TextRectangle.Y
+F:Atk.TextRectangle Atk.TextRectangle.Zero
+T:Atk.TextRemoveArgs
+C:Atk.TextRemoveArgs..ctor()
+P:System.Int32 Atk.TextRemoveArgs.P0
+P:System.Int32 Atk.TextRemoveArgs.P1
+P:System.String Atk.TextRemoveArgs.P2
+T:Atk.TextRemoveHandler
+C:Atk.TextRemoveHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.TextRemoveHandler.BeginInvoke(System.Object,Atk.TextRemoveArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.TextRemoveHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.TextRemoveHandler.Invoke(System.Object,Atk.TextRemoveArgs)
+T:Atk.Util
+C:Atk.Util..ctor(System.IntPtr)
+P:Atk.Util+AddKeyEventListenerDelegate Atk.Util.AddKeyEventListenerHandler
+P:GLib.GType Atk.Util.GType
+P:Atk.Util+GetRootDelegate Atk.Util.GetRootHandler
+P:Atk.Util+GetToolkitNameDelegate Atk.Util.GetToolkitNameHandler
+P:Atk.Util+GetToolkitVersionDelegate Atk.Util.GetToolkitVersionHandler
+P:GLib.AbiStruct Atk.Util.abi_info
+P:GLib.AbiStruct Atk.Util.class_abi
+T:Atk.Util+AddKeyEventListenerDelegate
+C:Atk.Util+AddKeyEventListenerDelegate..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.Util+AddKeyEventListenerDelegate.BeginInvoke(Atk.KeySnoopFunc,System.AsyncCallback,System.Object)
+M:System.UInt32 Atk.Util+AddKeyEventListenerDelegate.EndInvoke(System.IAsyncResult)
+M:System.UInt32 Atk.Util+AddKeyEventListenerDelegate.Invoke(Atk.KeySnoopFunc)
+T:Atk.Util+GetRootDelegate
+C:Atk.Util+GetRootDelegate..ctor(System.Object,System.IntPtr)
+M:Atk.Object Atk.Util+GetRootDelegate.EndInvoke(System.IAsyncResult)
+M:Atk.Object Atk.Util+GetRootDelegate.Invoke()
+M:System.IAsyncResult Atk.Util+GetRootDelegate.BeginInvoke(System.AsyncCallback,System.Object)
+T:Atk.Util+GetToolkitNameDelegate
+C:Atk.Util+GetToolkitNameDelegate..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.Util+GetToolkitNameDelegate.BeginInvoke(System.AsyncCallback,System.Object)
+M:System.String Atk.Util+GetToolkitNameDelegate.EndInvoke(System.IAsyncResult)
+M:System.String Atk.Util+GetToolkitNameDelegate.Invoke()
+T:Atk.Util+GetToolkitVersionDelegate
+C:Atk.Util+GetToolkitVersionDelegate..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.Util+GetToolkitVersionDelegate.BeginInvoke(System.AsyncCallback,System.Object)
+M:System.String Atk.Util+GetToolkitVersionDelegate.EndInvoke(System.IAsyncResult)
+M:System.String Atk.Util+GetToolkitVersionDelegate.Invoke()
+T:Atk.UtilListenerInfo
+C:Atk.UtilListenerInfo..ctor(System.IntPtr)
+P:GLib.AbiStruct Atk.UtilListenerInfo.abi_info
+T:Atk.ValueAdapter
+C:Atk.ValueAdapter..ctor()
+C:Atk.ValueAdapter..ctor(Atk.IValueImplementor)
+C:Atk.ValueAdapter..ctor(System.IntPtr)
+M:Atk.IValue Atk.ValueAdapter.GetObject(GLib.Object)
+M:Atk.IValue Atk.ValueAdapter.GetObject(System.IntPtr,System.Boolean)
+M:System.Boolean Atk.ValueAdapter.SetCurrentValue(GLib.Value)
+M:System.Double Atk.ValueAdapter.GetValueAndText(System.String)
+M:System.String Atk.ValueAdapter.TypeGetLocalizedName(Atk.ValueType)
+M:System.String Atk.ValueAdapter.TypeGetName(Atk.ValueType)
+M:System.Void Atk.ValueAdapter.GetCurrentValue(GLib.Value&)
+M:System.Void Atk.ValueAdapter.GetMaximumValue(GLib.Value&)
+M:System.Void Atk.ValueAdapter.GetMinimumIncrement(GLib.Value&)
+M:System.Void Atk.ValueAdapter.GetMinimumValue(GLib.Value&)
+P:GLib.GType Atk.ValueAdapter.GInterfaceGType
+P:GLib.GType Atk.ValueAdapter.GType
+P:System.IntPtr Atk.ValueAdapter.Handle
+P:Atk.IValueImplementor Atk.ValueAdapter.Implementor
+P:System.Double Atk.ValueAdapter.Increment
+P:System.IntPtr Atk.ValueAdapter.OwnedHandle
+P:Atk.Range Atk.ValueAdapter.Range
+P:GLib.SList Atk.ValueAdapter.SubRanges
+P:System.Double Atk.ValueAdapter.Value
+E:Atk.ValueChangedHandler Atk.ValueAdapter.ValueChanged
+T:Atk.ValueChangedArgs
+C:Atk.ValueChangedArgs..ctor()
+P:System.Double Atk.ValueChangedArgs.P0
+P:System.String Atk.ValueChangedArgs.P1
+T:Atk.ValueChangedHandler
+C:Atk.ValueChangedHandler..ctor(System.Object,System.IntPtr)
+M:System.IAsyncResult Atk.ValueChangedHandler.BeginInvoke(System.Object,Atk.ValueChangedArgs,System.AsyncCallback,System.Object)
+M:System.Void Atk.ValueChangedHandler.EndInvoke(System.IAsyncResult)
+M:System.Void Atk.ValueChangedHandler.Invoke(System.Object,Atk.ValueChangedArgs)
+T:Atk.ValueType
+F:Atk.ValueType Atk.ValueType.Acceptable
+F:Atk.ValueType Atk.ValueType.Bad
+F:Atk.ValueType Atk.ValueType.Best
+F:Atk.ValueType Atk.ValueType.Good
+F:Atk.ValueType Atk.ValueType.High
+F:Atk.ValueType Atk.ValueType.LastDefined
+F:Atk.ValueType Atk.ValueType.Low
+F:Atk.ValueType Atk.ValueType.Medium
+F:Atk.ValueType Atk.ValueType.Strong
+F:Atk.ValueType Atk.ValueType.VeryBad
+F:Atk.ValueType Atk.ValueType.VeryGood
+F:Atk.ValueType Atk.ValueType.VeryHigh
+F:Atk.ValueType Atk.ValueType.VeryLow
+F:Atk.ValueType Atk.ValueType.VeryStrong
+F:Atk.ValueType Atk.ValueType.VeryWeak
+F:Atk.ValueType Atk.ValueType.Weak
+F:System.Int32 Atk.ValueType.value__
+T:Atk.WindowAdapter
+C:Atk.WindowAdapter..ctor()
+C:Atk.WindowAdapter..ctor(Atk.IWindowImplementor)
+C:Atk.WindowAdapter..ctor(System.IntPtr)
+M:Atk.IWindow Atk.WindowAdapter.GetObject(GLib.Object)
+M:Atk.IWindow Atk.WindowAdapter.GetObject(System.IntPtr,System.Boolean)
+P:GLib.GType Atk.WindowAdapter.GInterfaceGType
+P:GLib.GType Atk.WindowAdapter.GType
+P:System.IntPtr Atk.WindowAdapter.Handle
+P:Atk.IWindowImplementor Atk.WindowAdapter.Implementor
+P:System.IntPtr Atk.WindowAdapter.OwnedHandle
