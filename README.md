@@ -4,20 +4,27 @@ GtkSharp is a C# wrapper for Gtk and its related components. The component list 
 
 Differences can be seen with the following table:
 
-|               | Target framework   | Target Gtk Version                                 | Extra notes                   |
-|:--------------|:-------------------|:---------------------------------------------------|:------------------------------|
-| GtkSharp      | .NET Standard 2.0  | Gtk 3.22                                           | Does not need glue libraries. |
-| mono/gtksharp | .NET Framework 4.5 | Gtk 2 (also Gtk 3.0 but never officially released) |                               |
+|               | Target framework             | Target Gtk Version                                 | Extra notes                   |
+|:--------------|:-----------------------------|:---------------------------------------------------|:------------------------------|
+| GtkSharp      | .NET Standard 2.0 and .NET 10 | Gtk 3.22                                           | Does not need glue libraries. |
+| mono/gtksharp | .NET Framework 4.5           | Gtk 2 (also Gtk 3.0 but never officially released) |                               |
 
 * [Building from source](#building-from-source)
+* [Testing](#testing)
 * [Using the library](#using-the-library)
+* [Workload](#workload)
+* [Contributing](#contributing)
 * [License](#license)
 
 ## Building from source
 
-Pre requirements for building from source are that you have .Net 6 installed on the system.
+Requirements:
 
-To build the repository, simply do:
+* .NET SDK **10.0.100** or newer.
+* Gtk 3 development libraries (`libgtk-3-dev` on Debian/Ubuntu, `gtk+3` on macOS).
+* `xvfb` when building or testing on a Linux machine without a desktop session.
+
+To build the repository:
 
 ```sh
 git clone https://github.com/GtkSharp/GtkSharp.git
@@ -26,12 +33,48 @@ dotnet tool restore
 dotnet cake build.cake
 ```
 
-A breakdown on how the source is structured:
+The build generates the wrapper sources, compiles the libraries and produces
+the NuGet packages and the workload under `BuildOutput/`.
 
-* Tools that are needed to generate wrapper code are found in [Tools](Source/Tools) folder
-* The actual wrappers code is found in [Libs](Source/Libs) folder
-* Templates are located in [Templates](Source/Templates) folder
-* Build script is separated between [build.cake](build.cake) and [CakeScripts](CakeScripts) folder
+A breakdown of how the source is structured:
+
+| Folder | Contents |
+|:--|:--|
+| [Source/Libs](Source/Libs) | The wrapper libraries: `GtkSharp`, `GLibSharp`, `GioSharp`, `GdkSharp`, `CairoSharp`, `PangoSharp`, `AtkSharp`, `GtkSourceSharp`, `WebkitGtkSharp`. |
+| [Source/Tools](Source/Tools) | Code generators used during the build (`GapiCodegen`, `GapiFixup`). |
+| [Source/Workload](Source/Workload) | The .NET SDK workload: SDK pack, reference pack, runtime pack and manifest. |
+| [Source/Templates](Source/Templates) | `dotnet new` templates (`gtkapp`). |
+| [Source/Samples](Source/Samples) | Sample application used for manual testing. |
+| [Source/Tests](Source/Tests) | Automated tests and the workload smoke test. |
+| [docs](docs) | Maintainer and contributor documentation. |
+| [build.cake](build.cake) / [CakeScripts](CakeScripts) | Build, package, workload install and test targets. |
+
+The libraries multi-target `net10.0` and `netstandard2.0`. The `netstandard2.0`
+target keeps the NuGet packages usable from older target frameworks; the
+`net10.0` target is what the workload ships.
+
+## Testing
+
+The test suite lives in [Source/Tests/GtkSharp.Tests](Source/Tests/GtkSharp.Tests)
+and runs on `net10.0`.
+
+```sh
+# Headless (recommended on CI and servers)
+xvfb-run -a dotnet test Source/Tests/GtkSharp.Tests -c Release
+
+# With a desktop session
+dotnet test Source/Tests/GtkSharp.Tests -c Release
+
+# Through the build script
+xvfb-run -a dotnet cake build.cake --BuildTarget=Test
+```
+
+GTK needs a display. When no display is available the GTK based tests are
+skipped and the GLib/Cairo/Pango tests still run.
+
+Tests are part of the contribution process. Every behavioural change is
+expected to include a test, and pull requests without tests must explain why.
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/testing.md](docs/testing.md).
 
 ## Using the library
 
@@ -53,6 +96,26 @@ To create a new gtk app project, simply use `dotnet new` templating engine:
 * install: `dotnet new --install GtkSharp.Template.CSharp`
 * uninstall: `dotnet new --uninstall GtkSharp.Template.CSharp`
 * generate project: `dotnet new gtkapp`
+
+## Workload
+
+The repository also produces a `gtk` .NET workload, which enables the
+`net10.0-gtk` target framework. Install it from the packages built in
+`BuildOutput/NugetPackages` with the build script:
+
+```sh
+dotnet cake build.cake --BuildTarget=InstallWorkload --BuildVersion=3.24.24.1
+```
+
+The workload is installed into the SDK pointed to by `DOTNET_ROOT`. Supported
+workload bands are listed in [build.cake](build.cake); the build adds the
+current SDK feature band automatically when it is missing, so the install
+target works with any .NET 10 SDK.
+
+## Contributing
+
+Pull requests target `develop`. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the
+build/test commands, the testing policy and the review checklist.
 
 ## License
 
