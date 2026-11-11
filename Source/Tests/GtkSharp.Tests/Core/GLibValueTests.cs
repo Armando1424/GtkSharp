@@ -89,3 +89,57 @@ public sealed class GLibValueTests
         Assert.Equal(9_000_000_000L, value.Val);
     }
 }
+
+public sealed class GLibValueExtraTests
+{
+    [Fact]
+    public void Byte_SByte_UShort_UInt_ULong_RoundTrip()
+    {
+        using var b = new GLib.Value((byte)200);
+        using var sb = new GLib.Value((sbyte)-5);
+        using var us = new GLib.Value((ushort)65000);
+        using var ui = new GLib.Value(4_000_000_000u);
+        using var ul = new GLib.Value(9_000_000_000UL);
+
+        Assert.Equal((byte)200, (byte)b);
+        Assert.Equal((sbyte)-5, (sbyte)sb);
+        Assert.Equal((ushort)65000, (ushort)us);
+        Assert.Equal(4_000_000_000u, (uint)ui);
+        Assert.Equal(9_000_000_000UL, (ulong)ul);
+    }
+
+    [Fact]
+    public void Pointer_RoundTrips()
+    {
+        var pointer = new IntPtr(0x1234);
+        using var value = new GLib.Value(pointer);
+
+        Assert.Equal(pointer, (IntPtr)value);
+    }
+
+    [Fact]
+    public void StringArray_RoundTrips()
+    {
+        using var value = new GLib.Value(new[] { "a", "b" });
+        var result = (string[])value;
+
+        Assert.Equal(new[] { "a", "b" }, result);
+    }
+
+    [Fact]
+    public void Variant_RoundTrips()
+    {
+        using var variant = new GLib.Variant("hello");
+        using var value = new GLib.Value(variant);
+
+        Assert.Equal("hello", (string)(GLib.Variant)value);
+    }
+
+    [Fact]
+    public void Enum_BoxedAsInt_CanBeRead()
+    {
+        using var value = new GLib.Value((int)DayOfWeek.Friday);
+
+        Assert.Equal((int)DayOfWeek.Friday, (int)value);
+    }
+}

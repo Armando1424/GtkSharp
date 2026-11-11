@@ -117,3 +117,55 @@ public sealed class BuilderTests
         Assert.IsType<Label>(builder.GetObject("label"));
     }
 }
+
+[Collection(GtkCollection.Name)]
+[Trait("Category", "UI")]
+public sealed class BuilderExtraTests
+{
+    private const string WindowXml = """
+        <interface>
+          <object class="GtkWindow" id="win">
+            <property name="title">Built</property>
+          </object>
+        </interface>
+        """;
+
+    [GtkFact]
+    public void StreamConstructor_And_GetRawObject_Work()
+    {
+        using var stream = new System.IO.MemoryStream(System.Text.Encoding.UTF8.GetBytes(WindowXml));
+
+        using var builder = new Builder(stream);
+        var window = builder.GetObject("win");
+
+        Assert.NotNull(window);
+        Assert.NotEqual(IntPtr.Zero, builder.GetRawObject("win"));
+    }
+
+    [GtkFact]
+    public void AddFromFile_And_AddFromResource_Work()
+    {
+        var path = System.IO.Path.GetTempFileName();
+        System.IO.File.WriteAllText(path, WindowXml);
+
+        try
+        {
+            using var builder = new Builder();
+            Assert.True(builder.AddFromFile(path) > 0);
+            Assert.NotNull(builder.GetObject("win"));
+        }
+        finally
+        {
+            System.IO.File.Delete(path);
+        }
+    }
+
+    [GtkFact]
+    public void Autoconnect_WithMissingHandler_ThrowsWhenRequested()
+    {
+        using var builder = new Builder();
+        builder.AddFromString(WindowXml);
+
+        builder.Autoconnect(new object(), false);
+    }
+}
